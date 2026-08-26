@@ -1,6 +1,7 @@
 import asyncio
 import hashlib
 import hmac
+import os
 import time
 import logging
 from typing import Callable, Awaitable, Dict, Any
@@ -45,7 +46,14 @@ class ContentPolishPipeline:
         self.empirical_filter = EmpiricalValidationFilter()
         self.normalizer = TextNormalizer()
         self.pacer = ExecutionPacer()
-        self._signing_key: bytes = b"GENERIC_PIPELINE_HMAC_SECRET_KEY_SHA384_815"
+        signing_key = os.environ.get("ECOLOGY_SIGNING_KEY")
+        if not signing_key:
+            raise RuntimeError(
+                "ECOLOGY_SIGNING_KEY environment variable must be set to a secret "
+                "value before ContentPolishPipeline can sign output. A key checked "
+                "into source control cannot provide integrity guarantees."
+            )
+        self._signing_key: bytes = signing_key.encode("utf-8")
 
     def _compute_signature(self, text: str) -> str:
         return hmac.new(self._signing_key, text.encode("utf-8"), hashlib.sha384).hexdigest()

@@ -449,16 +449,24 @@ The current repository contains an early implementation of the broader concept.
 
 It includes components for:
 
-- preprocessing;
-- knowledge-object construction;
+- preprocessing (PDF/JSON chat exports → Markdown corpus);
+- gitignore-aware, recursive corpus discovery and Python-source chunking (`code_scanner.py`) — corpus ingestion recurses into subdirectories and skips anything `.gitignore`-excluded, and `.py` files are split into per-function/class chunks (via `ast.get_source_segment`) rather than being skipped;
+- knowledge-object construction (`ActiveKnowledgeObject`);
 - deduplication;
-- query distribution;
+- query distribution across knowledge cells (`ecology.py`);
+- a separate ChromaDB-backed vector retrieval pipeline (`rag_engine.py`) — note this duplicates `ecology.py`'s file discovery/chunking rather than sharing it; the two pipelines are not yet unified;
 - language-model-assisted interpretation;
-- evidence-constrained response generation;
+- evidence-constrained response generation (a substring-containment check against source content, not a full evidence graph);
 - retrieval-oriented processing;
 - and supporting data and corpus structures.
 
-The implementation should be understood as a prototype of the architecture rather than as a complete realization of the long-term memory model.
+The implementation should be understood as a prototype of the architecture rather than as a complete realization of the long-term memory model. There is no persisted identity, provenance, relationship, or temporal-state model yet — see Current Limitations.
+
+`ecology.py`'s `ActiveKnowledgeObject.identity` is a filename+paragraph-index label (`file.md[Cell-3]`), not a stable or globally unique identifier — it changes if the source file's paragraph boundaries change on re-ingestion.
+
+A real (non-placebo) test suite exists under `tests/` — run via `pytest tests/` or `./run_all.sh`.
+
+`polish_bridge.py`'s output-signing key must be supplied via the `ECOLOGY_SIGNING_KEY` environment variable; the pipeline refuses to run without it (a hardcoded key checked into source cannot provide integrity guarantees).
 
 ## Current Limitations
 

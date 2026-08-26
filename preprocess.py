@@ -36,6 +36,7 @@ def parse_pdf(pdf_path, output_dir):
 
     processed_content = "\n\n".join(markdown_lines)
     base_name = os.path.splitext(os.path.basename(pdf_path))[0]
+    os.makedirs(output_dir, exist_ok=True)
     output_filepath = os.path.join(output_dir, f"{base_name}_corpus.md")
 
     with open(output_filepath, 'w', encoding='utf-8') as f:
@@ -75,6 +76,7 @@ def parse_json(json_path, output_dir):
 
     processed_content = "\n\n".join(markdown_lines)
     base_name = os.path.splitext(os.path.basename(json_path))[0]
+    os.makedirs(output_dir, exist_ok=True)
     output_filepath = os.path.join(output_dir, f"{base_name}_corpus.md")
 
     with open(output_filepath, 'w', encoding='utf-8') as f:
