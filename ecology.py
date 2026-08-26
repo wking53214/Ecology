@@ -4,6 +4,8 @@ from datetime import datetime
 import concurrent.futures
 import time
 
+from code_scanner import discover_files, extract_python_chunks
+
 class ActiveKnowledgeObject:
     def __init__(self, identity, content, timestamp):
         self.identity = identity
@@ -71,34 +73,40 @@ def broadcast_to_ether(ecology_cluster, message):
 
 def ingest_directory(directory_path):
     ecology_cluster = []
-    
+
     if not os.path.exists(directory_path):
         print(f"[System] Directory '{directory_path}' not found.")
         return ecology_cluster
 
-    files = [f for f in os.listdir(directory_path) if f.endswith((".md", ".txt"))]
-    
-    for filename in files:
-        filepath = os.path.join(directory_path, filename)
-        file_timestamp = os.path.getmtime(filepath)
-        
+    text_files = discover_files(directory_path, (".md", ".txt"))
+    python_files = discover_files(directory_path, (".py",))
+
+    for filepath in text_files:
+        file_timestamp = filepath.stat().st_mtime
+
         try:
-            with open(filepath, 'r', encoding='utf-8', errors='ignore') as file:
-                raw_dna = file.read().strip()
+            raw_dna = filepath.read_text(encoding="utf-8", errors="ignore").strip()
         except Exception as e:
-            print(f"[System] Skipping '{filename}' due to read error: {e}")
+            print(f"[System] Skipping '{filepath.name}' due to read error: {e}")
             continue
 
         segments = [segment.strip() for segment in raw_dna.split('\n\n') if segment.strip()]
-        
+
         for index, segment in enumerate(segments):
-            identity = f"{filename}[Cell-{index+1}]"
+            identity = f"{filepath.name}[Cell-{index+1}]"
             cell = ActiveKnowledgeObject(identity=identity, content=segment, timestamp=file_timestamp)
             ecology_cluster.append(cell)
-                
+
+    for filepath in python_files:
+        file_timestamp = filepath.stat().st_mtime
+        for identity, content in extract_python_chunks(filepath):
+            cell = ActiveKnowledgeObject(identity=identity, content=content, timestamp=file_timestamp)
+            ecology_cluster.append(cell)
+
     ecology_cluster.sort(key=lambda x: x.timestamp, reverse=True)
-            
-    print(f"[System] Ecology initialized with {len(ecology_cluster)} active cells descended from {len(files)} parent structures.\n")
+
+    parent_count = len(text_files) + len(python_files)
+    print(f"[System] Ecology initialized with {len(ecology_cluster)} active cells descended from {parent_count} parent structures.\n")
     return ecology_cluster
 
 
