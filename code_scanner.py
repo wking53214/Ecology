@@ -52,8 +52,10 @@ def discover_files(root_path: str, extensions: Tuple[str, ...]) -> List[Path]:
 def extract_python_chunks(file_path: Path) -> List[Tuple[str, str]]:
     """Split a Python file into per-function/class source chunks.
 
-    Returns (identity, content) pairs, e.g. ("bar.py::foo", "<source of foo>"),
-    so code can be ingested as addressable memory cells instead of opaque text.
+    Returns (symbol_name, content) pairs, e.g. ("foo", "<source of foo>"), so
+    code can be ingested as addressable memory cells instead of opaque text.
+    Identity/addressing (which needs the file's path, not just its bare name,
+    to stay collision-free under recursive discovery) is the caller's job.
     """
     try:
         source = file_path.read_text(encoding="utf-8", errors="ignore")
@@ -66,6 +68,5 @@ def extract_python_chunks(file_path: Path) -> List[Tuple[str, str]]:
         if isinstance(node, (ast.FunctionDef, ast.AsyncFunctionDef, ast.ClassDef)):
             segment = ast.get_source_segment(source, node)
             if segment:
-                identity = f"{file_path.name}::{node.name}"
-                chunks.append((identity, segment))
+                chunks.append((node.name, segment))
     return chunks

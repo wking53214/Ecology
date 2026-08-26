@@ -450,19 +450,19 @@ The current repository contains an early implementation of the broader concept.
 It includes components for:
 
 - preprocessing (PDF/JSON chat exports → Markdown corpus);
-- gitignore-aware, recursive corpus discovery and Python-source chunking (`code_scanner.py`) — corpus ingestion recurses into subdirectories and skips anything `.gitignore`-excluded, and `.py` files are split into per-function/class chunks (via `ast.get_source_segment`) rather than being skipped;
-- knowledge-object construction (`ActiveKnowledgeObject`);
+- gitignore-aware, recursive corpus discovery and Python-source chunking (`code_scanner.py`) — ingestion recurses into subdirectories and skips anything `.gitignore`-excluded, and `.py` files are split into per-function/class chunks (via `ast.get_source_segment`) rather than being skipped;
+- a single ingestion path (`ecology.py:ingest_directory`) shared by both querying modes — there used to be two independent implementations of file discovery/chunking (one in `ecology.py`, one in `rag_engine.py`); `rag_engine.py` now calls `ingest_directory` instead of re-scanning files itself;
+- knowledge-object construction (`ActiveKnowledgeObject`), including an explicit `source` field for clean metadata and a path-relative `identity` (collision-free even when two same-named files exist in different subdirectories under recursive discovery);
 - deduplication;
-- query distribution across knowledge cells (`ecology.py`);
-- a separate ChromaDB-backed vector retrieval pipeline (`rag_engine.py`) — note this duplicates `ecology.py`'s file discovery/chunking rather than sharing it; the two pipelines are not yet unified;
+- a ChromaDB-backed vector retrieval stage (`rag_engine.py`) for scalable top-k candidate retrieval, followed by a per-candidate containment-verification stage (`ActiveKnowledgeObject.receive_message`, reused from what was originally a separate full-corpus broadcast mode) — only chunks whose relevance *and* an extracted excerpt are both confirmed against the chunk's own content are passed to final answer synthesis. If nothing verifies, the query returns an explicit "no verifiable answer" response instead of letting the model synthesize from ungrounded context. This replaces the old two-pipeline split (an O(n) per-query LLM classification broadcast over every cell in `ecology.py`, and a separate unverified ChromaDB synthesis path in `rag_engine.py`) with one path that is both scalable (vector retrieval, not a full-corpus scan) and evidence-checked (every synthesized answer is built only from verified excerpts);
 - language-model-assisted interpretation;
-- evidence-constrained response generation (a substring-containment check against source content, not a full evidence graph);
+- evidence-constrained response generation — see above; still a substring-containment check against source content, not a full evidence graph;
 - retrieval-oriented processing;
 - and supporting data and corpus structures.
 
 The implementation should be understood as a prototype of the architecture rather than as a complete realization of the long-term memory model. There is no persisted identity, provenance, relationship, or temporal-state model yet — see Current Limitations.
 
-`ecology.py`'s `ActiveKnowledgeObject.identity` is a filename+paragraph-index label (`file.md[Cell-3]`), not a stable or globally unique identifier — it changes if the source file's paragraph boundaries change on re-ingestion.
+`ChromaDB`'s on-disk collection is versioned by name (`living_memory_v2` by default in `rag_engine.py`) specifically so a change to ingestion/chunking logic doesn't silently leave a stale collection in place — bump the name (or clear `./chroma_db`) after changing how content is chunked.
 
 A real (non-placebo) test suite exists under `tests/` — run via `pytest tests/` or `./run_all.sh`.
 
