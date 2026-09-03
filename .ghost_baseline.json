@@ -1,0 +1,2047 @@
+[
+  {
+    "category": "dead_code",
+    "confidence": null,
+    "detail": "No ast.Name, ast.Attribute, or string-subscript-key node anywhere in the scanned files resolves to this identifier. Scope limit: getattr-by-string and decorator-based registration are still not traced, so this can false-positive on names only reached that way -- confirm before deleting.",
+    "detector": "dead_code",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/Client-4cc9ba8f4347b805.md",
+      "line_end": null,
+      "line_start": null,
+      "related_files": [],
+      "snippet": null
+    },
+    "first_seen": "2026-09-03T03:41:20.371992+00:00",
+    "id": "ghost-7e49d02a6e4a",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'IcebergClient' is defined but never referenced anywhere in the scanned set"
+  },
+  {
+    "category": "dead_code",
+    "confidence": null,
+    "detail": "No ast.Name, ast.Attribute, or string-subscript-key node anywhere in the scanned files resolves to this identifier. Scope limit: getattr-by-string and decorator-based registration are still not traced, so this can false-positive on names only reached that way -- confirm before deleting.",
+    "detector": "dead_code",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/IngestAdapter-1-767c7acf8c309878.md",
+      "line_end": null,
+      "line_start": null,
+      "related_files": [],
+      "snippet": null
+    },
+    "first_seen": "2026-09-03T03:41:20.372095+00:00",
+    "id": "ghost-30df3702d096",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'generate_population' is defined but never referenced anywhere in the scanned set"
+  },
+  {
+    "category": "dead_code",
+    "confidence": null,
+    "detail": "No ast.Name, ast.Attribute, or string-subscript-key node anywhere in the scanned files resolves to this identifier. Scope limit: getattr-by-string and decorator-based registration are still not traced, so this can false-positive on names only reached that way -- confirm before deleting.",
+    "detector": "dead_code",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/Replay-0377e2794e0f8338.md",
+      "line_end": null,
+      "line_start": null,
+      "related_files": [],
+      "snippet": null
+    },
+    "first_seen": "2026-09-03T03:41:20.372107+00:00",
+    "id": "ghost-ef61c738ceca",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'compute_structural_hash' is defined but never referenced anywhere in the scanned set"
+  },
+  {
+    "category": "dead_code",
+    "confidence": null,
+    "detail": "No ast.Name, ast.Attribute, or string-subscript-key node anywhere in the scanned files resolves to this identifier. Scope limit: getattr-by-string and decorator-based registration are still not traced, so this can false-positive on names only reached that way -- confirm before deleting.",
+    "detector": "dead_code",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/adversarial_adapter-da9e06b7ed4bcb6a.md",
+      "line_end": null,
+      "line_start": null,
+      "related_files": [],
+      "snippet": null
+    },
+    "first_seen": "2026-09-03T03:41:20.372120+00:00",
+    "id": "ghost-23b70b4c0ecd",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'adversarial_adapter' is defined but never referenced anywhere in the scanned set"
+  },
+  {
+    "category": "dead_code",
+    "confidence": null,
+    "detail": "No ast.Name, ast.Attribute, or string-subscript-key node anywhere in the scanned files resolves to this identifier. Scope limit: getattr-by-string and decorator-based registration are still not traced, so this can false-positive on names only reached that way -- confirm before deleting.",
+    "detector": "dead_code",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/aggregator-b12826410011c3e1.md",
+      "line_end": null,
+      "line_start": null,
+      "related_files": [],
+      "snippet": null
+    },
+    "first_seen": "2026-09-03T03:41:20.372128+00:00",
+    "id": "ghost-5be723ddd28a",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'TelemetryAggregator' is defined but never referenced anywhere in the scanned set"
+  },
+  {
+    "category": "dead_code",
+    "confidence": null,
+    "detail": "No ast.Name, ast.Attribute, or string-subscript-key node anywhere in the scanned files resolves to this identifier. Scope limit: getattr-by-string and decorator-based registration are still not traced, so this can false-positive on names only reached that way -- confirm before deleting.",
+    "detector": "dead_code",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/audit_exporter (1)-36e05ac4b9be1d42.md",
+      "line_end": null,
+      "line_start": null,
+      "related_files": [],
+      "snippet": null
+    },
+    "first_seen": "2026-09-03T03:41:20.372136+00:00",
+    "id": "ghost-bdb81861433e",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'GovernanceAuditExporter' is defined but never referenced anywhere in the scanned set"
+  },
+  {
+    "category": "dead_code",
+    "confidence": null,
+    "detail": "No ast.Name, ast.Attribute, or string-subscript-key node anywhere in the scanned files resolves to this identifier. Scope limit: getattr-by-string and decorator-based registration are still not traced, so this can false-positive on names only reached that way -- confirm before deleting.",
+    "detector": "dead_code",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/boundary_gate_adapter-da9e06b7ed4bcb6a.md",
+      "line_end": null,
+      "line_start": null,
+      "related_files": [],
+      "snippet": null
+    },
+    "first_seen": "2026-09-03T03:41:20.372143+00:00",
+    "id": "ghost-37db57344c45",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'boundary_gate_adapter' is defined but never referenced anywhere in the scanned set"
+  },
+  {
+    "category": "dead_code",
+    "confidence": null,
+    "detail": "No ast.Name, ast.Attribute, or string-subscript-key node anywhere in the scanned files resolves to this identifier. Scope limit: getattr-by-string and decorator-based registration are still not traced, so this can false-positive on names only reached that way -- confirm before deleting.",
+    "detector": "dead_code",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/citadel_adapter-393c530967f46aa9.md",
+      "line_end": null,
+      "line_start": null,
+      "related_files": [],
+      "snippet": null
+    },
+    "first_seen": "2026-09-03T03:41:20.372154+00:00",
+    "id": "ghost-7ed771c2ceea",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'citadel_adapter' is defined but never referenced anywhere in the scanned set"
+  },
+  {
+    "category": "dead_code",
+    "confidence": null,
+    "detail": "No ast.Name, ast.Attribute, or string-subscript-key node anywhere in the scanned files resolves to this identifier. Scope limit: getattr-by-string and decorator-based registration are still not traced, so this can false-positive on names only reached that way -- confirm before deleting.",
+    "detector": "dead_code",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/clinical_policy-01aae117854bcb6a.md",
+      "line_end": null,
+      "line_start": null,
+      "related_files": [],
+      "snippet": null
+    },
+    "first_seen": "2026-09-03T03:41:20.372165+00:00",
+    "id": "ghost-ce6cc40c0bee",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'DriftThresholds' is defined but never referenced anywhere in the scanned set"
+  },
+  {
+    "category": "dead_code",
+    "confidence": null,
+    "detail": "No ast.Name, ast.Attribute, or string-subscript-key node anywhere in the scanned files resolves to this identifier. Scope limit: getattr-by-string and decorator-based registration are still not traced, so this can false-positive on names only reached that way -- confirm before deleting.",
+    "detector": "dead_code",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/clinical_vitals_adapter-16ef5c9ebbb5a9a7.md",
+      "line_end": null,
+      "line_start": null,
+      "related_files": [],
+      "snippet": null
+    },
+    "first_seen": "2026-09-03T03:41:20.372173+00:00",
+    "id": "ghost-686dc925b36d",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'vitals_bounds_adapter' is defined but never referenced anywhere in the scanned set"
+  },
+  {
+    "category": "dead_code",
+    "confidence": null,
+    "detail": "No ast.Name, ast.Attribute, or string-subscript-key node anywhere in the scanned files resolves to this identifier. Scope limit: getattr-by-string and decorator-based registration are still not traced, so this can false-positive on names only reached that way -- confirm before deleting.",
+    "detector": "dead_code",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/clinical_vitals_adapter-16ef5c9ebbb5a9a7.md",
+      "line_end": null,
+      "line_start": null,
+      "related_files": [],
+      "snippet": null
+    },
+    "first_seen": "2026-09-03T03:41:20.372180+00:00",
+    "id": "ghost-ddc24c4ee742",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'physiologic_complexity_adapter' is defined but never referenced anywhere in the scanned set"
+  },
+  {
+    "category": "dead_code",
+    "confidence": null,
+    "detail": "No ast.Name, ast.Attribute, or string-subscript-key node anywhere in the scanned files resolves to this identifier. Scope limit: getattr-by-string and decorator-based registration are still not traced, so this can false-positive on names only reached that way -- confirm before deleting.",
+    "detector": "dead_code",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/clinical_vitals_adapter-16ef5c9ebbb5a9a7.md",
+      "line_end": null,
+      "line_start": null,
+      "related_files": [],
+      "snippet": null
+    },
+    "first_seen": "2026-09-03T03:41:20.372187+00:00",
+    "id": "ghost-5f304448e6f7",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'assess_data_quality' is defined but never referenced anywhere in the scanned set"
+  },
+  {
+    "category": "dead_code",
+    "confidence": null,
+    "detail": "No ast.Name, ast.Attribute, or string-subscript-key node anywhere in the scanned files resolves to this identifier. Scope limit: getattr-by-string and decorator-based registration are still not traced, so this can false-positive on names only reached that way -- confirm before deleting.",
+    "detector": "dead_code",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/clinical_vitals_adapter-16ef5c9ebbb5a9a7.md",
+      "line_end": null,
+      "line_start": null,
+      "related_files": [],
+      "snippet": null
+    },
+    "first_seen": "2026-09-03T03:41:20.372193+00:00",
+    "id": "ghost-d79308d90ffb",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'vitals_rate_adapter' is defined but never referenced anywhere in the scanned set"
+  },
+  {
+    "category": "dead_code",
+    "confidence": null,
+    "detail": "No ast.Name, ast.Attribute, or string-subscript-key node anywhere in the scanned files resolves to this identifier. Scope limit: getattr-by-string and decorator-based registration are still not traced, so this can false-positive on names only reached that way -- confirm before deleting.",
+    "detector": "dead_code",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/clinical_vitals_adapter-16ef5c9ebbb5a9a7.md",
+      "line_end": null,
+      "line_start": null,
+      "related_files": [],
+      "snippet": null
+    },
+    "first_seen": "2026-09-03T03:41:20.372198+00:00",
+    "id": "ghost-0d012ac6da75",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'fuse_clinical_risk' is defined but never referenced anywhere in the scanned set"
+  },
+  {
+    "category": "dead_code",
+    "confidence": null,
+    "detail": "No ast.Name, ast.Attribute, or string-subscript-key node anywhere in the scanned files resolves to this identifier. Scope limit: getattr-by-string and decorator-based registration are still not traced, so this can false-positive on names only reached that way -- confirm before deleting.",
+    "detector": "dead_code",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/cluster_runner-f7a434deb10580ed.md",
+      "line_end": null,
+      "line_start": null,
+      "related_files": [],
+      "snippet": null
+    },
+    "first_seen": "2026-09-03T03:41:20.372204+00:00",
+    "id": "ghost-dbd2fe0182ba",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'ClusterRunner' is defined but never referenced anywhere in the scanned set"
+  },
+  {
+    "category": "dead_code",
+    "confidence": null,
+    "detail": "No ast.Name, ast.Attribute, or string-subscript-key node anywhere in the scanned files resolves to this identifier. Scope limit: getattr-by-string and decorator-based registration are still not traced, so this can false-positive on names only reached that way -- confirm before deleting.",
+    "detector": "dead_code",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/fortress_adapter-6fca23b4cc3f9839.md",
+      "line_end": null,
+      "line_start": null,
+      "related_files": [],
+      "snippet": null
+    },
+    "first_seen": "2026-09-03T03:41:20.372212+00:00",
+    "id": "ghost-f275b319ae09",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'fortress_adapter' is defined but never referenced anywhere in the scanned set"
+  },
+  {
+    "category": "dead_code",
+    "confidence": null,
+    "detail": "No ast.Name, ast.Attribute, or string-subscript-key node anywhere in the scanned files resolves to this identifier. Scope limit: getattr-by-string and decorator-based registration are still not traced, so this can false-positive on names only reached that way -- confirm before deleting.",
+    "detector": "dead_code",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/heuristic_rules_adapter-6fca23b4cc3f9839.md",
+      "line_end": null,
+      "line_start": null,
+      "related_files": [],
+      "snippet": null
+    },
+    "first_seen": "2026-09-03T03:41:20.372220+00:00",
+    "id": "ghost-ed1b12c50542",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'heuristic_rules_adapter' is defined but never referenced anywhere in the scanned set"
+  },
+  {
+    "category": "dead_code",
+    "confidence": null,
+    "detail": "No ast.Name, ast.Attribute, or string-subscript-key node anywhere in the scanned files resolves to this identifier. Scope limit: getattr-by-string and decorator-based registration are still not traced, so this can false-positive on names only reached that way -- confirm before deleting.",
+    "detector": "dead_code",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/invariant_validator_adapter-6fca23b4cc3f9839.md",
+      "line_end": null,
+      "line_start": null,
+      "related_files": [],
+      "snippet": null
+    },
+    "first_seen": "2026-09-03T03:41:20.372226+00:00",
+    "id": "ghost-366b65428b69",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'invariant_validator_adapter' is defined but never referenced anywhere in the scanned set"
+  },
+  {
+    "category": "dead_code",
+    "confidence": null,
+    "detail": "No ast.Name, ast.Attribute, or string-subscript-key node anywhere in the scanned files resolves to this identifier. Scope limit: getattr-by-string and decorator-based registration are still not traced, so this can false-positive on names only reached that way -- confirm before deleting.",
+    "detector": "dead_code",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/ivr_tree-8fdaa84c270b798e.md",
+      "line_end": null,
+      "line_start": null,
+      "related_files": [],
+      "snippet": null
+    },
+    "first_seen": "2026-09-03T03:41:20.372232+00:00",
+    "id": "ghost-535578b4e7b2",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'Outcome' is defined but never referenced anywhere in the scanned set"
+  },
+  {
+    "category": "dead_code",
+    "confidence": null,
+    "detail": "No ast.Name, ast.Attribute, or string-subscript-key node anywhere in the scanned files resolves to this identifier. Scope limit: getattr-by-string and decorator-based registration are still not traced, so this can false-positive on names only reached that way -- confirm before deleting.",
+    "detector": "dead_code",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/ivr_tree-8fdaa84c270b798e.md",
+      "line_end": null,
+      "line_start": null,
+      "related_files": [],
+      "snippet": null
+    },
+    "first_seen": "2026-09-03T03:41:20.372237+00:00",
+    "id": "ghost-4a27b370578c",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'is_terminal' is defined but never referenced anywhere in the scanned set"
+  },
+  {
+    "category": "dead_code",
+    "confidence": null,
+    "detail": "No ast.Name, ast.Attribute, or string-subscript-key node anywhere in the scanned files resolves to this identifier. Scope limit: getattr-by-string and decorator-based registration are still not traced, so this can false-positive on names only reached that way -- confirm before deleting.",
+    "detector": "dead_code",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/ivr_tree-8fdaa84c270b798e.md",
+      "line_end": null,
+      "line_start": null,
+      "related_files": [],
+      "snippet": null
+    },
+    "first_seen": "2026-09-03T03:41:20.372244+00:00",
+    "id": "ghost-ebe4f6e289a2",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'menu_nodes' is defined but never referenced anywhere in the scanned set"
+  },
+  {
+    "category": "dead_code",
+    "confidence": null,
+    "detail": "No ast.Name, ast.Attribute, or string-subscript-key node anywhere in the scanned files resolves to this identifier. Scope limit: getattr-by-string and decorator-based registration are still not traced, so this can false-positive on names only reached that way -- confirm before deleting.",
+    "detector": "dead_code",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/job_queue-cd7df2cf57c613cc.md",
+      "line_end": null,
+      "line_start": null,
+      "related_files": [],
+      "snippet": null
+    },
+    "first_seen": "2026-09-03T03:41:20.372250+00:00",
+    "id": "ghost-cc35849d11a9",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'get_provisional' is defined but never referenced anywhere in the scanned set"
+  },
+  {
+    "category": "dead_code",
+    "confidence": null,
+    "detail": "No ast.Name, ast.Attribute, or string-subscript-key node anywhere in the scanned files resolves to this identifier. Scope limit: getattr-by-string and decorator-based registration are still not traced, so this can false-positive on names only reached that way -- confirm before deleting.",
+    "detector": "dead_code",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/provisional_store-3a78a8a9ad1409d9.md",
+      "line_end": null,
+      "line_start": null,
+      "related_files": [],
+      "snippet": null
+    },
+    "first_seen": "2026-09-03T03:41:20.372256+00:00",
+    "id": "ghost-2605b0181514",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'get_provisional' is defined but never referenced anywhere in the scanned set"
+  },
+  {
+    "category": "dead_code",
+    "confidence": null,
+    "detail": "No ast.Name, ast.Attribute, or string-subscript-key node anywhere in the scanned files resolves to this identifier. Scope limit: getattr-by-string and decorator-based registration are still not traced, so this can false-positive on names only reached that way -- confirm before deleting.",
+    "detector": "dead_code",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/job_queue-cd7df2cf57c613cc.md",
+      "line_end": null,
+      "line_start": null,
+      "related_files": [],
+      "snippet": null
+    },
+    "first_seen": "2026-09-03T03:41:20.372261+00:00",
+    "id": "ghost-85f8efb91a9a",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'reconcile' is defined but never referenced anywhere in the scanned set"
+  },
+  {
+    "category": "dead_code",
+    "confidence": null,
+    "detail": "No ast.Name, ast.Attribute, or string-subscript-key node anywhere in the scanned files resolves to this identifier. Scope limit: getattr-by-string and decorator-based registration are still not traced, so this can false-positive on names only reached that way -- confirm before deleting.",
+    "detector": "dead_code",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/provisional_store-3a78a8a9ad1409d9.md",
+      "line_end": null,
+      "line_start": null,
+      "related_files": [],
+      "snippet": null
+    },
+    "first_seen": "2026-09-03T03:41:20.372265+00:00",
+    "id": "ghost-d29bc502c04e",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'reconcile' is defined but never referenced anywhere in the scanned set"
+  },
+  {
+    "category": "dead_code",
+    "confidence": null,
+    "detail": "No ast.Name, ast.Attribute, or string-subscript-key node anywhere in the scanned files resolves to this identifier. Scope limit: getattr-by-string and decorator-based registration are still not traced, so this can false-positive on names only reached that way -- confirm before deleting.",
+    "detector": "dead_code",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/job_queue-cd7df2cf57c613cc.md",
+      "line_end": null,
+      "line_start": null,
+      "related_files": [],
+      "snippet": null
+    },
+    "first_seen": "2026-09-03T03:41:20.372271+00:00",
+    "id": "ghost-7aae16711fe3",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'dequeue' is defined but never referenced anywhere in the scanned set"
+  },
+  {
+    "category": "dead_code",
+    "confidence": null,
+    "detail": "No ast.Name, ast.Attribute, or string-subscript-key node anywhere in the scanned files resolves to this identifier. Scope limit: getattr-by-string and decorator-based registration are still not traced, so this can false-positive on names only reached that way -- confirm before deleting.",
+    "detector": "dead_code",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/job_queue-cd7df2cf57c613cc.md",
+      "line_end": null,
+      "line_start": null,
+      "related_files": [],
+      "snippet": null
+    },
+    "first_seen": "2026-09-03T03:41:20.372276+00:00",
+    "id": "ghost-979da6a95ab1",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'dequeue_blocking' is defined but never referenced anywhere in the scanned set"
+  },
+  {
+    "category": "dead_code",
+    "confidence": null,
+    "detail": "No ast.Name, ast.Attribute, or string-subscript-key node anywhere in the scanned files resolves to this identifier. Scope limit: getattr-by-string and decorator-based registration are still not traced, so this can false-positive on names only reached that way -- confirm before deleting.",
+    "detector": "dead_code",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/job_queue-cd7df2cf57c613cc.md",
+      "line_end": null,
+      "line_start": null,
+      "related_files": [],
+      "snippet": null
+    },
+    "first_seen": "2026-09-03T03:41:20.372281+00:00",
+    "id": "ghost-2650baccc205",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'mark_running' is defined but never referenced anywhere in the scanned set"
+  },
+  {
+    "category": "dead_code",
+    "confidence": null,
+    "detail": "No ast.Name, ast.Attribute, or string-subscript-key node anywhere in the scanned files resolves to this identifier. Scope limit: getattr-by-string and decorator-based registration are still not traced, so this can false-positive on names only reached that way -- confirm before deleting.",
+    "detector": "dead_code",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/job_queue-cd7df2cf57c613cc.md",
+      "line_end": null,
+      "line_start": null,
+      "related_files": [],
+      "snippet": null
+    },
+    "first_seen": "2026-09-03T03:41:20.372288+00:00",
+    "id": "ghost-f75be48a0cb2",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'mark_completed' is defined but never referenced anywhere in the scanned set"
+  },
+  {
+    "category": "dead_code",
+    "confidence": null,
+    "detail": "No ast.Name, ast.Attribute, or string-subscript-key node anywhere in the scanned files resolves to this identifier. Scope limit: getattr-by-string and decorator-based registration are still not traced, so this can false-positive on names only reached that way -- confirm before deleting.",
+    "detector": "dead_code",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/job_queue-cd7df2cf57c613cc.md",
+      "line_end": null,
+      "line_start": null,
+      "related_files": [],
+      "snippet": null
+    },
+    "first_seen": "2026-09-03T03:41:20.372295+00:00",
+    "id": "ghost-dbfe77145adf",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'mark_failed' is defined but never referenced anywhere in the scanned set"
+  },
+  {
+    "category": "dead_code",
+    "confidence": null,
+    "detail": "No ast.Name, ast.Attribute, or string-subscript-key node anywhere in the scanned files resolves to this identifier. Scope limit: getattr-by-string and decorator-based registration are still not traced, so this can false-positive on names only reached that way -- confirm before deleting.",
+    "detector": "dead_code",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/job_queue-cd7df2cf57c613cc.md",
+      "line_end": null,
+      "line_start": null,
+      "related_files": [],
+      "snippet": null
+    },
+    "first_seen": "2026-09-03T03:41:20.372300+00:00",
+    "id": "ghost-5a5a199e9f83",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'queue_size' is defined but never referenced anywhere in the scanned set"
+  },
+  {
+    "category": "dead_code",
+    "confidence": null,
+    "detail": "No ast.Name, ast.Attribute, or string-subscript-key node anywhere in the scanned files resolves to this identifier. Scope limit: getattr-by-string and decorator-based registration are still not traced, so this can false-positive on names only reached that way -- confirm before deleting.",
+    "detector": "dead_code",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/micropatch_adapter-cd7df2cf57c613cc.md",
+      "line_end": null,
+      "line_start": null,
+      "related_files": [],
+      "snippet": null
+    },
+    "first_seen": "2026-09-03T03:41:20.372306+00:00",
+    "id": "ghost-a03f917fd077",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'micropatch_adapter' is defined but never referenced anywhere in the scanned set"
+  },
+  {
+    "category": "dead_code",
+    "confidence": null,
+    "detail": "No ast.Name, ast.Attribute, or string-subscript-key node anywhere in the scanned files resolves to this identifier. Scope limit: getattr-by-string and decorator-based registration are still not traced, so this can false-positive on names only reached that way -- confirm before deleting.",
+    "detector": "dead_code",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/module_registry-4cc9ba8f4347b805.md",
+      "line_end": null,
+      "line_start": null,
+      "related_files": [],
+      "snippet": null
+    },
+    "first_seen": "2026-09-03T03:41:20.372311+00:00",
+    "id": "ghost-b60a9fae6f0c",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'ModuleRegistry' is defined but never referenced anywhere in the scanned set"
+  },
+  {
+    "category": "dead_code",
+    "confidence": null,
+    "detail": "No ast.Name, ast.Attribute, or string-subscript-key node anywhere in the scanned files resolves to this identifier. Scope limit: getattr-by-string and decorator-based registration are still not traced, so this can false-positive on names only reached that way -- confirm before deleting.",
+    "detector": "dead_code",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/provisional_store-3a78a8a9ad1409d9.md",
+      "line_end": null,
+      "line_start": null,
+      "related_files": [],
+      "snippet": null
+    },
+    "first_seen": "2026-09-03T03:41:20.372316+00:00",
+    "id": "ghost-8c55a13dc50e",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'clear_patient' is defined but never referenced anywhere in the scanned set"
+  },
+  {
+    "category": "dead_code",
+    "confidence": null,
+    "detail": "No ast.Name, ast.Attribute, or string-subscript-key node anywhere in the scanned files resolves to this identifier. Scope limit: getattr-by-string and decorator-based registration are still not traced, so this can false-positive on names only reached that way -- confirm before deleting.",
+    "detector": "dead_code",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/rl_marl-3d0a8f55946ea046.md",
+      "line_end": null,
+      "line_start": null,
+      "related_files": [],
+      "snippet": null
+    },
+    "first_seen": "2026-09-03T03:41:20.372322+00:00",
+    "id": "ghost-dc4ee834d86e",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'MARLEngine' is defined but never referenced anywhere in the scanned set"
+  },
+  {
+    "category": "dead_code",
+    "confidence": null,
+    "detail": "No ast.Name, ast.Attribute, or string-subscript-key node anywhere in the scanned files resolves to this identifier. Scope limit: getattr-by-string and decorator-based registration are still not traced, so this can false-positive on names only reached that way -- confirm before deleting.",
+    "detector": "dead_code",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/server-3d0a8f55946ea046.md",
+      "line_end": null,
+      "line_start": null,
+      "related_files": [],
+      "snippet": null
+    },
+    "first_seen": "2026-09-03T03:41:20.372327+00:00",
+    "id": "ghost-560b12aa1a93",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'get_status' is defined but never referenced anywhere in the scanned set"
+  },
+  {
+    "category": "dead_code",
+    "confidence": null,
+    "detail": "No ast.Name, ast.Attribute, or string-subscript-key node anywhere in the scanned files resolves to this identifier. Scope limit: getattr-by-string and decorator-based registration are still not traced, so this can false-positive on names only reached that way -- confirm before deleting.",
+    "detector": "dead_code",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/tests/rag/test_rag.py",
+      "line_end": null,
+      "line_start": null,
+      "related_files": [],
+      "snippet": null
+    },
+    "first_seen": "2026-09-03T03:41:20.372336+00:00",
+    "id": "ghost-acd36cb34c20",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'stub_ollama' is defined but never referenced anywhere in the scanned set"
+  },
+  {
+    "category": "complexity",
+    "confidence": null,
+    "detail": "Line-count proxy for the 'Long Method' smell, not true cyclomatic complexity -- a long function that's mostly a flat sequence of simple statements is a weaker signal than a short function with deep branching. Treat as a prompt to look, not a verdict.",
+    "detector": "long_function",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/IngestAdapter-1-767c7acf8c309878.md",
+      "line_end": 227,
+      "line_start": 145,
+      "related_files": [],
+      "snippet": null
+    },
+    "first_seen": "2026-09-03T03:41:20.384912+00:00",
+    "id": "ghost-780ca3c4b53e",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'derive_stimuli' spans 82 lines (threshold 80)"
+  },
+  {
+    "category": "complexity",
+    "confidence": null,
+    "detail": "Line-count proxy for the 'Long Method' smell, not true cyclomatic complexity -- a long function that's mostly a flat sequence of simple statements is a weaker signal than a short function with deep branching. Treat as a prompt to look, not a verdict.",
+    "detector": "long_function",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/adversarial_adapter-da9e06b7ed4bcb6a.md",
+      "line_end": 132,
+      "line_start": 14,
+      "related_files": [],
+      "snippet": null
+    },
+    "first_seen": "2026-09-03T03:41:20.390436+00:00",
+    "id": "ghost-1f9f24d0c4da",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'adversarial_adapter' spans 118 lines (threshold 80)"
+  },
+  {
+    "category": "duplication",
+    "confidence": null,
+    "detail": "Structural fingerprint match, not textual diff -- this is the 'copy-pasted then renamed' shape specifically. Confirm these are actually solving the same problem before merging; some structural matches are coincidental (e.g. two unrelated simple validators).",
+    "detector": "near_duplicate_function",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/clinical_policy-01aae117854bcb6a.md",
+      "line_end": 111,
+      "line_start": 102,
+      "related_files": [
+        "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/clinical_policy-01aae117854bcb6a.md"
+      ],
+      "snippet": null
+    },
+    "first_seen": "2026-09-03T03:41:20.606338+00:00",
+    "id": "ghost-759f7445138b",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "2 functions share identical AST structure (names/literals differ, control flow and shape don't): clinical_policy-01aae117854bcb6a.md:102:severe_tachycardia, clinical_policy-01aae117854bcb6a.md:128:severe_tachypnea"
+  },
+  {
+    "category": "duplication",
+    "confidence": null,
+    "detail": "Structural fingerprint match, not textual diff -- this is the 'copy-pasted then renamed' shape specifically. Confirm these are actually solving the same problem before merging; some structural matches are coincidental (e.g. two unrelated simple validators).",
+    "detector": "near_duplicate_function",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/gallm_reference_impl-4e7e5e982a3d90f6.md",
+      "line_end": 347,
+      "line_start": 341,
+      "related_files": [
+        "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/gallm_reference_impl-4e7e5e982a3d90f6.md",
+        "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/gallm_reference_impl-4e7e5e982a3d90f6.md"
+      ],
+      "snippet": null
+    },
+    "first_seen": "2026-09-03T03:41:20.606376+00:00",
+    "id": "ghost-0846e7a38570",
+    "layer": "mechanical",
+    "severity": "major",
+    "status": "suppressed",
+    "summary": "3 functions share identical AST structure (names/literals differ, control flow and shape don't): gallm_reference_impl-4e7e5e982a3d90f6.md:341:_normal_vitals, gallm_reference_impl-4e7e5e982a3d90f6.md:357:_deterioration_vitals, gallm_reference_impl-4e7e5e982a3d90f6.md:365:_critical_vitals"
+  },
+  {
+    "category": "duplication",
+    "confidence": null,
+    "detail": "Structural fingerprint match, not textual diff -- this is the 'copy-pasted then renamed' shape specifically. Confirm these are actually solving the same problem before merging; some structural matches are coincidental (e.g. two unrelated simple validators).",
+    "detector": "near_duplicate_function",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/tests/ecology/test_ecology.py",
+      "line_end": 100,
+      "line_start": 87,
+      "related_files": [
+        "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/tests/ecology/test_ecology.py"
+      ],
+      "snippet": null
+    },
+    "first_seen": "2026-09-03T03:41:20.606400+00:00",
+    "id": "ghost-960ca42ca3bf",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "2 functions share identical AST structure (names/literals differ, control flow and shape don't): test_ecology.py:87:test_receive_message_rejects_extraction_not_present_in_content, test_ecology.py:103:test_receive_message_rejects_unknown_extraction"
+  },
+  {
+    "category": "duplication",
+    "confidence": null,
+    "detail": "Structural fingerprint match within one function, not a whole-function match (near_duplicate_function's detection is blind to this shape). Typical real cause: several branches each hand-build the same kind of object or perform the same sequence of calls -- worth a single shared helper if the branches really are doing the same thing, not just a coincidental resemblance.",
+    "detector": "intra_function_duplicate_block",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/IngestAdapter-1-767c7acf8c309878.md",
+      "line_end": 103,
+      "line_start": 103,
+      "related_files": [
+        "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/IngestAdapter-1-767c7acf8c309878.md:81-81",
+        "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/IngestAdapter-1-767c7acf8c309878.md:89-89",
+        "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/IngestAdapter-1-767c7acf8c309878.md:92-92"
+      ],
+      "snippet": null
+    },
+    "first_seen": "2026-09-03T03:41:20.620633+00:00",
+    "id": "ghost-8b366c760219",
+    "layer": "mechanical",
+    "severity": "major",
+    "status": "suppressed",
+    "summary": "'generate_synthetic_call' repeats the same single statement 4 times (lines 103-103, 81-81, 89-89, 92-92): same shape, names/literals differ"
+  },
+  {
+    "category": "duplication",
+    "confidence": null,
+    "detail": "Structural fingerprint match within one function, not a whole-function match (near_duplicate_function's detection is blind to this shape). Typical real cause: several branches each hand-build the same kind of object or perform the same sequence of calls -- worth a single shared helper if the branches really are doing the same thing, not just a coincidental resemblance.",
+    "detector": "intra_function_duplicate_block",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/IngestAdapter-1-767c7acf8c309878.md",
+      "line_end": 98,
+      "line_start": 98,
+      "related_files": [
+        "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/IngestAdapter-1-767c7acf8c309878.md:100-100"
+      ],
+      "snippet": null
+    },
+    "first_seen": "2026-09-03T03:41:20.620662+00:00",
+    "id": "ghost-5b6b99695c31",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'generate_synthetic_call' repeats the same single statement 2 times (lines 98-98, 100-100): same shape, names/literals differ"
+  },
+  {
+    "category": "duplication",
+    "confidence": null,
+    "detail": "Structural fingerprint match within one function, not a whole-function match (near_duplicate_function's detection is blind to this shape). Typical real cause: several branches each hand-build the same kind of object or perform the same sequence of calls -- worth a single shared helper if the branches really are doing the same thing, not just a coincidental resemblance.",
+    "detector": "intra_function_duplicate_block",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/IngestAdapter-1-767c7acf8c309878.md",
+      "line_end": 120,
+      "line_start": 120,
+      "related_files": [
+        "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/IngestAdapter-1-767c7acf8c309878.md:121-121"
+      ],
+      "snippet": null
+    },
+    "first_seen": "2026-09-03T03:41:20.621012+00:00",
+    "id": "ghost-631ae2abaf90",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'generate_population' repeats the same single statement 2 times (lines 120-120, 121-121): same shape, names/literals differ"
+  },
+  {
+    "category": "duplication",
+    "confidence": null,
+    "detail": "Structural fingerprint match within one function, not a whole-function match (near_duplicate_function's detection is blind to this shape). Typical real cause: several branches each hand-build the same kind of object or perform the same sequence of calls -- worth a single shared helper if the branches really are doing the same thing, not just a coincidental resemblance.",
+    "detector": "intra_function_duplicate_block",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/IngestAdapter-1-767c7acf8c309878.md",
+      "line_end": 161,
+      "line_start": 161,
+      "related_files": [
+        "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/IngestAdapter-1-767c7acf8c309878.md:173-173"
+      ],
+      "snippet": null
+    },
+    "first_seen": "2026-09-03T03:41:20.622602+00:00",
+    "id": "ghost-7d550d3d53d8",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'derive_stimuli' repeats the same single statement 2 times (lines 161-161, 173-173): same shape, names/literals differ"
+  },
+  {
+    "category": "duplication",
+    "confidence": null,
+    "detail": "Structural fingerprint match within one function, not a whole-function match (near_duplicate_function's detection is blind to this shape). Typical real cause: several branches each hand-build the same kind of object or perform the same sequence of calls -- worth a single shared helper if the branches really are doing the same thing, not just a coincidental resemblance.",
+    "detector": "intra_function_duplicate_block",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/Replay-0377e2794e0f8338.md",
+      "line_end": 69,
+      "line_start": 69,
+      "related_files": [
+        "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/Replay-0377e2794e0f8338.md:71-71"
+      ],
+      "snippet": null
+    },
+    "first_seen": "2026-09-03T03:41:20.626894+00:00",
+    "id": "ghost-77ea0f13ba89",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'replay_from_events' repeats the same single statement 2 times (lines 69-69, 71-71): same shape, names/literals differ"
+  },
+  {
+    "category": "duplication",
+    "confidence": null,
+    "detail": "Structural fingerprint match within one function, not a whole-function match (near_duplicate_function's detection is blind to this shape). Typical real cause: several branches each hand-build the same kind of object or perform the same sequence of calls -- worth a single shared helper if the branches really are doing the same thing, not just a coincidental resemblance.",
+    "detector": "intra_function_duplicate_block",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/adversarial_adapter-da9e06b7ed4bcb6a.md",
+      "line_end": 35,
+      "line_start": 35,
+      "related_files": [
+        "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/adversarial_adapter-da9e06b7ed4bcb6a.md:39-39",
+        "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/adversarial_adapter-da9e06b7ed4bcb6a.md:43-43",
+        "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/adversarial_adapter-da9e06b7ed4bcb6a.md:47-47"
+      ],
+      "snippet": null
+    },
+    "first_seen": "2026-09-03T03:41:20.631591+00:00",
+    "id": "ghost-505fd018a699",
+    "layer": "mechanical",
+    "severity": "major",
+    "status": "suppressed",
+    "summary": "'adversarial_adapter' repeats the same single statement 4 times (lines 35-35, 39-39, 43-43, 47-47): same shape, names/literals differ"
+  },
+  {
+    "category": "duplication",
+    "confidence": null,
+    "detail": "Structural fingerprint match within one function, not a whole-function match (near_duplicate_function's detection is blind to this shape). Typical real cause: several branches each hand-build the same kind of object or perform the same sequence of calls -- worth a single shared helper if the branches really are doing the same thing, not just a coincidental resemblance.",
+    "detector": "intra_function_duplicate_block",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/adversarial_adapter-da9e06b7ed4bcb6a.md",
+      "line_end": 56,
+      "line_start": 56,
+      "related_files": [
+        "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/adversarial_adapter-da9e06b7ed4bcb6a.md:60-60"
+      ],
+      "snippet": null
+    },
+    "first_seen": "2026-09-03T03:41:20.631616+00:00",
+    "id": "ghost-6d46c19ea10f",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'adversarial_adapter' repeats the same single statement 2 times (lines 56-56, 60-60): same shape, names/literals differ"
+  },
+  {
+    "category": "duplication",
+    "confidence": null,
+    "detail": "Structural fingerprint match within one function, not a whole-function match (near_duplicate_function's detection is blind to this shape). Typical real cause: several branches each hand-build the same kind of object or perform the same sequence of calls -- worth a single shared helper if the branches really are doing the same thing, not just a coincidental resemblance.",
+    "detector": "intra_function_duplicate_block",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/bayes_gpu-4cc9ba8f4347b805.md",
+      "line_end": 36,
+      "line_start": 36,
+      "related_files": [
+        "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/bayes_gpu-4cc9ba8f4347b805.md:37-37"
+      ],
+      "snippet": null
+    },
+    "first_seen": "2026-09-03T03:41:20.642694+00:00",
+    "id": "ghost-b2c97b1e4f28",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'observe_single' repeats the same single statement 2 times (lines 36-36, 37-37): same shape, names/literals differ"
+  },
+  {
+    "category": "duplication",
+    "confidence": null,
+    "detail": "Structural fingerprint match within one function, not a whole-function match (near_duplicate_function's detection is blind to this shape). Typical real cause: several branches each hand-build the same kind of object or perform the same sequence of calls -- worth a single shared helper if the branches really are doing the same thing, not just a coincidental resemblance.",
+    "detector": "intra_function_duplicate_block",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/bayes_gpu-4cc9ba8f4347b805.md",
+      "line_end": 44,
+      "line_start": 44,
+      "related_files": [
+        "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/bayes_gpu-4cc9ba8f4347b805.md:47-47"
+      ],
+      "snippet": null
+    },
+    "first_seen": "2026-09-03T03:41:20.642923+00:00",
+    "id": "ghost-01a6f1587420",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'observe_sequence' repeats the same single statement 2 times (lines 44-44, 47-47): same shape, names/literals differ"
+  },
+  {
+    "category": "duplication",
+    "confidence": null,
+    "detail": "Structural fingerprint match within one function, not a whole-function match (near_duplicate_function's detection is blind to this shape). Typical real cause: several branches each hand-build the same kind of object or perform the same sequence of calls -- worth a single shared helper if the branches really are doing the same thing, not just a coincidental resemblance.",
+    "detector": "intra_function_duplicate_block",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/bayes_gpu-f7a434deb10580ed.md",
+      "line_end": 22,
+      "line_start": 22,
+      "related_files": [
+        "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/bayes_gpu-f7a434deb10580ed.md:23-23"
+      ],
+      "snippet": null
+    },
+    "first_seen": "2026-09-03T03:41:20.643797+00:00",
+    "id": "ghost-8e9bcb89a873",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'observe_single' repeats the same single statement 2 times (lines 22-22, 23-23): same shape, names/literals differ"
+  },
+  {
+    "category": "duplication",
+    "confidence": null,
+    "detail": "Structural fingerprint match within one function, not a whole-function match (near_duplicate_function's detection is blind to this shape). Typical real cause: several branches each hand-build the same kind of object or perform the same sequence of calls -- worth a single shared helper if the branches really are doing the same thing, not just a coincidental resemblance.",
+    "detector": "intra_function_duplicate_block",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/bayes_gpu-f7a434deb10580ed.md",
+      "line_end": 30,
+      "line_start": 30,
+      "related_files": [
+        "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/bayes_gpu-f7a434deb10580ed.md:33-33"
+      ],
+      "snippet": null
+    },
+    "first_seen": "2026-09-03T03:41:20.644075+00:00",
+    "id": "ghost-72512488b6e5",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'observe_sequence' repeats the same single statement 2 times (lines 30-30, 33-33): same shape, names/literals differ"
+  },
+  {
+    "category": "duplication",
+    "confidence": null,
+    "detail": "Structural fingerprint match within one function, not a whole-function match (near_duplicate_function's detection is blind to this shape). Typical real cause: several branches each hand-build the same kind of object or perform the same sequence of calls -- worth a single shared helper if the branches really are doing the same thing, not just a coincidental resemblance.",
+    "detector": "intra_function_duplicate_block",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/calibrate_expected_wait-1-767c7acf8c309878.md",
+      "line_end": 67,
+      "line_start": 67,
+      "related_files": [
+        "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/calibrate_expected_wait-1-767c7acf8c309878.md:68-68"
+      ],
+      "snippet": null
+    },
+    "first_seen": "2026-09-03T03:41:20.647883+00:00",
+    "id": "ghost-340a11a500ef",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'draw_tolerance' repeats the same single statement 2 times (lines 67-67, 68-68): same shape, names/literals differ"
+  },
+  {
+    "category": "duplication",
+    "confidence": null,
+    "detail": "Structural fingerprint match within one function, not a whole-function match (near_duplicate_function's detection is blind to this shape). Typical real cause: several branches each hand-build the same kind of object or perform the same sequence of calls -- worth a single shared helper if the branches really are doing the same thing, not just a coincidental resemblance.",
+    "detector": "intra_function_duplicate_block",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/calibrate_expected_wait-1-767c7acf8c309878.md",
+      "line_end": 69,
+      "line_start": 69,
+      "related_files": [
+        "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/calibrate_expected_wait-1-767c7acf8c309878.md:67-67",
+        "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/calibrate_expected_wait-1-767c7acf8c309878.md:68-68"
+      ],
+      "snippet": null
+    },
+    "first_seen": "2026-09-03T03:41:20.647908+00:00",
+    "id": "ghost-47cd58e8e0b6",
+    "layer": "mechanical",
+    "severity": "major",
+    "status": "suppressed",
+    "summary": "'draw_tolerance' repeats the same single statement 3 times (lines 69-69, 67-67, 68-68): same shape, names/literals differ"
+  },
+  {
+    "category": "duplication",
+    "confidence": null,
+    "detail": "Structural fingerprint match within one function, not a whole-function match (near_duplicate_function's detection is blind to this shape). Typical real cause: several branches each hand-build the same kind of object or perform the same sequence of calls -- worth a single shared helper if the branches really are doing the same thing, not just a coincidental resemblance.",
+    "detector": "intra_function_duplicate_block",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/calibrate_expected_wait-1-767c7acf8c309878.md",
+      "line_end": 94,
+      "line_start": 94,
+      "related_files": [
+        "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/calibrate_expected_wait-1-767c7acf8c309878.md:96-96"
+      ],
+      "snippet": null
+    },
+    "first_seen": "2026-09-03T03:41:20.649554+00:00",
+    "id": "ghost-e1aec0667879",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'generate_behavioral_call' repeats the same single statement 2 times (lines 94-94, 96-96): same shape, names/literals differ"
+  },
+  {
+    "category": "duplication",
+    "confidence": null,
+    "detail": "Structural fingerprint match within one function, not a whole-function match (near_duplicate_function's detection is blind to this shape). Typical real cause: several branches each hand-build the same kind of object or perform the same sequence of calls -- worth a single shared helper if the branches really are doing the same thing, not just a coincidental resemblance.",
+    "detector": "intra_function_duplicate_block",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/calibrate_expected_wait-1-767c7acf8c309878.md",
+      "line_end": 101,
+      "line_start": 101,
+      "related_files": [
+        "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/calibrate_expected_wait-1-767c7acf8c309878.md:104-104"
+      ],
+      "snippet": null
+    },
+    "first_seen": "2026-09-03T03:41:20.649575+00:00",
+    "id": "ghost-dc54d3e893cf",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'generate_behavioral_call' repeats the same single statement 2 times (lines 101-101, 104-104): same shape, names/literals differ"
+  },
+  {
+    "category": "duplication",
+    "confidence": null,
+    "detail": "Structural fingerprint match within one function, not a whole-function match (near_duplicate_function's detection is blind to this shape). Typical real cause: several branches each hand-build the same kind of object or perform the same sequence of calls -- worth a single shared helper if the branches really are doing the same thing, not just a coincidental resemblance.",
+    "detector": "intra_function_duplicate_block",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/calibrate_expected_wait-1-767c7acf8c309878.md",
+      "line_end": 222,
+      "line_start": 222,
+      "related_files": [
+        "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/calibrate_expected_wait-1-767c7acf8c309878.md:224-224"
+      ],
+      "snippet": null
+    },
+    "first_seen": "2026-09-03T03:41:20.652685+00:00",
+    "id": "ghost-3a4b5fbc274e",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'run_policy' repeats the same 3-statement block 2 times (lines 222-222, 224-224): same shape, names/literals differ"
+  },
+  {
+    "category": "duplication",
+    "confidence": null,
+    "detail": "Structural fingerprint match within one function, not a whole-function match (near_duplicate_function's detection is blind to this shape). Typical real cause: several branches each hand-build the same kind of object or perform the same sequence of calls -- worth a single shared helper if the branches really are doing the same thing, not just a coincidental resemblance.",
+    "detector": "intra_function_duplicate_block",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/clinical_vitals_adapter-16ef5c9ebbb5a9a7.md",
+      "line_end": 270,
+      "line_start": 270,
+      "related_files": [
+        "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/clinical_vitals_adapter-16ef5c9ebbb5a9a7.md:271-271"
+      ],
+      "snippet": null
+    },
+    "first_seen": "2026-09-03T03:41:20.667767+00:00",
+    "id": "ghost-cdf0540b7986",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'physiologic_complexity_adapter' repeats the same single statement 2 times (lines 270-270, 271-271): same shape, names/literals differ"
+  },
+  {
+    "category": "duplication",
+    "confidence": null,
+    "detail": "Structural fingerprint match within one function, not a whole-function match (near_duplicate_function's detection is blind to this shape). Typical real cause: several branches each hand-build the same kind of object or perform the same sequence of calls -- worth a single shared helper if the branches really are doing the same thing, not just a coincidental resemblance.",
+    "detector": "intra_function_duplicate_block",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/clinical_vitals_adapter-16ef5c9ebbb5a9a7.md",
+      "line_end": 525,
+      "line_start": 525,
+      "related_files": [
+        "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/clinical_vitals_adapter-16ef5c9ebbb5a9a7.md:527-527"
+      ],
+      "snippet": null
+    },
+    "first_seen": "2026-09-03T03:41:20.671703+00:00",
+    "id": "ghost-a221e6bc468c",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'fuse_clinical_risk' repeats the same single statement 2 times (lines 525-525, 527-527): same shape, names/literals differ"
+  },
+  {
+    "category": "duplication",
+    "confidence": null,
+    "detail": "Structural fingerprint match within one function, not a whole-function match (near_duplicate_function's detection is blind to this shape). Typical real cause: several branches each hand-build the same kind of object or perform the same sequence of calls -- worth a single shared helper if the branches really are doing the same thing, not just a coincidental resemblance.",
+    "detector": "intra_function_duplicate_block",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/create_labels-01aae117854bcb6a.md",
+      "line_end": 43,
+      "line_start": 43,
+      "related_files": [
+        "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/create_labels-01aae117854bcb6a.md:53-53"
+      ],
+      "snippet": null
+    },
+    "first_seen": "2026-09-03T03:41:20.676786+00:00",
+    "id": "ghost-28dbf10c554c",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'create_labels' repeats the same single statement 2 times (lines 43-43, 53-53): same shape, names/literals differ"
+  },
+  {
+    "category": "duplication",
+    "confidence": null,
+    "detail": "Structural fingerprint match within one function, not a whole-function match (near_duplicate_function's detection is blind to this shape). Typical real cause: several branches each hand-build the same kind of object or perform the same sequence of calls -- worth a single shared helper if the branches really are doing the same thing, not just a coincidental resemblance.",
+    "detector": "intra_function_duplicate_block",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/create_labels-01aae117854bcb6a.md",
+      "line_end": 49,
+      "line_start": 49,
+      "related_files": [
+        "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/create_labels-01aae117854bcb6a.md:50-50"
+      ],
+      "snippet": null
+    },
+    "first_seen": "2026-09-03T03:41:20.676806+00:00",
+    "id": "ghost-d589642ba0cf",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'create_labels' repeats the same single statement 2 times (lines 49-49, 50-50): same shape, names/literals differ"
+  },
+  {
+    "category": "duplication",
+    "confidence": null,
+    "detail": "Structural fingerprint match within one function, not a whole-function match (near_duplicate_function's detection is blind to this shape). Typical real cause: several branches each hand-build the same kind of object or perform the same sequence of calls -- worth a single shared helper if the branches really are doing the same thing, not just a coincidental resemblance.",
+    "detector": "intra_function_duplicate_block",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/create_labels-01aae117854bcb6a.md",
+      "line_end": 68,
+      "line_start": 68,
+      "related_files": [
+        "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/create_labels-01aae117854bcb6a.md:70-70"
+      ],
+      "snippet": null
+    },
+    "first_seen": "2026-09-03T03:41:20.676815+00:00",
+    "id": "ghost-7bca3024dc98",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'create_labels' repeats the same single statement 2 times (lines 68-68, 70-70): same shape, names/literals differ"
+  },
+  {
+    "category": "duplication",
+    "confidence": null,
+    "detail": "Structural fingerprint match within one function, not a whole-function match (near_duplicate_function's detection is blind to this shape). Typical real cause: several branches each hand-build the same kind of object or perform the same sequence of calls -- worth a single shared helper if the branches really are doing the same thing, not just a coincidental resemblance.",
+    "detector": "intra_function_duplicate_block",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/gallm_reference_impl-4e7e5e982a3d90f6.md",
+      "line_end": 381,
+      "line_start": 381,
+      "related_files": [
+        "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/gallm_reference_impl-4e7e5e982a3d90f6.md:388-388"
+      ],
+      "snippet": null
+    },
+    "first_seen": "2026-09-03T03:41:20.686316+00:00",
+    "id": "ghost-bd0008c8603f",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'create_v1_manifest' repeats the same single statement 2 times (lines 381-381, 388-388): same shape, names/literals differ"
+  },
+  {
+    "category": "duplication",
+    "confidence": null,
+    "detail": "Structural fingerprint match within one function, not a whole-function match (near_duplicate_function's detection is blind to this shape). Typical real cause: several branches each hand-build the same kind of object or perform the same sequence of calls -- worth a single shared helper if the branches really are doing the same thing, not just a coincidental resemblance.",
+    "detector": "intra_function_duplicate_block",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/gallm_reference_impl-4e7e5e982a3d90f6.md",
+      "line_end": 501,
+      "line_start": 501,
+      "related_files": [
+        "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/gallm_reference_impl-4e7e5e982a3d90f6.md:512-512"
+      ],
+      "snippet": null
+    },
+    "first_seen": "2026-09-03T03:41:20.687634+00:00",
+    "id": "ghost-e77aabce70bd",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'run_synthetic_dataset' repeats the same single statement 2 times (lines 501-501, 512-512): same shape, names/literals differ"
+  },
+  {
+    "category": "duplication",
+    "confidence": null,
+    "detail": "Structural fingerprint match within one function, not a whole-function match (near_duplicate_function's detection is blind to this shape). Typical real cause: several branches each hand-build the same kind of object or perform the same sequence of calls -- worth a single shared helper if the branches really are doing the same thing, not just a coincidental resemblance.",
+    "detector": "intra_function_duplicate_block",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/gallm_reference_impl-4e7e5e982a3d90f6.md",
+      "line_end": 529,
+      "line_start": 529,
+      "related_files": [
+        "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/gallm_reference_impl-4e7e5e982a3d90f6.md:539-539"
+      ],
+      "snippet": null
+    },
+    "first_seen": "2026-09-03T03:41:20.688982+00:00",
+    "id": "ghost-c1b81db7f994",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'generate_execution_report' repeats the same single statement 2 times (lines 529-529, 539-539): same shape, names/literals differ"
+  },
+  {
+    "category": "duplication",
+    "confidence": null,
+    "detail": "Structural fingerprint match within one function, not a whole-function match (near_duplicate_function's detection is blind to this shape). Typical real cause: several branches each hand-build the same kind of object or perform the same sequence of calls -- worth a single shared helper if the branches really are doing the same thing, not just a coincidental resemblance.",
+    "detector": "intra_function_duplicate_block",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/gallm_reference_impl-4e7e5e982a3d90f6.md",
+      "line_end": 530,
+      "line_start": 530,
+      "related_files": [
+        "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/gallm_reference_impl-4e7e5e982a3d90f6.md:540-540"
+      ],
+      "snippet": null
+    },
+    "first_seen": "2026-09-03T03:41:20.688998+00:00",
+    "id": "ghost-cae96574acfd",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'generate_execution_report' repeats the same single statement 2 times (lines 530-530, 540-540): same shape, names/literals differ"
+  },
+  {
+    "category": "duplication",
+    "confidence": null,
+    "detail": "Structural fingerprint match within one function, not a whole-function match (near_duplicate_function's detection is blind to this shape). Typical real cause: several branches each hand-build the same kind of object or perform the same sequence of calls -- worth a single shared helper if the branches really are doing the same thing, not just a coincidental resemblance.",
+    "detector": "intra_function_duplicate_block",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/gallm_reference_impl-4e7e5e982a3d90f6.md",
+      "line_end": 534,
+      "line_start": 531,
+      "related_files": [
+        "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/gallm_reference_impl-4e7e5e982a3d90f6.md:541-544"
+      ],
+      "snippet": null
+    },
+    "first_seen": "2026-09-03T03:41:20.689009+00:00",
+    "id": "ghost-400f153c5a61",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'generate_execution_report' repeats the same 3-statement block 2 times (lines 531-534, 541-544): same shape, names/literals differ"
+  },
+  {
+    "category": "duplication",
+    "confidence": null,
+    "detail": "Structural fingerprint match within one function, not a whole-function match (near_duplicate_function's detection is blind to this shape). Typical real cause: several branches each hand-build the same kind of object or perform the same sequence of calls -- worth a single shared helper if the branches really are doing the same thing, not just a coincidental resemblance.",
+    "detector": "intra_function_duplicate_block",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/gallm_reference_impl-4e7e5e982a3d90f6.md",
+      "line_end": 531,
+      "line_start": 531,
+      "related_files": [
+        "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/gallm_reference_impl-4e7e5e982a3d90f6.md:541-541"
+      ],
+      "snippet": null
+    },
+    "first_seen": "2026-09-03T03:41:20.689025+00:00",
+    "id": "ghost-f2d0201bfc69",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'generate_execution_report' repeats the same single statement 2 times (lines 531-531, 541-541): same shape, names/literals differ"
+  },
+  {
+    "category": "duplication",
+    "confidence": null,
+    "detail": "Structural fingerprint match within one function, not a whole-function match (near_duplicate_function's detection is blind to this shape). Typical real cause: several branches each hand-build the same kind of object or perform the same sequence of calls -- worth a single shared helper if the branches really are doing the same thing, not just a coincidental resemblance.",
+    "detector": "intra_function_duplicate_block",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/gallm_reference_impl-4e7e5e982a3d90f6.md",
+      "line_end": 534,
+      "line_start": 534,
+      "related_files": [
+        "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/gallm_reference_impl-4e7e5e982a3d90f6.md:544-544"
+      ],
+      "snippet": null
+    },
+    "first_seen": "2026-09-03T03:41:20.689052+00:00",
+    "id": "ghost-ebe9452fc0cf",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'generate_execution_report' repeats the same single statement 2 times (lines 534-534, 544-544): same shape, names/literals differ"
+  },
+  {
+    "category": "duplication",
+    "confidence": null,
+    "detail": "Structural fingerprint match within one function, not a whole-function match (near_duplicate_function's detection is blind to this shape). Typical real cause: several branches each hand-build the same kind of object or perform the same sequence of calls -- worth a single shared helper if the branches really are doing the same thing, not just a coincidental resemblance.",
+    "detector": "intra_function_duplicate_block",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/gallm_reference_impl-4e7e5e982a3d90f6.md",
+      "line_end": 201,
+      "line_start": 201,
+      "related_files": [
+        "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/gallm_reference_impl-4e7e5e982a3d90f6.md:212-212"
+      ],
+      "snippet": null
+    },
+    "first_seen": "2026-09-03T03:41:20.690801+00:00",
+    "id": "ghost-3b94bd9508d4",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'transition' repeats the same single statement 2 times (lines 201-201, 212-212): same shape, names/literals differ"
+  },
+  {
+    "category": "duplication",
+    "confidence": null,
+    "detail": "Structural fingerprint match within one function, not a whole-function match (near_duplicate_function's detection is blind to this shape). Typical real cause: several branches each hand-build the same kind of object or perform the same sequence of calls -- worth a single shared helper if the branches really are doing the same thing, not just a coincidental resemblance.",
+    "detector": "intra_function_duplicate_block",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/gallm_reference_impl-4e7e5e982a3d90f6.md",
+      "line_end": 318,
+      "line_start": 318,
+      "related_files": [
+        "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/gallm_reference_impl-4e7e5e982a3d90f6.md:320-320",
+        "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/gallm_reference_impl-4e7e5e982a3d90f6.md:322-322",
+        "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/gallm_reference_impl-4e7e5e982a3d90f6.md:324-324"
+      ],
+      "snippet": null
+    },
+    "first_seen": "2026-09-03T03:41:20.692950+00:00",
+    "id": "ghost-c75037ea56a6",
+    "layer": "mechanical",
+    "severity": "major",
+    "status": "suppressed",
+    "summary": "'_generate_patients' repeats the same single statement 4 times (lines 318-318, 320-320, 322-322, 324-324): same shape, names/literals differ"
+  },
+  {
+    "category": "duplication",
+    "confidence": null,
+    "detail": "Structural fingerprint match within one function, not a whole-function match (near_duplicate_function's detection is blind to this shape). Typical real cause: several branches each hand-build the same kind of object or perform the same sequence of calls -- worth a single shared helper if the branches really are doing the same thing, not just a coincidental resemblance.",
+    "detector": "intra_function_duplicate_block",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/ivr_tree-8fdaa84c270b798e.md",
+      "line_end": 186,
+      "line_start": 186,
+      "related_files": [
+        "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/ivr_tree-8fdaa84c270b798e.md:188-188",
+        "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/ivr_tree-8fdaa84c270b798e.md:190-190"
+      ],
+      "snippet": null
+    },
+    "first_seen": "2026-09-03T03:41:20.702873+00:00",
+    "id": "ghost-db81fe320f98",
+    "layer": "mechanical",
+    "severity": "major",
+    "status": "suppressed",
+    "summary": "'_validate' repeats the same single statement 3 times (lines 186-186, 188-188, 190-190): same shape, names/literals differ"
+  },
+  {
+    "category": "duplication",
+    "confidence": null,
+    "detail": "Structural fingerprint match within one function, not a whole-function match (near_duplicate_function's detection is blind to this shape). Typical real cause: several branches each hand-build the same kind of object or perform the same sequence of calls -- worth a single shared helper if the branches really are doing the same thing, not just a coincidental resemblance.",
+    "detector": "intra_function_duplicate_block",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/ivr_tree-8fdaa84c270b798e.md",
+      "line_end": 214,
+      "line_start": 214,
+      "related_files": [
+        "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/ivr_tree-8fdaa84c270b798e.md:216-216"
+      ],
+      "snippet": null
+    },
+    "first_seen": "2026-09-03T03:41:20.704222+00:00",
+    "id": "ghost-dc85fe584a41",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'describe' repeats the same single statement 2 times (lines 214-214, 216-216): same shape, names/literals differ"
+  },
+  {
+    "category": "duplication",
+    "confidence": null,
+    "detail": "Structural fingerprint match within one function, not a whole-function match (near_duplicate_function's detection is blind to this shape). Typical real cause: several branches each hand-build the same kind of object or perform the same sequence of calls -- worth a single shared helper if the branches really are doing the same thing, not just a coincidental resemblance.",
+    "detector": "intra_function_duplicate_block",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/test_diagnostic-2c17e2c4e49abe2a.md",
+      "line_end": 86,
+      "line_start": 86,
+      "related_files": [
+        "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/test_diagnostic-2c17e2c4e49abe2a.md:87-87"
+      ],
+      "snippet": null
+    },
+    "first_seen": "2026-09-03T03:41:20.726634+00:00",
+    "id": "ghost-9278f7b3a012",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'test_findings_and_candidates_are_distinct_types' repeats the same single statement 2 times (lines 86-86, 87-87): same shape, names/literals differ"
+  },
+  {
+    "category": "duplication",
+    "confidence": null,
+    "detail": "Structural fingerprint match within one function, not a whole-function match (near_duplicate_function's detection is blind to this shape). Typical real cause: several branches each hand-build the same kind of object or perform the same sequence of calls -- worth a single shared helper if the branches really are doing the same thing, not just a coincidental resemblance.",
+    "detector": "intra_function_duplicate_block",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/test_diagnostic-2c17e2c4e49abe2a.md",
+      "line_end": 142,
+      "line_start": 142,
+      "related_files": [
+        "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/test_diagnostic-2c17e2c4e49abe2a.md:146-146"
+      ],
+      "snippet": null
+    },
+    "first_seen": "2026-09-03T03:41:20.728697+00:00",
+    "id": "ghost-8c778dee7a96",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'test_protected_attributes_never_optimization_targets' repeats the same single statement 2 times (lines 142-142, 146-146): same shape, names/literals differ"
+  },
+  {
+    "category": "duplication",
+    "confidence": null,
+    "detail": "Structural fingerprint match within one function, not a whole-function match (near_duplicate_function's detection is blind to this shape). Typical real cause: several branches each hand-build the same kind of object or perform the same sequence of calls -- worth a single shared helper if the branches really are doing the same thing, not just a coincidental resemblance.",
+    "detector": "intra_function_duplicate_block",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/test_diagnostic-2c17e2c4e49abe2a.md",
+      "line_end": 143,
+      "line_start": 143,
+      "related_files": [
+        "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/test_diagnostic-2c17e2c4e49abe2a.md:147-147"
+      ],
+      "snippet": null
+    },
+    "first_seen": "2026-09-03T03:41:20.728729+00:00",
+    "id": "ghost-e3d5fed637cd",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'test_protected_attributes_never_optimization_targets' repeats the same single statement 2 times (lines 143-143, 147-147): same shape, names/literals differ"
+  },
+  {
+    "category": "duplication",
+    "confidence": null,
+    "detail": "Structural fingerprint match within one function, not a whole-function match (near_duplicate_function's detection is blind to this shape). Typical real cause: several branches each hand-build the same kind of object or perform the same sequence of calls -- worth a single shared helper if the branches really are doing the same thing, not just a coincidental resemblance.",
+    "detector": "intra_function_duplicate_block",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/test_harness-2c17e2c4e49abe2a.md",
+      "line_end": 68,
+      "line_start": 68,
+      "related_files": [
+        "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/test_harness-2c17e2c4e49abe2a.md:69-69"
+      ],
+      "snippet": null
+    },
+    "first_seen": "2026-09-03T03:41:20.734773+00:00",
+    "id": "ghost-8696ba769346",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'test_traversal_is_deterministic' repeats the same single statement 2 times (lines 68-68, 69-69): same shape, names/literals differ"
+  },
+  {
+    "category": "duplication",
+    "confidence": null,
+    "detail": "Structural fingerprint match within one function, not a whole-function match (near_duplicate_function's detection is blind to this shape). Typical real cause: several branches each hand-build the same kind of object or perform the same sequence of calls -- worth a single shared helper if the branches really are doing the same thing, not just a coincidental resemblance.",
+    "detector": "intra_function_duplicate_block",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/test_harness-2c17e2c4e49abe2a.md",
+      "line_end": 74,
+      "line_start": 74,
+      "related_files": [
+        "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/test_harness-2c17e2c4e49abe2a.md:75-75"
+      ],
+      "snippet": null
+    },
+    "first_seen": "2026-09-03T03:41:20.735037+00:00",
+    "id": "ghost-79ba18f774f4",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'test_population_is_reproducible' repeats the same single statement 2 times (lines 74-74, 75-75): same shape, names/literals differ"
+  },
+  {
+    "category": "duplication",
+    "confidence": null,
+    "detail": "Structural fingerprint match within one function, not a whole-function match (near_duplicate_function's detection is blind to this shape). Typical real cause: several branches each hand-build the same kind of object or perform the same sequence of calls -- worth a single shared helper if the branches really are doing the same thing, not just a coincidental resemblance.",
+    "detector": "intra_function_duplicate_block",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/test_harness-2c17e2c4e49abe2a.md",
+      "line_end": 120,
+      "line_start": 120,
+      "related_files": [
+        "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/test_harness-2c17e2c4e49abe2a.md:121-121"
+      ],
+      "snippet": null
+    },
+    "first_seen": "2026-09-03T03:41:20.736384+00:00",
+    "id": "ghost-34c58495a629",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'test_emotion_drives_outcome' repeats the same single statement 2 times (lines 120-120, 121-121): same shape, names/literals differ"
+  },
+  {
+    "category": "duplication",
+    "confidence": null,
+    "detail": "Structural fingerprint match within one function, not a whole-function match (near_duplicate_function's detection is blind to this shape). Typical real cause: several branches each hand-build the same kind of object or perform the same sequence of calls -- worth a single shared helper if the branches really are doing the same thing, not just a coincidental resemblance.",
+    "detector": "intra_function_duplicate_block",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/test_harness-2c17e2c4e49abe2a.md",
+      "line_end": 151,
+      "line_start": 151,
+      "related_files": [
+        "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/test_harness-2c17e2c4e49abe2a.md:152-152"
+      ],
+      "snippet": null
+    },
+    "first_seen": "2026-09-03T03:41:20.737207+00:00",
+    "id": "ghost-dd9030a7835c",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'test_planted_reason_effect_is_recoverable' repeats the same single statement 2 times (lines 151-151, 152-152): same shape, names/literals differ"
+  },
+  {
+    "category": "duplication",
+    "confidence": null,
+    "detail": "Structural fingerprint match within one function, not a whole-function match (near_duplicate_function's detection is blind to this shape). Typical real cause: several branches each hand-build the same kind of object or perform the same sequence of calls -- worth a single shared helper if the branches really are doing the same thing, not just a coincidental resemblance.",
+    "detector": "intra_function_duplicate_block",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/test_harness-2c17e2c4e49abe2a.md",
+      "line_end": 167,
+      "line_start": 167,
+      "related_files": [
+        "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/test_harness-2c17e2c4e49abe2a.md:168-168"
+      ],
+      "snippet": null
+    },
+    "first_seen": "2026-09-03T03:41:20.737666+00:00",
+    "id": "ghost-cde7d7d2494d",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'test_no_protected_effect_by_default' repeats the same single statement 2 times (lines 167-167, 168-168): same shape, names/literals differ"
+  },
+  {
+    "category": "duplication",
+    "confidence": null,
+    "detail": "Structural fingerprint match within one function, not a whole-function match (near_duplicate_function's detection is blind to this shape). Typical real cause: several branches each hand-build the same kind of object or perform the same sequence of calls -- worth a single shared helper if the branches really are doing the same thing, not just a coincidental resemblance.",
+    "detector": "intra_function_duplicate_block",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/test_harness-2c17e2c4e49abe2a.md",
+      "line_end": 182,
+      "line_start": 182,
+      "related_files": [
+        "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/test_harness-2c17e2c4e49abe2a.md:183-183"
+      ],
+      "snippet": null
+    },
+    "first_seen": "2026-09-03T03:41:20.738131+00:00",
+    "id": "ghost-0165a2bc60c0",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'test_planted_protected_bias_is_detectable_when_enabled' repeats the same single statement 2 times (lines 182-182, 183-183): same shape, names/literals differ"
+  },
+  {
+    "category": "duplication",
+    "confidence": null,
+    "detail": "Structural fingerprint match within one function, not a whole-function match (near_duplicate_function's detection is blind to this shape). Typical real cause: several branches each hand-build the same kind of object or perform the same sequence of calls -- worth a single shared helper if the branches really are doing the same thing, not just a coincidental resemblance.",
+    "detector": "intra_function_duplicate_block",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/test_latent_fuzz-d5d5c90a236daa83.md",
+      "line_end": 69,
+      "line_start": 69,
+      "related_files": [
+        "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/test_latent_fuzz-d5d5c90a236daa83.md:70-70"
+      ],
+      "snippet": null
+    },
+    "first_seen": "2026-09-03T03:41:20.742800+00:00",
+    "id": "ghost-258208b32105",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'test_hard_constraints_hold_on_every_step' repeats the same single statement 2 times (lines 69-69, 70-70): same shape, names/literals differ"
+  },
+  {
+    "category": "duplication",
+    "confidence": null,
+    "detail": "Structural fingerprint match within one function, not a whole-function match (near_duplicate_function's detection is blind to this shape). Typical real cause: several branches each hand-build the same kind of object or perform the same sequence of calls -- worth a single shared helper if the branches really are doing the same thing, not just a coincidental resemblance.",
+    "detector": "intra_function_duplicate_block",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/test_latent_fuzz-d5d5c90a236daa83.md",
+      "line_end": 119,
+      "line_start": 119,
+      "related_files": [
+        "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/test_latent_fuzz-d5d5c90a236daa83.md:120-120"
+      ],
+      "snippet": null
+    },
+    "first_seen": "2026-09-03T03:41:20.743642+00:00",
+    "id": "ghost-741072564f4e",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'test_hash_tracks_meaningful_change' repeats the same single statement 2 times (lines 119-119, 120-120): same shape, names/literals differ"
+  },
+  {
+    "category": "duplication",
+    "confidence": null,
+    "detail": "Structural fingerprint match within one function, not a whole-function match (near_duplicate_function's detection is blind to this shape). Typical real cause: several branches each hand-build the same kind of object or perform the same sequence of calls -- worth a single shared helper if the branches really are doing the same thing, not just a coincidental resemblance.",
+    "detector": "intra_function_duplicate_block",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/test_prescription-2c17e2c4e49abe2a.md",
+      "line_end": 100,
+      "line_start": 100,
+      "related_files": [
+        "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/test_prescription-2c17e2c4e49abe2a.md:101-101"
+      ],
+      "snippet": null
+    },
+    "first_seen": "2026-09-03T03:41:20.749011+00:00",
+    "id": "ghost-d3f2890ffb9c",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'test_classifier_always_returns_caveats' repeats the same single statement 2 times (lines 100-100, 101-101): same shape, names/literals differ"
+  },
+  {
+    "category": "duplication",
+    "confidence": null,
+    "detail": "Structural fingerprint match within one function, not a whole-function match (near_duplicate_function's detection is blind to this shape). Typical real cause: several branches each hand-build the same kind of object or perform the same sequence of calls -- worth a single shared helper if the branches really are doing the same thing, not just a coincidental resemblance.",
+    "detector": "intra_function_duplicate_block",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/test_simulator-2c17e2c4e49abe2a.md",
+      "line_end": 42,
+      "line_start": 42,
+      "related_files": [
+        "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/test_simulator-2c17e2c4e49abe2a.md:44-44"
+      ],
+      "snippet": null
+    },
+    "first_seen": "2026-09-03T03:41:20.755288+00:00",
+    "id": "ghost-c121904bc9b2",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'test_change_does_not_mutate_baseline' repeats the same single statement 2 times (lines 42-42, 44-44): same shape, names/literals differ"
+  },
+  {
+    "category": "duplication",
+    "confidence": null,
+    "detail": "Structural fingerprint match within one function, not a whole-function match (near_duplicate_function's detection is blind to this shape). Typical real cause: several branches each hand-build the same kind of object or perform the same sequence of calls -- worth a single shared helper if the branches really are doing the same thing, not just a coincidental resemblance.",
+    "detector": "intra_function_duplicate_block",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/test_simulator-2c17e2c4e49abe2a.md",
+      "line_end": 62,
+      "line_start": 62,
+      "related_files": [
+        "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/test_simulator-2c17e2c4e49abe2a.md:63-63"
+      ],
+      "snippet": null
+    },
+    "first_seen": "2026-09-03T03:41:20.755741+00:00",
+    "id": "ghost-3805458b3779",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'test_determinism' repeats the same single statement 2 times (lines 62-62, 63-63): same shape, names/literals differ"
+  },
+  {
+    "category": "duplication",
+    "confidence": null,
+    "detail": "Structural fingerprint match within one function, not a whole-function match (near_duplicate_function's detection is blind to this shape). Typical real cause: several branches each hand-build the same kind of object or perform the same sequence of calls -- worth a single shared helper if the branches really are doing the same thing, not just a coincidental resemblance.",
+    "detector": "intra_function_duplicate_block",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/test_simulator-2c17e2c4e49abe2a.md",
+      "line_end": 151,
+      "line_start": 151,
+      "related_files": [
+        "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/test_simulator-2c17e2c4e49abe2a.md:152-152"
+      ],
+      "snippet": null
+    },
+    "first_seen": "2026-09-03T03:41:20.757111+00:00",
+    "id": "ghost-f6cdf0074722",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'test_compare_ranks_clean_wins_above_landmines' repeats the same single statement 2 times (lines 151-151, 152-152): same shape, names/literals differ"
+  },
+  {
+    "category": "duplication",
+    "confidence": null,
+    "detail": "Structural fingerprint match within one function, not a whole-function match (near_duplicate_function's detection is blind to this shape). Typical real cause: several branches each hand-build the same kind of object or perform the same sequence of calls -- worth a single shared helper if the branches really are doing the same thing, not just a coincidental resemblance.",
+    "detector": "intra_function_duplicate_block",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/ecology.py",
+      "line_end": 98,
+      "line_start": 98,
+      "related_files": [
+        "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/ecology.py:106-106"
+      ],
+      "snippet": null
+    },
+    "first_seen": "2026-09-03T03:41:20.767261+00:00",
+    "id": "ghost-8e72d5437f46",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'ingest_directory' repeats the same single statement 2 times (lines 98-98, 106-106): same shape, names/literals differ"
+  },
+  {
+    "category": "duplication",
+    "confidence": null,
+    "detail": "Structural fingerprint match within one function, not a whole-function match (near_duplicate_function's detection is blind to this shape). Typical real cause: several branches each hand-build the same kind of object or perform the same sequence of calls -- worth a single shared helper if the branches really are doing the same thing, not just a coincidental resemblance.",
+    "detector": "intra_function_duplicate_block",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/ecology.py",
+      "line_end": 27,
+      "line_start": 27,
+      "related_files": [
+        "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/ecology.py:45-45"
+      ],
+      "snippet": null
+    },
+    "first_seen": "2026-09-03T03:41:20.767987+00:00",
+    "id": "ghost-7509dff572a2",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'receive_message' repeats the same single statement 2 times (lines 27-27, 45-45): same shape, names/literals differ"
+  },
+  {
+    "category": "doc_drift",
+    "confidence": null,
+    "detail": "actual is a static AST lower bound (functions named test_*, counted directly, no pytest run) -- the true collected count can only be higher (pytest.mark.parametrize expands one function into several cases), never lower, so this can only under-flag, not over-flag. Confirm by running the real suite and update the claim, or remove the specific number if it will keep going stale.",
+    "detector": "doc_test_count_drift",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/tmp/claude-1000/-home-wking53214/f7f86960-5cd3-4e63-a084-1fe153210437/scratchpad/ghost_survey/clones/Ecology/corpus/DGK_LIGHT_INTEGRATION-2cc91dc07cb1bac8.md",
+      "line_end": 183,
+      "line_start": 183,
+      "related_files": [],
+      "snippet": null
+    },
+    "first_seen": "2026-09-03T03:41:20.807974+00:00",
+    "id": "ghost-860779821445",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'DGK_LIGHT_INTEGRATION-2cc91dc07cb1bac8.md' claims 18 test(s), but at least 35 test_* function(s) exist in the scanned .py files -- this claim is stale"
+  }
+]
