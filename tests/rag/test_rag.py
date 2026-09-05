@@ -115,7 +115,7 @@ def _history_repo(tmp_path):
         ("older", "2026-01-05T10:00:00Z",
          "---\nid: older\n---\n\n**human_anon** (2026-01-05T10:00:00Z):\n\n"
          "alpha topics only in this message.\n\n"
-         "**assistant_anon** (2026-01-05T10:01:00Z):\n\nnoted the alpha point.\n"),
+         "**assistant_anon** (2026-01-05T10:01:00Z):\n\nunderstood, that is the key point here.\n"),
         ("newer", "2026-09-05T10:00:00Z",
          "---\nid: newer\n---\n\n**human_anon** (2026-09-05T10:00:00Z):\n\n"
          "beta topics only in this message.\n"),
