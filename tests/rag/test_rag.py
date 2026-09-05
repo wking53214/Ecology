@@ -26,6 +26,14 @@ def _extract_data(user_content: str) -> str:
     return match.group(1) if match else ""
 
 
+def _extract_verified_excerpts(user_content: str) -> str:
+    """The final-synthesis call's prompt shape, not receive_message's --
+    used to fake a synthesis that faithfully echoes what it was given,
+    so the synthesis-verification check has real overlap to find."""
+    match = re.search(r"Verified excerpts:\n(.*)\n\nQuery:", user_content, re.S)
+    return match.group(1) if match else ""
+
+
 def _fake_chat_relevance_matches_query(model, messages, options=None):
     """Simulates receive_message's two calls plus the final synthesis call,
     routed by which system prompt is active. Relevance/extraction always
@@ -44,7 +52,7 @@ def _fake_chat_relevance_matches_query(model, messages, options=None):
         data = _extract_data(user_content)
         return {"message": {"content": data}}
 
-    return {"message": {"content": "synthesized answer"}}
+    return {"message": {"content": _extract_verified_excerpts(user_content)}}
 
 
 @pytest.fixture(autouse=True)
@@ -75,8 +83,9 @@ def test_generate_response_retrieves_and_verifies_matching_source(tmp_path, monk
 
     answer, sources = generate_response(collection, "alpha query", n_results=1)
 
-    assert answer == "synthesized answer"
+    assert "alpha topics" in answer
     assert sources[0]["source"] == "alpha_doc.md"
+    assert sources[0]["extract"] == "alpha topics only in this document."
 
 
 def test_generate_response_returns_no_answer_when_nothing_verifies(tmp_path, monkeypatch):
