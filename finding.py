@@ -15,10 +15,15 @@ from typing import Optional, Tuple
 class FindingRecord:
     """A generic, consumer-agnostic shape for one retrieval result.
 
-    `confidence` is derived, not asserted: the fraction of retrieved
-    candidates that actually passed containment verification. It is not a
-    claim about correctness, only about how much of what was retrieved held
-    up under the one check Ecology actually performs.
+    `confidence` is derived, not asserted: the fraction of the requested
+    search width covered by *distinct* verified sources. Counted by
+    distinct source, not by verified chunk -- three verified paragraphs
+    from the same document are one source, not three, and a confidence
+    number that counted them as three would tell a different, inflated
+    story than `source_material` (which was already deduped) tells right
+    next to it. It is not a claim about correctness, only about how much
+    independent source material held up under the one check Ecology
+    actually performs.
 
     `evidence` carries each individually-verified excerpt's own text, not
     just its source path. A consumer with real evidence-linking (attach
@@ -44,13 +49,13 @@ def to_finding_record(answer: str, sources: list, n_results: int,
     returns) populate `evidence`; older callers passing bare {"source": ...}
     dicts still work, just without per-excerpt evidence.
     """
-    verified_count = len(sources)
-    verified = verified_count > 0
-    confidence = (verified_count / n_results) if verified and n_results else None
+    verified = len(sources) > 0
+    distinct_sources = tuple(sorted({s["source"] for s in sources}))
+    confidence = (len(distinct_sources) / n_results) if verified and n_results else None
     return FindingRecord(
         conclusion=answer,
         method=f"ecology.rag_engine.generate_response(model={model_name}, n_results={n_results})",
-        source_material=tuple(sorted({s["source"] for s in sources})),
+        source_material=distinct_sources,
         confidence=confidence,
         verified=verified,
         evidence=tuple((s["source"], s["extract"]) for s in sources if "extract" in s),

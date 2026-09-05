@@ -2,8 +2,10 @@ from finding import to_finding_record
 
 
 def test_verified_result_has_derived_confidence_from_pass_rate():
-    """3 of 5 retrieved candidates passed verification -> confidence 0.6,
-    not an invented number."""
+    """3 verified chunks, but 2 of them are the SAME document -- confidence
+    must count 2 distinct sources, not 3 chunks. A flood-test finding:
+    counting raw chunks let confidence claim stronger corroboration than
+    source_material (already deduped) showed right next to it."""
     sources = [{"source": "a.md"}, {"source": "b.md"}, {"source": "a.md"}]
     record = to_finding_record(
         answer="The car is red.",
@@ -12,7 +14,7 @@ def test_verified_result_has_derived_confidence_from_pass_rate():
         model_name="llama3.2",
     )
     assert record.verified is True
-    assert record.confidence == 3 / 5
+    assert record.confidence == 2 / 5  # 2 distinct sources, not 3 chunks
     assert record.source_material == ("a.md", "b.md")  # deduped, sorted
     assert "generate_response" in record.method
 
@@ -56,3 +58,18 @@ def test_evidence_is_empty_for_bare_source_only_dicts():
     record = to_finding_record(answer="x", sources=[{"source": "a.md"}], n_results=1)
     assert record.evidence == ()
     assert record.confidence == 1.0
+
+
+def test_confidence_and_source_material_agree_on_how_many_sources_there_are():
+    """The two fields must never tell a different-cardinality story about
+    the same finding -- confidence's numerator and len(source_material)
+    have to match, always, regardless of how many chunks came from each
+    document."""
+    sources = [
+        {"source": "doc.md", "extract": "paragraph one"},
+        {"source": "doc.md", "extract": "paragraph two"},
+        {"source": "doc.md", "extract": "paragraph three"},
+    ]
+    record = to_finding_record(answer="x", sources=sources, n_results=5)
+    implied_source_count = round(record.confidence * 5)
+    assert implied_source_count == len(record.source_material) == 1
