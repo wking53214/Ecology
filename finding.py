@@ -19,12 +19,19 @@ class FindingRecord:
     candidates that actually passed containment verification. It is not a
     claim about correctness, only about how much of what was retrieved held
     up under the one check Ecology actually performs.
+
+    `evidence` carries each individually-verified excerpt's own text, not
+    just its source path. A consumer with real evidence-linking (attach
+    each excerpt as its own item, not one collapsed number) needs the
+    actual verified content to attach -- collapsing to a single float here
+    would throw that structure away before it ever reached the consumer.
     """
     conclusion: str
     method: str
     source_material: Tuple[str, ...]
     confidence: Optional[float]
     verified: bool
+    evidence: Tuple[Tuple[str, str], ...] = ()  # (source, extract) pairs
 
 
 def to_finding_record(answer: str, sources: list, n_results: int,
@@ -33,6 +40,9 @@ def to_finding_record(answer: str, sources: list, n_results: int,
 
     verified=False and confidence=None when nothing passed verification --
     an honest non-answer must not be dressed up as a low-confidence finding.
+    `sources` items carrying an "extract" key (as generate_response() now
+    returns) populate `evidence`; older callers passing bare {"source": ...}
+    dicts still work, just without per-excerpt evidence.
     """
     verified_count = len(sources)
     verified = verified_count > 0
@@ -43,4 +53,5 @@ def to_finding_record(answer: str, sources: list, n_results: int,
         source_material=tuple(sorted({s["source"] for s in sources})),
         confidence=confidence,
         verified=verified,
+        evidence=tuple((s["source"], s["extract"]) for s in sources if "extract" in s),
     )

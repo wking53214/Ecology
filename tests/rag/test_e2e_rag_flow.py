@@ -20,6 +20,14 @@ def _extract_data(user_content: str) -> str:
     return match.group(1) if match else ""
 
 
+def _extract_verified_excerpts(user_content: str) -> str:
+    """The final-synthesis call's prompt shape, not receive_message's --
+    used to fake a synthesis that faithfully echoes what it was given,
+    so the synthesis-verification check has real overlap to find."""
+    match = re.search(r"Verified excerpts:\n(.*)\n\nQuery:", user_content, re.S)
+    return match.group(1) if match else ""
+
+
 def _fake_chat(model, messages, options=None):
     system_content = messages[0]["content"]
     user_content = messages[-1]["content"]
@@ -31,7 +39,7 @@ def _fake_chat(model, messages, options=None):
     if "strict text-extraction robot" in system_content:
         return {"message": {"content": _extract_data(user_content)}}
 
-    return {"message": {"content": "n/a"}}
+    return {"message": {"content": _extract_verified_excerpts(user_content)}}
 
 
 def test_knowledge_round_trip_preserves_source_content(tmp_path, monkeypatch):

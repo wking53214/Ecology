@@ -1,8 +1,50 @@
+import re
 import time
 import ollama
 import chromadb
 
 from ecology import ingest_directory, ActiveKnowledgeObject
+
+# Term-overlap floor for the synthesis-verification check below. Same idea
+# as Resume_OS's validate.py MEANING DRIFT check (a reworded line has to
+# keep a minimum share of its source's meaningful terms), ported here rather
+# than imported -- this module stays free of a dependency on that repo, but
+# the principle is the same: per-excerpt verification only proves each
+# excerpt was real, not that the LLM's synthesis of them stayed faithful.
+_SYNTHESIS_TERM = re.compile(r"[a-zA-Z][a-zA-Z0-9+/.-]*")
+_SYNTHESIS_STOPWORDS = {
+    "a", "an", "the", "and", "or", "of", "to", "in", "on", "for", "with",
+    "by", "at", "as", "from", "into", "that", "this", "it", "is", "are",
+    "was", "were", "be", "been", "being", "has", "have", "had", "not",
+    "which", "who", "what", "when", "where", "how", "query", "answer",
+}
+SYNTHESIS_OVERLAP_FLOOR = 0.35
+
+
+def _terms(text: str) -> set:
+    return {w.lower().strip(".-/") for w in _SYNTHESIS_TERM.findall(text)
+            if len(w) > 2 and w.lower() not in _SYNTHESIS_STOPWORDS}
+
+
+def _synthesis_matches_its_own_sources(answer: str, verified: list) -> bool:
+    """Per-excerpt containment proves each excerpt was real. It says nothing
+    about whether the LLM's synthesis of them stayed faithful once combined
+    -- that's a separate check, and this is it.
+
+    Direction matters: this checks how much of what the ANSWER says is
+    grounded in the source terms, not how much of the sources the answer
+    covers (a faithful answer can be far shorter than its sources; that's
+    summarization, not drift). Catching an answer that introduces something
+    the sources never said is the goal here, the same shape as Resume_OS's
+    NUMBER DRIFT check -- new content in the output that isn't in the input.
+    """
+    combined = " ".join(item["extract"] for item in verified)
+    source_terms = _terms(combined)
+    answer_terms = _terms(answer)
+    if not answer_terms:
+        return False
+    kept = len(answer_terms & source_terms) / len(answer_terms)
+    return kept >= SYNTHESIS_OVERLAP_FLOOR
 
 # Bump this whenever ingestion/chunking logic changes, so a stale on-disk
 # collection built under the old scheme (different identities, no .py
@@ -130,8 +172,24 @@ def generate_response(collection, query_text, model_name="llama3.2", n_results=5
     total_latency = embed_time + query_time + verify_time + gen_time
     print(f"[Telemetry] Embed: {embed_time:.4f}s | Search: {query_time:.4f}s | Verify: {verify_time:.4f}s | Generation: {gen_time:.4f}s | Total: {total_latency:.4f}s\n")
 
-    sources = [{"source": item["source"]} for item in verified]
-    return response['message']['content'], sources
+    answer = response['message']['content']
+
+    # Per-excerpt containment proved each excerpt was real. This is the
+    # separate check that the LLM's synthesis of them stayed faithful --
+    # skip it, and a paraphrase drift in the combination step would still
+    # come back tagged as "verified" on the strength of excerpts it no
+    # longer accurately reflects.
+    if not _synthesis_matches_its_own_sources(answer, verified):
+        return (
+            "The retrieved corpus does not contain a verifiable answer to this query.",
+            []
+        )
+
+    # source_material carries the extract too now, not just the path --
+    # a downstream governance consumer needs the actual verified text, not
+    # just a citation to it (see finding.py).
+    sources = [{"source": item["source"], "extract": item["extract"]} for item in verified]
+    return answer, sources
 
 
 if __name__ == "__main__":
