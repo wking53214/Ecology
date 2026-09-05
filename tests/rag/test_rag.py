@@ -1,9 +1,10 @@
+import json
 import re
 
 import pytest
 import ollama
 
-from rag_engine import initialize_vector_store, generate_response
+from rag_engine import generate_response, index_history_repo, initialize_vector_store
 
 
 def _keyword_embedding(text: str):
@@ -103,3 +104,63 @@ def test_generate_response_returns_no_answer_when_nothing_verifies(tmp_path, mon
 
     assert sources == []
     assert "does not contain a verifiable answer" in answer
+
+
+def _history_repo(tmp_path):
+    """A minimal Claude_History-shaped repo with two dated conversations."""
+    repo = tmp_path / "Claude_History"
+    (repo / "index").mkdir(parents=True)
+    (repo / "transcripts").mkdir()
+    convs = [
+        ("older", "2026-01-05T10:00:00Z",
+         "---\nid: older\n---\n\n**human_anon** (2026-01-05T10:00:00Z):\n\n"
+         "alpha topics only in this message.\n\n"
+         "**assistant_anon** (2026-01-05T10:01:00Z):\n\nnoted the alpha point.\n"),
+        ("newer", "2026-09-05T10:00:00Z",
+         "---\nid: newer\n---\n\n**human_anon** (2026-09-05T10:00:00Z):\n\n"
+         "beta topics only in this message.\n"),
+    ]
+    manifest = []
+    for cid, start, text in convs:
+        (repo / "transcripts" / f"{cid}.md").write_text(text)
+        manifest.append({"id": cid, "start_time": start, "transcript": f"transcripts/{cid}.md"})
+    (repo / "index" / "manifest.json").write_text(json.dumps({"conversations": manifest}))
+    return repo
+
+
+def test_index_history_repo_indexes_every_message_cell(tmp_path):
+    repo = _history_repo(tmp_path)
+    collection = index_history_repo(
+        str(repo), collection_name="hist_test_1", db_path=str(tmp_path / "chroma_db"),
+    )
+    assert collection.count() == 3  # 2 messages in "older" + 1 in "newer"
+
+
+def test_indexed_history_cells_carry_real_date_and_speaker_metadata(tmp_path):
+    repo = _history_repo(tmp_path)
+    collection = index_history_repo(
+        str(repo), collection_name="hist_test_2", db_path=str(tmp_path / "chroma_db"),
+    )
+    got = collection.get(ids=["Claude_History/older#0"])
+    meta = got["metadatas"][0]
+    assert meta["source"] == "Claude_History/transcripts/older.md"
+    assert meta["date"] == "2026-01-05"          # the message's real date, not today
+    assert meta["speaker"] == "human"
+
+
+def test_history_and_generate_response_flow_end_to_end(tmp_path):
+    repo = _history_repo(tmp_path)
+    collection = index_history_repo(
+        str(repo), collection_name="hist_test_3", db_path=str(tmp_path / "chroma_db"),
+    )
+    answer, sources = generate_response(collection, "alpha query", n_results=1)
+    assert "alpha topics" in answer
+    assert sources[0]["source"] == "Claude_History/transcripts/older.md"
+
+
+def test_history_limit_caps_conversations(tmp_path):
+    repo = _history_repo(tmp_path)
+    collection = index_history_repo(
+        str(repo), collection_name="hist_test_4", db_path=str(tmp_path / "chroma_db"), limit=1,
+    )
+    assert collection.count() == 2  # only the older conversation's 2 messages
