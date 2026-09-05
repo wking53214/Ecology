@@ -49,8 +49,10 @@ PRIVATE_HISTORY_REPOS = (
 
 # A message longer than this is split on paragraph boundaries into parts
 # that each keep the parent message's speaker and timestamp. nomic-embed-text
-# (Ecology's embedder) tops out near 2k tokens; ~6k chars stays clear of it.
-DEFAULT_MAX_CELL_CHARS = 6000
+# tops out at 2048 tokens; 4000 chars stays under that even for code-dense
+# content (~3 chars/token), so nothing is silently truncated at embed time.
+# Locking this matters: a full corpus re-index is a ~38h operation.
+DEFAULT_MAX_CELL_CHARS = 4000
 
 # A message shorter than this carries no retrievable content ("Go", "Y",
 # "continue", "Rewrite") -- ~1,400 such across the two real archives.
