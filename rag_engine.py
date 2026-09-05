@@ -52,6 +52,23 @@ def _synthesis_matches_its_own_sources(answer: str, verified: list) -> bool:
 DEFAULT_COLLECTION_NAME = "living_memory_v2"
 
 
+def _cell_metadata(cell) -> dict:
+    """Chroma metadata for one cell. `source` always; `date` and `speaker`
+    when the cell carries them (history_loader.ConversationCell does,
+    ingest_directory's ActiveKnowledgeObject carries date only). Kept so
+    the real conversation time and who-said-it survive indexing -- a
+    memory system that reconstructs *when* cannot afford to drop them
+    here, and re-deriving them means a full re-index."""
+    meta = {"source": cell.source}
+    date = getattr(cell, "date_str", None)
+    if date:
+        meta["date"] = date
+    speaker = getattr(cell, "speaker", None)
+    if speaker:
+        meta["speaker"] = speaker
+    return meta
+
+
 def initialize_vector_store(directory_path="corpus", collection_name=DEFAULT_COLLECTION_NAME, batch_size=32, db_path="./chroma_db"):
     client = chromadb.PersistentClient(path=db_path)
 
@@ -79,7 +96,7 @@ def initialize_vector_store(directory_path="corpus", collection_name=DEFAULT_COL
         batch = cells[i:i + batch_size]
         batch_ids = [cell.identity for cell in batch]
         batch_docs = [cell.content for cell in batch]
-        batch_metas = [{"source": cell.source} for cell in batch]
+        batch_metas = [_cell_metadata(cell) for cell in batch]
 
         try:
             response = ollama.embed(model='nomic-embed-text', input=batch_docs)
