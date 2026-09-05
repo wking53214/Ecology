@@ -52,6 +52,12 @@ PRIVATE_HISTORY_REPOS = (
 # (Ecology's embedder) tops out near 2k tokens; ~6k chars stays clear of it.
 DEFAULT_MAX_CELL_CHARS = 6000
 
+# A message shorter than this carries no retrievable content ("Go", "Y",
+# "continue", "Rewrite") -- ~1,400 such across the two real archives.
+# Skipped: embedding them costs the same as any other cell and returns
+# nothing recallable. The conversation's shape is still in the manifest.
+DEFAULT_MIN_CELL_CHARS = 12
+
 _FRONTMATTER = re.compile(r"\A---\n(.*?)\n---\n", re.S)
 
 # Message headers are matched against a KNOWN speaker vocabulary, not any
@@ -190,6 +196,7 @@ def cells_from_transcript(
     conversation_start_iso: str,
     *,
     max_cell_chars: int = DEFAULT_MAX_CELL_CHARS,
+    min_cell_chars: int = DEFAULT_MIN_CELL_CHARS,
 ) -> Iterator[ConversationCell]:
     """Parse one transcript's text into cells. Exposed for callers that
     already hold the text; `cells_from_history_repo` is the usual entry."""
@@ -197,41 +204,41 @@ def cells_from_transcript(
     source = f"{repo_name}/transcripts/{conv_id}.md"
     start_posix, _ = _iso_to_posix(conversation_start_iso, datetime.now(tz=timezone.utc).timestamp())
 
-    header_re = _detect_headers(body)
-    if header_re is None:
-        text = body.strip()
-        if not text:
-            return
-        for part_no, part in enumerate(_split_oversized(text, max_cell_chars)):
-            suffix = "" if part_no == 0 and len(part) == len(text) else f".{part_no}"
-            yield ConversationCell(
-                identity=f"{repo_name}/{conv_id}#0{suffix}",
-                content=part, timestamp=start_posix, source=source, speaker="other",
-                conversation_id=conv_id, conversation_title=title,
-                occurred_at=conversation_start_iso,
-                date_str=datetime.fromtimestamp(start_posix, tz=timezone.utc).strftime("%Y-%m-%d"),
-            )
-        return
-
-    for seq, (label, iso, text) in enumerate(_iter_messages(body, header_re)):
-        posix, norm_iso = _iso_to_posix(iso, start_posix)
-        speaker = _normalize_speaker(label)
-        date_str = datetime.fromtimestamp(posix, tz=timezone.utc).strftime("%Y-%m-%d")
-        slices = _split_oversized(text, max_cell_chars)
-        for part_no, part in enumerate(slices):
-            suffix = "" if len(slices) == 1 else f".{part_no}"
+    def _emit(seq, parts, posix, iso_str, speaker, date_str):
+        kept = [p for p in parts if len(p.strip()) >= min_cell_chars]
+        for part_no, part in enumerate(kept):
+            suffix = "" if len(kept) == 1 else f".{part_no}"
             yield ConversationCell(
                 identity=f"{repo_name}/{conv_id}#{seq}{suffix}",
                 content=part, timestamp=posix, source=source, speaker=speaker,
                 conversation_id=conv_id, conversation_title=title,
-                occurred_at=norm_iso, date_str=date_str,
+                occurred_at=iso_str, date_str=date_str,
             )
+
+    header_re = _detect_headers(body)
+    if header_re is None:
+        text = body.strip()
+        if len(text) < min_cell_chars:
+            return
+        date_str = datetime.fromtimestamp(start_posix, tz=timezone.utc).strftime("%Y-%m-%d")
+        yield from _emit(0, _split_oversized(text, max_cell_chars),
+                         start_posix, conversation_start_iso, "other", date_str)
+        return
+
+    for seq, (label, iso, text) in enumerate(_iter_messages(body, header_re)):
+        if len(text.strip()) < min_cell_chars:
+            continue
+        posix, norm_iso = _iso_to_posix(iso, start_posix)
+        date_str = datetime.fromtimestamp(posix, tz=timezone.utc).strftime("%Y-%m-%d")
+        yield from _emit(seq, _split_oversized(text, max_cell_chars),
+                         posix, norm_iso, _normalize_speaker(label), date_str)
 
 
 def cells_from_history_repo(
     repo_path,
     *,
     max_cell_chars: int = DEFAULT_MAX_CELL_CHARS,
+    min_cell_chars: int = DEFAULT_MIN_CELL_CHARS,
     limit: Optional[int] = None,
 ) -> Iterator[ConversationCell]:
     """Yield ConversationCells for every conversation in a *_History repo,
@@ -255,7 +262,8 @@ def cells_from_history_repo(
         yield from cells_from_transcript(
             repo_name, conv_id, entry.get("title", ""),
             transcript.read_text(encoding="utf-8", errors="ignore"),
-            _conversation_start(entry), max_cell_chars=max_cell_chars,
+            _conversation_start(entry),
+            max_cell_chars=max_cell_chars, min_cell_chars=min_cell_chars,
         )
 
 

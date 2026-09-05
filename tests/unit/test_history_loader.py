@@ -25,7 +25,7 @@ Understood. I will triage the four items and build the small ones.
 
 **issuer** (2026-05-16T14:29:00.000000Z):
 
-approved
+approved, proceed with the build as scoped
 """
 
 CHATGPT_TX = """---
@@ -98,8 +98,17 @@ def test_a_content_stripped_transcript_yields_nothing_not_a_crash():
     assert list(cells_from_transcript("Claude_History", "c", "", tx, "2026-01-01T00:00:00Z")) == []
 
 
+def test_a_one_word_message_is_dropped_as_unretrievable():
+    tx = ("---\nid: c\n---\n\n"
+          "**human_anon** (2026-01-01T00:00:00Z):\n\nGo\n\n"
+          "**assistant_anon** (2026-01-01T00:01:00Z):\n\n"
+          "Proceeding with the full build now, verifying each step live.\n")
+    cells = list(cells_from_transcript("Claude_History", "c", "", tx, "2026-01-01T00:00:00Z"))
+    assert [c.speaker for c in cells] == ["assistant"]  # the "Go" turn is dropped
+
+
 def test_non_iso_message_timestamp_falls_back_to_conversation_start():
-    tx = "---\nid: c\n---\n\n**human_anon** (not-a-timestamp):\n\nhello there\n"
+    tx = "---\nid: c\n---\n\n**human_anon** (not-a-timestamp):\n\nhello there, this message has no usable timestamp\n"
     cell = next(iter(cells_from_transcript("Claude_History", "c", "", tx, "2026-03-01T12:00:00Z")))
     assert cell.occurred_at.startswith("2026-03-01T12:00:00")
 
