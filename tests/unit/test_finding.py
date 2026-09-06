@@ -73,3 +73,58 @@ def test_confidence_and_source_material_agree_on_how_many_sources_there_are():
     record = to_finding_record(answer="x", sources=sources, n_results=5)
     implied_source_count = round(record.confidence * 5)
     assert implied_source_count == len(record.source_material) == 1
+
+
+def test_finding_record_carries_event_dates():
+    """Event dates can be set on a FindingRecord and carried through."""
+    from finding import FindingRecord
+
+    record = FindingRecord(
+        conclusion="Evidence from May.",
+        method="test_method",
+        source_material=("conv.md",),
+        confidence=0.8,
+        verified=True,
+        evidence=(("conv.md", "may evidence"),),
+        event_start_date="2026-05-14",
+        event_end_date="2026-05-14",
+    )
+    assert record.event_start_date == "2026-05-14"
+    assert record.event_end_date == "2026-05-14"
+
+
+def test_finding_record_defaults_event_dates_to_none():
+    """A FindingRecord without event dates has them as None."""
+    from finding import FindingRecord
+
+    record = FindingRecord(
+        conclusion="No event date info.",
+        method="method",
+        source_material=("source.md",),
+        confidence=None,
+        verified=False,
+    )
+    assert record.event_start_date is None
+    assert record.event_end_date is None
+
+
+def test_finding_record_event_dates_span_multiple_sources():
+    """Event dates can span multiple sources with different dates."""
+    from finding import FindingRecord
+
+    record = FindingRecord(
+        conclusion="Pattern across months.",
+        method="method",
+        source_material=("march.md", "may.md", "july.md"),
+        confidence=0.7,
+        verified=True,
+        evidence=(
+            ("march.md", "March evidence"),
+            ("may.md", "May evidence"),
+            ("july.md", "July evidence"),
+        ),
+        event_start_date="2026-03-01",
+        event_end_date="2026-07-31",
+    )
+    assert record.event_start_date == "2026-03-01"
+    assert record.event_end_date == "2026-07-31"
