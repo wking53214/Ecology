@@ -191,7 +191,12 @@ def generate_response(collection, query_text, model_name="llama3.2", n_results=5
         cell = ActiveKnowledgeObject(identity=cell_id, content=doc, timestamp=0, source=meta['source'])
         extract = cell.receive_message(query_text)
         if extract is not None:
-            verified.append({"source": meta['source'], "extract": extract})
+            item = {"source": meta['source'], "extract": extract}
+            if meta.get("date"):
+                item["date"] = meta["date"]
+            if meta.get("speaker"):
+                item["speaker"] = meta["speaker"]
+            verified.append(item)
     verify_time = time.perf_counter() - start_verify
 
     if not verified:
@@ -248,8 +253,13 @@ def generate_response(collection, query_text, model_name="llama3.2", n_results=5
 
     # source_material carries the extract too now, not just the path --
     # a downstream governance consumer needs the actual verified text, not
-    # just a citation to it (see finding.py).
-    sources = [{"source": item["source"], "extract": item["extract"]} for item in verified]
+    # just a citation to it (see finding.py). `date` / `speaker` ride along
+    # when the collection carried them (the conversation-history path), so
+    # the finding can be given a real event-time span.
+    sources = [
+        {k: v for k, v in item.items() if k in ("source", "extract", "date", "speaker")}
+        for item in verified
+    ]
     return answer, sources
 
 

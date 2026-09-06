@@ -128,3 +128,33 @@ def test_finding_record_event_dates_span_multiple_sources():
     )
     assert record.event_start_date == "2026-03-01"
     assert record.event_end_date == "2026-07-31"
+
+
+def test_dated_sources_produce_an_event_time_span():
+    """Sources carrying a 'date' set the finding's event-time span to the
+    earliest and latest known dates."""
+    sources = [
+        {"source": "Claude_History/transcripts/a.md", "extract": "x", "date": "2026-07-15"},
+        {"source": "Claude_History/transcripts/b.md", "extract": "y", "date": "2026-03-01"},
+        {"source": "Claude_History/transcripts/c.md", "extract": "z", "date": "2026-05-20"},
+    ]
+    r = to_finding_record(answer="a finding", sources=sources, n_results=5)
+    assert r.event_start_date == "2026-03-01"
+    assert r.event_end_date == "2026-07-15"
+
+
+def test_sources_without_dates_leave_the_span_unknown():
+    sources = [{"source": "a.md", "extract": "x"}, {"source": "b.md", "extract": "y"}]
+    r = to_finding_record(answer="a", sources=sources, n_results=2)
+    assert r.event_start_date is None
+    assert r.event_end_date is None
+
+
+def test_partial_dates_use_only_the_known_ones():
+    sources = [
+        {"source": "a.md", "extract": "x", "date": "2026-06-10"},
+        {"source": "b.md", "extract": "y"},  # no date
+    ]
+    r = to_finding_record(answer="a", sources=sources, n_results=2)
+    assert r.event_start_date == "2026-06-10"
+    assert r.event_end_date == "2026-06-10"
