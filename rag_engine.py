@@ -2,8 +2,28 @@ import re
 import time
 import ollama
 import chromadb
+from chromadb.utils import embedding_functions
 
 from ecology import ingest_directory, ActiveKnowledgeObject
+
+# Local, in-process embedder: ChromaDB's bundled all-MiniLM-L6-v2 as a
+# quantized ONNX model (384-dim, ~80MB, onnxruntime -- no torch, no ollama
+# server). Replaces nomic-embed-text via ollama, which on this CPU ran at
+# ~0.28 cells/sec on real-length cells AND progressively wedged llama-server
+# under batched load until a full-corpus index run failed. This one measures
+# ~12 cells/sec on the same cells and holds up, and 384-dim halves the
+# on-disk HNSW footprint. Synthesis still uses ollama.chat (llama3.2) --
+# that's a separate concern from retrieval.
+_EMBEDDER = None
+
+
+def _embed(texts: list[str]) -> list[list[float]]:
+    """Embed a list of strings with the local ONNX model (lazy-loaded on
+    first use, so `import rag_engine` stays cheap for callers that mock this)."""
+    global _EMBEDDER
+    if _EMBEDDER is None:
+        _EMBEDDER = embedding_functions.ONNXMiniLM_L6_V2()
+    return _EMBEDDER(texts)
 
 # Term-overlap floor for the synthesis-verification check below. Same idea
 # as Resume_OS's validate.py MEANING DRIFT check (a reworded line has to
@@ -46,10 +66,13 @@ def _synthesis_matches_its_own_sources(answer: str, verified: list) -> bool:
     kept = len(answer_terms & source_terms) / len(answer_terms)
     return kept >= SYNTHESIS_OVERLAP_FLOOR
 
-# Bump this whenever ingestion/chunking logic changes, so a stale on-disk
-# collection built under the old scheme (different identities, no .py
-# chunks) doesn't get silently reused instead of re-indexed.
-DEFAULT_COLLECTION_NAME = "living_memory_v2"
+# Bump this whenever ingestion/chunking logic OR the embedding model
+# changes, so a stale on-disk collection built under the old scheme
+# (different vector space, different identities) doesn't get silently
+# reused instead of re-indexed. v3: switched nomic-embed-text (768d, ollama)
+# -> ONNXMiniLM_L6_V2 (384d, in-process).
+DEFAULT_COLLECTION_NAME = "living_memory_v3"
+HISTORY_COLLECTION_NAME = "conversation_history_v2"
 
 
 def _cell_metadata(cell) -> dict:
@@ -89,20 +112,23 @@ def _index_cells(collection, cells, batch_size):
     total = len(cells)
     if not total:
         return collection
-    print(f"[System] Indexing {total} chunks using batched embeddings...")
+    print(f"[System] Indexing {total} chunks with the local ONNX embedder...")
     start = time.perf_counter()
     for i in range(0, total, batch_size):
         batch = cells[i:i + batch_size]
         try:
-            response = ollama.embed(model='nomic-embed-text', input=[c.content for c in batch])
+            embeddings = _embed([c.content for c in batch])
             collection.add(
                 ids=[c.identity for c in batch],
-                embeddings=response['embeddings'],
+                embeddings=embeddings,
                 documents=[c.content for c in batch],
                 metadatas=[_cell_metadata(c) for c in batch],
             )
         except Exception as e:
             print(f"[Batch Error at index {i}]: {e}")
+        if i and i % (batch_size * 50) == 0:
+            rate = i / (time.perf_counter() - start)
+            print(f"[System]   {i}/{total} ({rate:.0f} cells/s)")
     print(f"[System] Indexed {total} chunks in {time.perf_counter() - start:.4f}s.\n")
     return collection
 
@@ -115,7 +141,7 @@ def initialize_vector_store(directory_path="corpus", collection_name=DEFAULT_COL
     return _index_cells(collection, ingest_directory(directory_path), batch_size)
 
 
-def index_history_repo(repo_path, collection_name="conversation_history_v1", batch_size=32,
+def index_history_repo(repo_path, collection_name=HISTORY_COLLECTION_NAME, batch_size=32,
                        db_path="./chroma_db", limit=None, max_cell_chars=None):
     """Index a *_History conversation archive (via history_loader) into its
     own Chroma collection. Separate collection from the code/docs corpus:
@@ -145,8 +171,7 @@ def generate_response(collection, query_text, model_name="llama3.2", n_results=5
     print(f"\n--- Synthesizing Response for: '{query_text}' (n_results={n_results}) ---")
 
     start_embed = time.perf_counter()
-    query_response = ollama.embed(model='nomic-embed-text', input=query_text)
-    query_embedding = query_response['embeddings'][0]
+    query_embedding = _embed([query_text])[0]
     embed_time = time.perf_counter() - start_embed
 
     start_query = time.perf_counter()
