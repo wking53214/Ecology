@@ -169,3 +169,31 @@ def test_history_limit_caps_conversations(tmp_path):
         str(repo), collection_name="hist_test_4", db_path=str(tmp_path / "chroma_db"), limit=1,
     )
     assert collection.count() == 2  # only the older conversation's 2 messages
+
+
+def test_indexing_a_second_repo_appends_it_does_not_skip(tmp_path):
+    """The bug: _open_or_load_collection saw a populated collection and
+    skipped, so a second archive into the same collection never landed.
+    Now _index_cells skips per-identity, so a second repo appends and a
+    re-run of the same repo is a no-op."""
+    db = str(tmp_path / "chroma_db")
+    repo_a = _history_repo(tmp_path)
+
+    repo_b = tmp_path / "ChatGPT_History"
+    (repo_b / "index").mkdir(parents=True)
+    (repo_b / "transcripts").mkdir()
+    (repo_b / "transcripts" / "g.md").write_text(
+        "---\nid: g\n---\n\n**user** · 2025-03-03T00:00:00+00:00\n\n"
+        "gamma topics only in this message.\n"
+    )
+    (repo_b / "index" / "manifest.json").write_text(json.dumps(
+        {"conversations": [{"id": "g", "start_time": "2025-03-03T00:00:00+00:00",
+                            "transcript": "transcripts/g.md"}]}
+    ))
+
+    col = index_history_repo(str(repo_a), collection_name="multi", db_path=db)
+    assert col.count() == 3
+    col = index_history_repo(str(repo_b), collection_name="multi", db_path=db)
+    assert col.count() == 4  # 3 from A + 1 from B, not skipped
+    col = index_history_repo(str(repo_a), collection_name="multi", db_path=db)
+    assert col.count() == 4  # re-run of A adds nothing
