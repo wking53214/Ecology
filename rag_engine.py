@@ -106,11 +106,28 @@ def _open_or_load_collection(client, collection_name):
 
 
 def _index_cells(collection, cells, batch_size):
-    """Batched-embed and add a list of cells to a Chroma collection. A cell
-    is anything with .identity / .content plus whatever _cell_metadata
-    reads (.source, and .date_str / .speaker when present)."""
+    """Batched-embed and add a list of cells to a Chroma collection, skipping
+    any whose identity is already present. Idempotent and safe to call
+    repeatedly and with more than one source repo into the same collection
+    (a re-run resumes; a second archive appends). A cell is anything with
+    .identity / .content plus whatever _cell_metadata reads (.source, and
+    .date_str / .speaker when present)."""
+    cells = list(cells)
+    if not cells:
+        return collection
+
+    # Drop cells already indexed (batched existence check).
+    present = set()
+    for i in range(0, len(cells), 512):
+        ids = [c.identity for c in cells[i:i + 512]]
+        present.update(collection.get(ids=ids, include=[])["ids"])
+    if present:
+        cells = [c for c in cells if c.identity not in present]
+        print(f"[System] {len(present)} chunks already indexed; {len(cells)} new.")
+
     total = len(cells)
     if not total:
+        print("[System] Nothing new to index.\n")
         return collection
     print(f"[System] Indexing {total} chunks with the local ONNX embedder...")
     start = time.perf_counter()
@@ -151,13 +168,14 @@ def index_history_repo(repo_path, collection_name=HISTORY_COLLECTION_NAME, batch
     from history_loader import DEFAULT_MAX_CELL_CHARS, cells_from_history_repo
 
     client = chromadb.PersistentClient(path=db_path)
-    collection, populated = _open_or_load_collection(client, collection_name)
-    if populated:
-        return collection
-    cells = list(cells_from_history_repo(
+    # Not _open_or_load_collection's skip-if-populated path: more than one
+    # archive lands in this one collection, so "already has rows" does not
+    # mean "this repo is done". _index_cells skips per-identity instead.
+    collection = client.get_or_create_collection(name=collection_name)
+    cells = cells_from_history_repo(
         repo_path, limit=limit,
         max_cell_chars=max_cell_chars or DEFAULT_MAX_CELL_CHARS,
-    ))
+    )
     return _index_cells(collection, cells, batch_size)
 
 
