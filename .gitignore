@@ -5,3 +5,5 @@ venv/
 history_index.log
 history_index*.nohup
 chroma_db.salvage-*/
+lexical_index.sqlite3
+lexical_index.sqlite3-*

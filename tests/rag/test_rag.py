@@ -4,6 +4,7 @@ import re
 import pytest
 import ollama
 
+import rag_engine
 from rag_engine import generate_response, index_history_repo, initialize_vector_store
 
 
@@ -17,9 +18,10 @@ def _keyword_embedding(text: str):
     ]
 
 
-def _fake_embed(model, input):
-    docs = input if isinstance(input, list) else [input]
-    return {"embeddings": [_keyword_embedding(d) for d in docs]}
+def _fake_embed(texts):
+    """Stands in for rag_engine._embed (the local ONNX embedder): a list of
+    strings in, a list of deterministic keyword vectors out."""
+    return [_keyword_embedding(t) for t in texts]
 
 
 def _extract_data(user_content: str) -> str:
@@ -58,7 +60,10 @@ def _fake_chat_relevance_matches_query(model, messages, options=None):
 
 @pytest.fixture(autouse=True)
 def stub_ollama(monkeypatch):
-    monkeypatch.setattr(ollama, "embed", _fake_embed)
+    # retrieval no longer goes through ollama -- it's the local ONNX
+    # embedder, reached via rag_engine._embed. Synthesis and the
+    # receive_message verification calls still use ollama.chat.
+    monkeypatch.setattr(rag_engine, "_embed", _fake_embed)
     monkeypatch.setattr(ollama, "chat", _fake_chat_relevance_matches_query)
 
 
