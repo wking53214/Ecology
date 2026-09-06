@@ -57,10 +57,17 @@ def to_finding_record(answer: str, sources: list, n_results: int,
     `sources` items carrying an "extract" key (as generate_response() now
     returns) populate `evidence`; older callers passing bare {"source": ...}
     dicts still work, just without per-excerpt evidence.
+
+    A source carrying a "date" key (YYYY-MM-DD, as the conversation-history
+    retrieval paths return) contributes to the finding's event-time span:
+    event_start_date / event_end_date become the earliest and latest known
+    evidence dates. Sources without a date are simply not counted toward the
+    span -- a missing date is left unknown, never guessed.
     """
     verified = len(sources) > 0
     distinct_sources = tuple(sorted({s["source"] for s in sources}))
     confidence = (len(distinct_sources) / n_results) if verified and n_results else None
+    known_dates = sorted(s["date"] for s in sources if s.get("date"))
     return FindingRecord(
         conclusion=answer,
         method=f"ecology.rag_engine.generate_response(model={model_name}, n_results={n_results})",
@@ -68,4 +75,6 @@ def to_finding_record(answer: str, sources: list, n_results: int,
         confidence=confidence,
         verified=verified,
         evidence=tuple((s["source"], s["extract"]) for s in sources if "extract" in s),
+        event_start_date=known_dates[0] if known_dates else None,
+        event_end_date=known_dates[-1] if known_dates else None,
     )
