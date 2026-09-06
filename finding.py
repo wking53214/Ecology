@@ -30,6 +30,13 @@ class FindingRecord:
     each excerpt as its own item, not one collapsed number) needs the
     actual verified content to attach -- collapsing to a single float here
     would throw that structure away before it ever reached the consumer.
+
+    `event_start_date` and `event_end_date` (YYYY-MM-DD) preserve when the
+    underlying evidence occurred, separate from when Ecology processed it.
+    For a finding aggregating March and July evidence, the span is
+    [2026-03-..., 2026-07-...]. Both fields must be present or both absent.
+    If missing, the consumer (e.g. CCC) falls back to ingest time. The
+    temporal precision matches the evidence precision (dates, not timestamps).
     """
     conclusion: str
     method: str
@@ -37,6 +44,8 @@ class FindingRecord:
     confidence: Optional[float]
     verified: bool
     evidence: Tuple[Tuple[str, str], ...] = ()  # (source, extract) pairs
+    event_start_date: Optional[str] = None
+    event_end_date: Optional[str] = None
 
 
 def to_finding_record(answer: str, sources: list, n_results: int,
