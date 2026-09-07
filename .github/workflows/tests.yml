@@ -21,7 +21,11 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           python -m pip install pytest ruff==0.15.22
-          python -m pip install -r requirements.txt
+          # requirements-dev.txt includes -r requirements.txt and adds
+          # pytest-asyncio, without which every async test does not fail
+          # loudly -- it fails with "async def functions are not natively
+          # supported", which includes the injection-rejection security tests.
+          python -m pip install -r requirements-dev.txt
       - name: Test
         run: python -m pytest -q
       - name: Lint (hard gate)
