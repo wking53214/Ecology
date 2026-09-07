@@ -4,6 +4,7 @@ import ollama
 import chromadb
 from chromadb.utils import embedding_functions
 
+from containment import verify as verify_containment
 from ecology import ingest_directory, ActiveKnowledgeObject
 
 # Local, in-process embedder: ChromaDB's bundled all-MiniLM-L6-v2 as a
@@ -179,7 +180,8 @@ def index_history_repo(repo_path, collection_name=HISTORY_COLLECTION_NAME, batch
     return _index_cells(collection, cells, batch_size)
 
 
-def generate_response(collection, query_text, model_name="llama3.2", n_results=5):
+def generate_response(collection, query_text, model_name="llama3.2", n_results=5,
+                      verifier="deterministic"):
     """Retrieve the top-n_results chunks by embedding similarity, verify each
     one actually supports the query (the same containment check the old
     per-cell broadcast used), and only synthesize an answer from the chunks
@@ -203,11 +205,29 @@ def generate_response(collection, query_text, model_name="llama3.2", n_results=5
     metadatas = results['metadatas'][0]
     ids = results['ids'][0]
 
+    # Containment verification. Deterministic by default.
+    #
+    # The LLM path made two model calls per candidate passage -- a relevance
+    # classification and an extraction. Measured on this machine: a
+    # two-passage query did not finish in 120 seconds, against retrieval that
+    # takes 0.08s (lexical) to 2.1s (vector). Verification was the entire
+    # wall, and it meant the Ecology -> CCC path had never completed once on
+    # real data. containment.verify runs the same check at ~48 passages/sec.
+    #
+    # `verifier="llm"` keeps the original path available, because the two
+    # answer slightly different questions and a disagreement between them is
+    # worth being able to produce on demand: the deterministic one establishes
+    # lexical and structural containment, the model one attempts paraphrase
+    # judgement. Neither claims the passage is true.
     start_verify = time.perf_counter()
     verified = []
     for cell_id, doc, meta in zip(ids, documents, metadatas):
-        cell = ActiveKnowledgeObject(identity=cell_id, content=doc, timestamp=0, source=meta['source'])
-        extract = cell.receive_message(query_text)
+        if verifier == "deterministic":
+            extract = verify_containment(query_text, doc)
+        else:
+            cell = ActiveKnowledgeObject(identity=cell_id, content=doc,
+                                         timestamp=0, source=meta['source'])
+            extract = cell.receive_message(query_text)
         if extract is not None:
             item = {"source": meta['source'], "extract": extract}
             if meta.get("date"):

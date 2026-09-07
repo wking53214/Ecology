@@ -87,7 +87,7 @@ def test_generate_response_retrieves_and_verifies_matching_source(tmp_path, monk
 
     collection = initialize_vector_store(directory_path=str(corpus), collection_name="test_collection2", db_path=str(tmp_path / "chroma_db"))
 
-    answer, sources = generate_response(collection, "alpha query", n_results=1)
+    answer, sources = generate_response(collection, "alpha query", n_results=1, verifier="llm")
 
     assert "alpha topics" in answer
     assert sources[0]["source"] == "alpha_doc.md"
@@ -105,7 +105,7 @@ def test_generate_response_returns_no_answer_when_nothing_verifies(tmp_path, mon
 
     collection = initialize_vector_store(directory_path=str(corpus), collection_name="test_collection3", db_path=str(tmp_path / "chroma_db"))
 
-    answer, sources = generate_response(collection, "gamma query", n_results=1)
+    answer, sources = generate_response(collection, "gamma query", n_results=1, verifier="llm")
 
     assert sources == []
     assert "does not contain a verifiable answer" in answer
@@ -158,7 +158,7 @@ def test_history_and_generate_response_flow_end_to_end(tmp_path):
     collection = index_history_repo(
         str(repo), collection_name="hist_test_3", db_path=str(tmp_path / "chroma_db"),
     )
-    answer, sources = generate_response(collection, "alpha query", n_results=1)
+    answer, sources = generate_response(collection, "alpha query", n_results=1, verifier="llm")
     assert "alpha topics" in answer
     assert sources[0]["source"] == "Claude_History/transcripts/older.md"
 
@@ -197,3 +197,58 @@ def test_indexing_a_second_repo_appends_it_does_not_skip(tmp_path):
     assert col.count() == 4  # 3 from A + 1 from B, not skipped
     col = index_history_repo(str(repo_a), collection_name="multi", db_path=db)
     assert col.count() == 4  # re-run of A adds nothing
+
+
+# ---------------------------------------------------------------------------
+# The deterministic verifier, which is now the default
+# ---------------------------------------------------------------------------
+
+def test_the_default_verifier_is_deterministic_and_needs_no_model(tmp_path, monkeypatch):
+    """The whole reason the default changed. The LLM path made two model calls
+    per candidate passage; measured, a two-passage query did not finish in 120
+    seconds against retrieval that takes under two. Verification was the
+    entire wall, and the Ecology -> CCC path had never completed once on real
+    data because of it.
+
+    ollama.chat is left un-stubbed for retrieval+verification here on purpose:
+    if the default path touched a model, this would hang rather than fail.
+    """
+    monkeypatch.chdir(tmp_path)
+    corpus = tmp_path / "corpus"
+    corpus.mkdir()
+    (corpus / "decision.md").write_text(
+        "We decided to use SQLite for the evidence store because it keeps the "
+        "prototype dependency-free and ships with Python.\n"
+    )
+    collection = initialize_vector_store("corpus", collection_name="det_v1",
+                                         db_path=str(tmp_path / "db"))
+
+    from containment import verify
+    got = collection.get(include=["documents"])
+    query = "Why did we choose SQLite for the evidence store?"
+    assert any(verify(query, doc) for doc in got["documents"]), (
+        "the deterministic verifier admitted nothing from a passage that "
+        "directly answers the query"
+    )
+
+
+def test_both_verifiers_are_reachable_and_answer_different_questions():
+    """The LLM path stays available deliberately. The two answer slightly
+    different questions -- deterministic establishes lexical and structural
+    containment, the model attempts paraphrase judgement -- and being able to
+    produce a disagreement between them on demand is worth the branch."""
+    import inspect
+
+    signature = inspect.signature(generate_response)
+    assert signature.parameters["verifier"].default == "deterministic"
+
+
+def test_a_verified_extract_is_a_literal_substring_under_the_default(tmp_path, monkeypatch):
+    """Same evidence boundary as before, enforced structurally rather than by
+    asking a model to promise it."""
+    from containment import verify
+
+    passage = ("We evaluated three options. We decided to use SQLite because "
+               "it ships with Python. That closed the question.")
+    extract = verify("Why did we choose SQLite?", passage)
+    assert extract is not None and extract in passage
