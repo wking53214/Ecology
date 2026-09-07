@@ -1,3 +1,15 @@
+import pytest
+
+# These tests import src.rag.*, which pulls in lancedb and sentence_transformers
+# -- a multi-gigabyte ML stack not needed to work on the rest of this repo.
+# Without this guard the failure lands at COLLECTION, which takes the whole
+# suite down: 116 passing tests reported as "8 errors during collection"
+# because an optional dependency was absent. A skip says "not exercised"; a
+# collection error says nothing about the code and hides everything else.
+#   pip install lancedb sentence-transformers pypdf google-genai
+pytest.importorskip("lancedb", reason="RAG extras not installed")
+pytest.importorskip("sentence_transformers", reason="RAG extras not installed")
+
 import os
 import shutil
 import pytest
