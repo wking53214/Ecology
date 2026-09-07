@@ -11,7 +11,6 @@ pytest.importorskip("lancedb", reason="RAG extras not installed")
 pytest.importorskip("sentence_transformers", reason="RAG extras not installed")
 
 import os
-import json
 import pytest
 from unittest.mock import MagicMock
 from src.rag.crawler import DirectoryIngestionScanner

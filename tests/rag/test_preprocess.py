@@ -1,5 +1,3 @@
-import os
-import pytest
 from src.rag.preprocess import MarkdownPreprocessor
 
 def test_markdown_preprocessing_pipeline(tmp_path):

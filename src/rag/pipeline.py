@@ -1,7 +1,6 @@
 import logging
 import lancedb
 import os
-import re
 from sentence_transformers import SentenceTransformer
 from src.governance.registry import register_as_module
 
@@ -12,7 +11,7 @@ class StorageManager:
         self.db = db
         try:
             self._table = self.db.open_table("memory_nodes")
-        except:
+        except Exception:
             self._table = None
 
     @property
@@ -21,7 +20,8 @@ class StorageManager:
 
     def search(self, query_vec, top_k=2):
         tbl = self.table
-        if tbl is None: return []
+        if tbl is None:
+            return []
         
         try:
             # Filter for Markdown first (high relevance documentation)
@@ -58,7 +58,8 @@ class StorageManager:
                         dot = sum(x*y for x,y in zip(a,b))
                         na = math.sqrt(sum(x*x for x in a))
                         nb = math.sqrt(sum(x*x for x in b))
-                        if na == 0 or nb == 0: return 0.0
+                        if na == 0 or nb == 0:
+                            return 0.0
                         return dot/(na*nb)
 
                     # ensure query_vec is numeric vector (encode if provided as string)
@@ -68,7 +69,8 @@ class StorageManager:
                     scored = []
                     for r in all_rows:
                         vec = r.get('vector')
-                        if not vec: continue
+                        if not vec:
+                            continue
                         score = cosine(qvec, vec)
                         scored.append((score, r))
                     scored.sort(key=lambda x: x[0], reverse=True)
@@ -103,7 +105,7 @@ class RAGOrchestrationPipeline:
     def _ensure_table(self):
         try:
             tbl = self.db.open_table("memory_nodes")
-        except:
+        except Exception:
             init_data = [{"vector": [0.0] * 384, "content": "init", "metadata": {"source": "init", "file_type": "init"}}]
             tbl = self.db.create_table("memory_nodes", data=init_data)
         # ensure storage manager references the active table
@@ -122,7 +124,6 @@ class RAGOrchestrationPipeline:
         return chunks
 
     def orchestrate(self, paths):
-        processed_count = 0
         _, ext = os.path.splitext(paths[0]) # Placeholder logic
         cells_ingested = 0
         skipped_files = []

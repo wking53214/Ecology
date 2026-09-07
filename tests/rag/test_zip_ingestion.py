@@ -10,12 +10,9 @@ import pytest
 pytest.importorskip("lancedb", reason="RAG extras not installed")
 pytest.importorskip("sentence_transformers", reason="RAG extras not installed")
 
-import os
 import zipfile
 import pytest
-from unittest.mock import MagicMock
 from src.rag.crawler import DirectoryIngestionScanner
-from src.rag.pipeline import RAGOrchestrationPipeline
 
 def test_zip_in_memory_extraction(tmp_path):
     """Confirms zip archives extract compliant documents into stream buffers while dropping unmapped blocks."""

@@ -1,5 +1,3 @@
-import pytest
-import os
 import json
 from src.telemetry.audit import AuditLogger
 

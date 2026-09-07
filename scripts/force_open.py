@@ -7,7 +7,7 @@ db = lancedb.connect(db_path)
 try:
     # Attempt direct access
     tbl = db.open_table("memory_nodes")
-    print(f"SUCCESS: Table 'memory_nodes' opened directly.")
+    print("SUCCESS: Table 'memory_nodes' opened directly.")
     print(f"Total rows: {len(tbl.to_arrow())}")
     
     # Verify we can actually read data

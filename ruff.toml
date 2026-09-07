@@ -1,0 +1,7 @@
+# corpus/ is harvested source material kept as data -- samples collected from
+# other systems, including files whose line breaks were destroyed before they
+# arrived. Linting them produced 7,515 invalid-syntax errors and buried the 27
+# real findings in this repository's own code.
+#
+# Same reasoning as norecursedirs in pytest.ini: it is a data directory.
+exclude = ["corpus", "corpus_archive", "lancedb_data", "chroma_db", "data"]

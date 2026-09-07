@@ -11,7 +11,6 @@ pytest.importorskip("lancedb", reason="RAG extras not installed")
 pytest.importorskip("sentence_transformers", reason="RAG extras not installed")
 
 import os
-import shutil
 import pytest
 from src.rag.pipeline import RAGOrchestrationPipeline
 

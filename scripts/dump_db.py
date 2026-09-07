@@ -1,5 +1,4 @@
 import lancedb
-import os
 
 db = lancedb.connect('./lancedb_data')
 if "memory_nodes" in db.list_tables():

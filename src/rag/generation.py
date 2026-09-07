@@ -6,7 +6,6 @@ from typing import Dict, Any, Optional, Callable, List
 from pydantic import BaseModel, Field
 from google import genai
 from google.genai import types
-from google.genai.errors import APIError
 from src.governance.registry import register_as_module
 from src.rag.retrieval import RAGQueryEngine
 from src.telemetry.audit import AuditLogger

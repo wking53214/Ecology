@@ -1,5 +1,3 @@
-import os
-import pytest
 from src.rag.preprocess import UniversalPreprocessor
 
 def test_code_and_patch_extraction(tmp_path):
