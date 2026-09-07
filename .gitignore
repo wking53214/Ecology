@@ -2,3 +2,10 @@ chroma_db/
 __pycache__/
 .env
 venv/
+
+# Generated vector stores and run logs -- 493 of these were staged for
+# commit by accident; they are rebuilt from source and must not be tracked.
+lancedb_data/
+data/vector_store/
+telemetry/audit.log
+execution_audit.jsonl
