@@ -73,7 +73,7 @@ def build_lexical_index(cells: Iterable, db_path: str | Path = DEFAULT_DB, *, re
             )
             for c in cells
         )
-        cur = conn.executemany(
+        conn.executemany(
             "INSERT INTO cells (identity, content, source, cell_date, speaker) "
             "VALUES (?, ?, ?, ?, ?)",
             rows,

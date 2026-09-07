@@ -15,7 +15,6 @@ corroborating passage can advance a pattern that does not exist.
 import pytest
 
 from containment import (
-    DEFAULT,
     Thresholds,
     extract_concepts,
     is_distinctive,
