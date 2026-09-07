@@ -56,7 +56,7 @@ def test_knowledge_round_trip_preserves_source_content(tmp_path, monkeypatch):
     (corpus / "status.md").write_text(original_text + "\n")
 
     collection = initialize_vector_store(directory_path=str(corpus), collection_name="roundtrip", db_path=str(tmp_path / "chroma_db"))
-    _, sources = generate_response(collection, "gamma status", n_results=1)
+    _, sources = generate_response(collection, "gamma status", n_results=1, verifier="llm")
 
     assert sources[0]["source"] == "status.md"
 
