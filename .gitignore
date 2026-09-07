@@ -7,3 +7,10 @@ history_index*.nohup
 chroma_db.salvage-*/
 lexical_index.sqlite3
 lexical_index.sqlite3-*
+
+# Generated vector stores and run logs -- 493 of these were staged for
+# commit by accident; they are rebuilt from source and must not be tracked.
+lancedb_data/
+data/vector_store/
+telemetry/audit.log
+execution_audit.jsonl
