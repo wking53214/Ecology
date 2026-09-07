@@ -1,5 +1,7 @@
-import os, time, asyncio, json, re, difflib
-from typing import Callable, Awaitable, Dict, Any, Optional, List
+import json
+import re
+import difflib
+from typing import Callable, Awaitable, Dict, Any
 from pydantic import BaseModel, Field
 
 # --- Schema ---
@@ -37,7 +39,8 @@ class PersonalPronounFilter:
 class ReadabilityFilter:
     def is_clean(self, text: str) -> bool:
         words = text.split()
-        if len(words) == 0: return False
+        if len(words) == 0:
+            return False
         avg_word_len = sum(len(w) for w in words) / len(words)
         return avg_word_len < 10.0
 
@@ -49,7 +52,8 @@ class SpeculativeLanguageFilter:
         tokens = clean_text.split()
         search_space = tokens + [concatenated]
         for item in search_space:
-            if item in speculative_terms: return False
+            if item in speculative_terms:
+                return False
             if difflib.get_close_matches(item, speculative_terms, n=1, cutoff=0.8):
                 return False
         return True

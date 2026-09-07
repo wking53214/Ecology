@@ -1,5 +1,4 @@
 import pytest
-import asyncio
 from plant import ContentPolishPipeline
 from tests.mocks.mock_gateway import mock_gateway
 

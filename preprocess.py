@@ -1,6 +1,5 @@
 import os
 import json
-from datetime import datetime
 
 def parse_file(file_path, output_dir="corpus"):
     """Detects file type and routes parsing accordingly."""

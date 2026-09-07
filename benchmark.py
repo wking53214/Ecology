@@ -22,7 +22,7 @@ def run_benchmark():
     generate_response(collection, test_query, n_results=5)
     query_time = time.perf_counter() - start_query
 
-    print(f"\n[Performance Summary]")
+    print("\n[Performance Summary]")
     print(f"- Ingestion Time: {init_time:.4f} seconds ({len(cells)} cells)")
     print(f"- Indexing Time: {index_time:.4f} seconds")
     print(f"- Query Latency: {query_time:.4f} seconds")
