@@ -2825,5 +2825,51 @@
     "severity": "minor",
     "status": "suppressed",
     "summary": "'test_date_range_filter' repeats the same single statement 2 times (lines 45-45, 50-50): same shape, names/literals differ"
+  },
+  {
+    "category": "duplication",
+    "confidence": null,
+    "detail": "Structural fingerprint match within one function, not a whole-function match (near_duplicate_function's detection is blind to this shape). Typical real cause: several branches each hand-build the same kind of object or perform the same sequence of calls -- worth a single shared helper if the branches really are doing the same thing, not just a coincidental resemblance.",
+    "detector": "intra_function_duplicate_block",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/home/wking53214/ecology/scripts/corpus_origin.py",
+      "line_end": 99,
+      "line_start": 99,
+      "related_files": [
+        "/home/wking53214/ecology/scripts/corpus_origin.py:101-101"
+      ],
+      "snippet": null
+    },
+    "first_seen": "2026-09-08T03:47:08.379181+00:00",
+    "id": "ghost-f822cae40ca0",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'classify' repeats the same single statement 2 times (lines 99-99, 101-101): same shape, names/literals differ"
+  },
+  {
+    "category": "duplication",
+    "confidence": null,
+    "detail": "Structural fingerprint match within one function, not a whole-function match (near_duplicate_function's detection is blind to this shape). Typical real cause: several branches each hand-build the same kind of object or perform the same sequence of calls -- worth a single shared helper if the branches really are doing the same thing, not just a coincidental resemblance.",
+    "detector": "intra_function_duplicate_block",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/home/wking53214/ecology/scripts/corpus_origin.py",
+      "line_end": 136,
+      "line_start": 136,
+      "related_files": [
+        "/home/wking53214/ecology/scripts/corpus_origin.py:149-149"
+      ],
+      "snippet": null
+    },
+    "first_seen": "2026-09-08T03:47:08.381425+00:00",
+    "id": "ghost-40e17af9e5d2",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'main' repeats the same single statement 2 times (lines 136-136, 149-149): same shape, names/literals differ"
   }
 ]
