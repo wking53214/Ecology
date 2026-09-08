@@ -549,3 +549,11 @@ Ecology is currently a prototype and architectural foundation.
 Its present implementation demonstrates the cellular knowledge-object and evidence-bound querying concepts.
 
 The broader persistent, contextual, temporal memory architecture remains an active area of development.
+
+## License and corpus provenance
+
+Ecology's own code is licensed under the Apache License 2.0 (`LICENSE`).
+`corpus/` and `raw_sources/` are harvested data of mixed and partly unrecorded
+origin, are excluded from tests and linting by configuration, and are **not**
+covered by that license or included in any release. See
+[`corpus/PROVENANCE.md`](corpus/PROVENANCE.md).
