@@ -14,7 +14,7 @@
       "snippet": null
     },
     "first_seen": "2026-09-03T03:41:20.371992+00:00",
-    "id": "ghost-7e49d02a6e4a",
+    "id": "ghost-5f680db3173c",
     "layer": "mechanical",
     "severity": "minor",
     "status": "suppressed",
@@ -35,7 +35,7 @@
       "snippet": null
     },
     "first_seen": "2026-09-03T03:41:20.372095+00:00",
-    "id": "ghost-30df3702d096",
+    "id": "ghost-0bac26349f7a",
     "layer": "mechanical",
     "severity": "minor",
     "status": "suppressed",
@@ -56,7 +56,7 @@
       "snippet": null
     },
     "first_seen": "2026-09-03T03:41:20.372107+00:00",
-    "id": "ghost-ef61c738ceca",
+    "id": "ghost-c5d25918f8e0",
     "layer": "mechanical",
     "severity": "minor",
     "status": "suppressed",
@@ -77,7 +77,7 @@
       "snippet": null
     },
     "first_seen": "2026-09-03T03:41:20.372120+00:00",
-    "id": "ghost-23b70b4c0ecd",
+    "id": "ghost-76a7f1efadc0",
     "layer": "mechanical",
     "severity": "minor",
     "status": "suppressed",
@@ -98,7 +98,7 @@
       "snippet": null
     },
     "first_seen": "2026-09-03T03:41:20.372128+00:00",
-    "id": "ghost-5be723ddd28a",
+    "id": "ghost-e3dc74c2bb73",
     "layer": "mechanical",
     "severity": "minor",
     "status": "suppressed",
@@ -119,7 +119,7 @@
       "snippet": null
     },
     "first_seen": "2026-09-03T03:41:20.372136+00:00",
-    "id": "ghost-bdb81861433e",
+    "id": "ghost-408b739c1931",
     "layer": "mechanical",
     "severity": "minor",
     "status": "suppressed",
@@ -140,7 +140,7 @@
       "snippet": null
     },
     "first_seen": "2026-09-03T03:41:20.372143+00:00",
-    "id": "ghost-37db57344c45",
+    "id": "ghost-d547a8828202",
     "layer": "mechanical",
     "severity": "minor",
     "status": "suppressed",
@@ -161,7 +161,7 @@
       "snippet": null
     },
     "first_seen": "2026-09-03T03:41:20.372154+00:00",
-    "id": "ghost-7ed771c2ceea",
+    "id": "ghost-c7bce04d2876",
     "layer": "mechanical",
     "severity": "minor",
     "status": "suppressed",
@@ -182,7 +182,7 @@
       "snippet": null
     },
     "first_seen": "2026-09-03T03:41:20.372165+00:00",
-    "id": "ghost-ce6cc40c0bee",
+    "id": "ghost-316d1446f4ed",
     "layer": "mechanical",
     "severity": "minor",
     "status": "suppressed",
@@ -203,7 +203,7 @@
       "snippet": null
     },
     "first_seen": "2026-09-03T03:41:20.372173+00:00",
-    "id": "ghost-686dc925b36d",
+    "id": "ghost-dd5c2a48d517",
     "layer": "mechanical",
     "severity": "minor",
     "status": "suppressed",
@@ -224,7 +224,7 @@
       "snippet": null
     },
     "first_seen": "2026-09-03T03:41:20.372180+00:00",
-    "id": "ghost-ddc24c4ee742",
+    "id": "ghost-e47a2b4c2e43",
     "layer": "mechanical",
     "severity": "minor",
     "status": "suppressed",
@@ -245,7 +245,7 @@
       "snippet": null
     },
     "first_seen": "2026-09-03T03:41:20.372187+00:00",
-    "id": "ghost-5f304448e6f7",
+    "id": "ghost-9d96fec4e83d",
     "layer": "mechanical",
     "severity": "minor",
     "status": "suppressed",
@@ -266,7 +266,7 @@
       "snippet": null
     },
     "first_seen": "2026-09-03T03:41:20.372193+00:00",
-    "id": "ghost-d79308d90ffb",
+    "id": "ghost-f0f9db084209",
     "layer": "mechanical",
     "severity": "minor",
     "status": "suppressed",
@@ -287,7 +287,7 @@
       "snippet": null
     },
     "first_seen": "2026-09-03T03:41:20.372198+00:00",
-    "id": "ghost-0d012ac6da75",
+    "id": "ghost-c867562c1713",
     "layer": "mechanical",
     "severity": "minor",
     "status": "suppressed",
@@ -308,7 +308,7 @@
       "snippet": null
     },
     "first_seen": "2026-09-03T03:41:20.372204+00:00",
-    "id": "ghost-dbd2fe0182ba",
+    "id": "ghost-3324701c629a",
     "layer": "mechanical",
     "severity": "minor",
     "status": "suppressed",
@@ -329,7 +329,7 @@
       "snippet": null
     },
     "first_seen": "2026-09-03T03:41:20.372212+00:00",
-    "id": "ghost-f275b319ae09",
+    "id": "ghost-b7bf8d436d2e",
     "layer": "mechanical",
     "severity": "minor",
     "status": "suppressed",
@@ -350,7 +350,7 @@
       "snippet": null
     },
     "first_seen": "2026-09-03T03:41:20.372220+00:00",
-    "id": "ghost-ed1b12c50542",
+    "id": "ghost-75e18c1aa889",
     "layer": "mechanical",
     "severity": "minor",
     "status": "suppressed",
@@ -371,7 +371,7 @@
       "snippet": null
     },
     "first_seen": "2026-09-03T03:41:20.372226+00:00",
-    "id": "ghost-366b65428b69",
+    "id": "ghost-2fa6b14893ad",
     "layer": "mechanical",
     "severity": "minor",
     "status": "suppressed",
@@ -392,7 +392,7 @@
       "snippet": null
     },
     "first_seen": "2026-09-03T03:41:20.372232+00:00",
-    "id": "ghost-535578b4e7b2",
+    "id": "ghost-1a555d8f0ad6",
     "layer": "mechanical",
     "severity": "minor",
     "status": "suppressed",
@@ -413,7 +413,7 @@
       "snippet": null
     },
     "first_seen": "2026-09-03T03:41:20.372237+00:00",
-    "id": "ghost-4a27b370578c",
+    "id": "ghost-db4317a99e47",
     "layer": "mechanical",
     "severity": "minor",
     "status": "suppressed",
@@ -434,7 +434,7 @@
       "snippet": null
     },
     "first_seen": "2026-09-03T03:41:20.372244+00:00",
-    "id": "ghost-ebe4f6e289a2",
+    "id": "ghost-dcdf2fc29049",
     "layer": "mechanical",
     "severity": "minor",
     "status": "suppressed",
@@ -455,7 +455,7 @@
       "snippet": null
     },
     "first_seen": "2026-09-03T03:41:20.372250+00:00",
-    "id": "ghost-cc35849d11a9",
+    "id": "ghost-f192984656ee",
     "layer": "mechanical",
     "severity": "minor",
     "status": "suppressed",
@@ -476,7 +476,7 @@
       "snippet": null
     },
     "first_seen": "2026-09-03T03:41:20.372256+00:00",
-    "id": "ghost-2605b0181514",
+    "id": "ghost-3fb78c66b2bf",
     "layer": "mechanical",
     "severity": "minor",
     "status": "suppressed",
@@ -497,7 +497,7 @@
       "snippet": null
     },
     "first_seen": "2026-09-03T03:41:20.372261+00:00",
-    "id": "ghost-85f8efb91a9a",
+    "id": "ghost-c8cf106fbfad",
     "layer": "mechanical",
     "severity": "minor",
     "status": "suppressed",
@@ -518,7 +518,7 @@
       "snippet": null
     },
     "first_seen": "2026-09-03T03:41:20.372265+00:00",
-    "id": "ghost-d29bc502c04e",
+    "id": "ghost-6064a4bd86e4",
     "layer": "mechanical",
     "severity": "minor",
     "status": "suppressed",
@@ -539,7 +539,7 @@
       "snippet": null
     },
     "first_seen": "2026-09-03T03:41:20.372271+00:00",
-    "id": "ghost-7aae16711fe3",
+    "id": "ghost-98222204396b",
     "layer": "mechanical",
     "severity": "minor",
     "status": "suppressed",
@@ -560,7 +560,7 @@
       "snippet": null
     },
     "first_seen": "2026-09-03T03:41:20.372276+00:00",
-    "id": "ghost-979da6a95ab1",
+    "id": "ghost-b74c2955d13f",
     "layer": "mechanical",
     "severity": "minor",
     "status": "suppressed",
@@ -581,7 +581,7 @@
       "snippet": null
     },
     "first_seen": "2026-09-03T03:41:20.372281+00:00",
-    "id": "ghost-2650baccc205",
+    "id": "ghost-bc9597585a97",
     "layer": "mechanical",
     "severity": "minor",
     "status": "suppressed",
@@ -602,7 +602,7 @@
       "snippet": null
     },
     "first_seen": "2026-09-03T03:41:20.372288+00:00",
-    "id": "ghost-f75be48a0cb2",
+    "id": "ghost-bc3fb246f816",
     "layer": "mechanical",
     "severity": "minor",
     "status": "suppressed",
@@ -623,7 +623,7 @@
       "snippet": null
     },
     "first_seen": "2026-09-03T03:41:20.372295+00:00",
-    "id": "ghost-dbfe77145adf",
+    "id": "ghost-b7a7e96025c9",
     "layer": "mechanical",
     "severity": "minor",
     "status": "suppressed",
@@ -644,7 +644,7 @@
       "snippet": null
     },
     "first_seen": "2026-09-03T03:41:20.372300+00:00",
-    "id": "ghost-5a5a199e9f83",
+    "id": "ghost-546875ea0523",
     "layer": "mechanical",
     "severity": "minor",
     "status": "suppressed",
@@ -665,7 +665,7 @@
       "snippet": null
     },
     "first_seen": "2026-09-03T03:41:20.372306+00:00",
-    "id": "ghost-a03f917fd077",
+    "id": "ghost-12791d4398e8",
     "layer": "mechanical",
     "severity": "minor",
     "status": "suppressed",
@@ -686,7 +686,7 @@
       "snippet": null
     },
     "first_seen": "2026-09-03T03:41:20.372311+00:00",
-    "id": "ghost-b60a9fae6f0c",
+    "id": "ghost-f6d5f7c1e6f9",
     "layer": "mechanical",
     "severity": "minor",
     "status": "suppressed",
@@ -707,7 +707,7 @@
       "snippet": null
     },
     "first_seen": "2026-09-03T03:41:20.372316+00:00",
-    "id": "ghost-8c55a13dc50e",
+    "id": "ghost-d8934b313502",
     "layer": "mechanical",
     "severity": "minor",
     "status": "suppressed",
@@ -728,7 +728,7 @@
       "snippet": null
     },
     "first_seen": "2026-09-03T03:41:20.372322+00:00",
-    "id": "ghost-dc4ee834d86e",
+    "id": "ghost-71a60fcfeea2",
     "layer": "mechanical",
     "severity": "minor",
     "status": "suppressed",
@@ -749,7 +749,7 @@
       "snippet": null
     },
     "first_seen": "2026-09-03T03:41:20.372327+00:00",
-    "id": "ghost-560b12aa1a93",
+    "id": "ghost-3654bcf73f8a",
     "layer": "mechanical",
     "severity": "minor",
     "status": "suppressed",
@@ -770,7 +770,7 @@
       "snippet": null
     },
     "first_seen": "2026-09-03T03:41:20.372336+00:00",
-    "id": "ghost-acd36cb34c20",
+    "id": "ghost-f981c8b654cb",
     "layer": "mechanical",
     "severity": "minor",
     "status": "suppressed",
@@ -791,7 +791,7 @@
       "snippet": null
     },
     "first_seen": "2026-09-03T03:41:20.384912+00:00",
-    "id": "ghost-780ca3c4b53e",
+    "id": "ghost-11a42a0367ad",
     "layer": "mechanical",
     "severity": "minor",
     "status": "suppressed",
@@ -812,7 +812,7 @@
       "snippet": null
     },
     "first_seen": "2026-09-03T03:41:20.390436+00:00",
-    "id": "ghost-1f9f24d0c4da",
+    "id": "ghost-0893b804a2ab",
     "layer": "mechanical",
     "severity": "minor",
     "status": "suppressed",
@@ -835,7 +835,7 @@
       "snippet": null
     },
     "first_seen": "2026-09-03T03:41:20.606338+00:00",
-    "id": "ghost-759f7445138b",
+    "id": "ghost-9b554ad6eb9c",
     "layer": "mechanical",
     "severity": "minor",
     "status": "suppressed",
@@ -859,7 +859,7 @@
       "snippet": null
     },
     "first_seen": "2026-09-03T03:41:20.606376+00:00",
-    "id": "ghost-0846e7a38570",
+    "id": "ghost-4ca4a7295c36",
     "layer": "mechanical",
     "severity": "major",
     "status": "suppressed",
@@ -882,7 +882,7 @@
       "snippet": null
     },
     "first_seen": "2026-09-03T03:41:20.606400+00:00",
-    "id": "ghost-960ca42ca3bf",
+    "id": "ghost-64ff7816a124",
     "layer": "mechanical",
     "severity": "minor",
     "status": "suppressed",
@@ -907,7 +907,7 @@
       "snippet": null
     },
     "first_seen": "2026-09-03T03:41:20.620633+00:00",
-    "id": "ghost-8b366c760219",
+    "id": "ghost-e2f2339a5083",
     "layer": "mechanical",
     "severity": "major",
     "status": "suppressed",
@@ -930,7 +930,7 @@
       "snippet": null
     },
     "first_seen": "2026-09-03T03:41:20.620662+00:00",
-    "id": "ghost-5b6b99695c31",
+    "id": "ghost-8c404572d799",
     "layer": "mechanical",
     "severity": "minor",
     "status": "suppressed",
@@ -953,7 +953,7 @@
       "snippet": null
     },
     "first_seen": "2026-09-03T03:41:20.621012+00:00",
-    "id": "ghost-631ae2abaf90",
+    "id": "ghost-0b238c2bbda4",
     "layer": "mechanical",
     "severity": "minor",
     "status": "suppressed",
@@ -976,7 +976,7 @@
       "snippet": null
     },
     "first_seen": "2026-09-03T03:41:20.622602+00:00",
-    "id": "ghost-7d550d3d53d8",
+    "id": "ghost-bc8ccb390d24",
     "layer": "mechanical",
     "severity": "minor",
     "status": "suppressed",
@@ -999,7 +999,7 @@
       "snippet": null
     },
     "first_seen": "2026-09-03T03:41:20.626894+00:00",
-    "id": "ghost-77ea0f13ba89",
+    "id": "ghost-f4fefd8fe889",
     "layer": "mechanical",
     "severity": "minor",
     "status": "suppressed",
@@ -1024,7 +1024,7 @@
       "snippet": null
     },
     "first_seen": "2026-09-03T03:41:20.631591+00:00",
-    "id": "ghost-505fd018a699",
+    "id": "ghost-94fa8ab8e473",
     "layer": "mechanical",
     "severity": "major",
     "status": "suppressed",
@@ -1047,7 +1047,7 @@
       "snippet": null
     },
     "first_seen": "2026-09-03T03:41:20.631616+00:00",
-    "id": "ghost-6d46c19ea10f",
+    "id": "ghost-5fd9fcd5f72b",
     "layer": "mechanical",
     "severity": "minor",
     "status": "suppressed",
@@ -1070,7 +1070,7 @@
       "snippet": null
     },
     "first_seen": "2026-09-03T03:41:20.642694+00:00",
-    "id": "ghost-b2c97b1e4f28",
+    "id": "ghost-b164f45419e2",
     "layer": "mechanical",
     "severity": "minor",
     "status": "suppressed",
@@ -1093,7 +1093,7 @@
       "snippet": null
     },
     "first_seen": "2026-09-03T03:41:20.642923+00:00",
-    "id": "ghost-01a6f1587420",
+    "id": "ghost-042d8d4aea8c",
     "layer": "mechanical",
     "severity": "minor",
     "status": "suppressed",
@@ -1116,7 +1116,7 @@
       "snippet": null
     },
     "first_seen": "2026-09-03T03:41:20.643797+00:00",
-    "id": "ghost-8e9bcb89a873",
+    "id": "ghost-d64fc9d3f6f0",
     "layer": "mechanical",
     "severity": "minor",
     "status": "suppressed",
@@ -1139,7 +1139,7 @@
       "snippet": null
     },
     "first_seen": "2026-09-03T03:41:20.644075+00:00",
-    "id": "ghost-72512488b6e5",
+    "id": "ghost-b25adb434eaf",
     "layer": "mechanical",
     "severity": "minor",
     "status": "suppressed",
@@ -1162,7 +1162,7 @@
       "snippet": null
     },
     "first_seen": "2026-09-03T03:41:20.647883+00:00",
-    "id": "ghost-340a11a500ef",
+    "id": "ghost-26f34f14b028",
     "layer": "mechanical",
     "severity": "minor",
     "status": "suppressed",
@@ -1186,7 +1186,7 @@
       "snippet": null
     },
     "first_seen": "2026-09-03T03:41:20.647908+00:00",
-    "id": "ghost-47cd58e8e0b6",
+    "id": "ghost-cb411656e1d0",
     "layer": "mechanical",
     "severity": "major",
     "status": "suppressed",
@@ -1209,7 +1209,7 @@
       "snippet": null
     },
     "first_seen": "2026-09-03T03:41:20.649554+00:00",
-    "id": "ghost-e1aec0667879",
+    "id": "ghost-ade58b5fc761",
     "layer": "mechanical",
     "severity": "minor",
     "status": "suppressed",
@@ -1232,7 +1232,7 @@
       "snippet": null
     },
     "first_seen": "2026-09-03T03:41:20.649575+00:00",
-    "id": "ghost-dc54d3e893cf",
+    "id": "ghost-dde1b121ef17",
     "layer": "mechanical",
     "severity": "minor",
     "status": "suppressed",
@@ -1255,7 +1255,7 @@
       "snippet": null
     },
     "first_seen": "2026-09-03T03:41:20.652685+00:00",
-    "id": "ghost-3a4b5fbc274e",
+    "id": "ghost-211665327c53",
     "layer": "mechanical",
     "severity": "minor",
     "status": "suppressed",
@@ -1278,7 +1278,7 @@
       "snippet": null
     },
     "first_seen": "2026-09-03T03:41:20.667767+00:00",
-    "id": "ghost-cdf0540b7986",
+    "id": "ghost-0673e1fb4432",
     "layer": "mechanical",
     "severity": "minor",
     "status": "suppressed",
@@ -1301,7 +1301,7 @@
       "snippet": null
     },
     "first_seen": "2026-09-03T03:41:20.671703+00:00",
-    "id": "ghost-a221e6bc468c",
+    "id": "ghost-1d379f5e5422",
     "layer": "mechanical",
     "severity": "minor",
     "status": "suppressed",
@@ -1324,7 +1324,7 @@
       "snippet": null
     },
     "first_seen": "2026-09-03T03:41:20.676786+00:00",
-    "id": "ghost-28dbf10c554c",
+    "id": "ghost-87a17c6f49c5",
     "layer": "mechanical",
     "severity": "minor",
     "status": "suppressed",
@@ -1347,7 +1347,7 @@
       "snippet": null
     },
     "first_seen": "2026-09-03T03:41:20.676806+00:00",
-    "id": "ghost-d589642ba0cf",
+    "id": "ghost-136d2dfa8ceb",
     "layer": "mechanical",
     "severity": "minor",
     "status": "suppressed",
@@ -1370,7 +1370,7 @@
       "snippet": null
     },
     "first_seen": "2026-09-03T03:41:20.676815+00:00",
-    "id": "ghost-7bca3024dc98",
+    "id": "ghost-7ee82404088c",
     "layer": "mechanical",
     "severity": "minor",
     "status": "suppressed",
@@ -1393,7 +1393,7 @@
       "snippet": null
     },
     "first_seen": "2026-09-03T03:41:20.686316+00:00",
-    "id": "ghost-bd0008c8603f",
+    "id": "ghost-8c295998c209",
     "layer": "mechanical",
     "severity": "minor",
     "status": "suppressed",
@@ -1416,7 +1416,7 @@
       "snippet": null
     },
     "first_seen": "2026-09-03T03:41:20.687634+00:00",
-    "id": "ghost-e77aabce70bd",
+    "id": "ghost-894672c39947",
     "layer": "mechanical",
     "severity": "minor",
     "status": "suppressed",
@@ -1439,7 +1439,7 @@
       "snippet": null
     },
     "first_seen": "2026-09-03T03:41:20.688982+00:00",
-    "id": "ghost-c1b81db7f994",
+    "id": "ghost-fba952f93805",
     "layer": "mechanical",
     "severity": "minor",
     "status": "suppressed",
@@ -1462,7 +1462,7 @@
       "snippet": null
     },
     "first_seen": "2026-09-03T03:41:20.688998+00:00",
-    "id": "ghost-cae96574acfd",
+    "id": "ghost-1869e3a44537",
     "layer": "mechanical",
     "severity": "minor",
     "status": "suppressed",
@@ -1485,7 +1485,7 @@
       "snippet": null
     },
     "first_seen": "2026-09-03T03:41:20.689009+00:00",
-    "id": "ghost-400f153c5a61",
+    "id": "ghost-c93b0f094ffa",
     "layer": "mechanical",
     "severity": "minor",
     "status": "suppressed",
@@ -1508,7 +1508,7 @@
       "snippet": null
     },
     "first_seen": "2026-09-03T03:41:20.689025+00:00",
-    "id": "ghost-f2d0201bfc69",
+    "id": "ghost-8d0ec0707008",
     "layer": "mechanical",
     "severity": "minor",
     "status": "suppressed",
@@ -1531,7 +1531,7 @@
       "snippet": null
     },
     "first_seen": "2026-09-03T03:41:20.689052+00:00",
-    "id": "ghost-ebe9452fc0cf",
+    "id": "ghost-6d054a89ca1f",
     "layer": "mechanical",
     "severity": "minor",
     "status": "suppressed",
@@ -1554,7 +1554,7 @@
       "snippet": null
     },
     "first_seen": "2026-09-03T03:41:20.690801+00:00",
-    "id": "ghost-3b94bd9508d4",
+    "id": "ghost-c7e5db04c9d7",
     "layer": "mechanical",
     "severity": "minor",
     "status": "suppressed",
@@ -1579,7 +1579,7 @@
       "snippet": null
     },
     "first_seen": "2026-09-03T03:41:20.692950+00:00",
-    "id": "ghost-c75037ea56a6",
+    "id": "ghost-65d892396e18",
     "layer": "mechanical",
     "severity": "major",
     "status": "suppressed",
@@ -1603,7 +1603,7 @@
       "snippet": null
     },
     "first_seen": "2026-09-03T03:41:20.702873+00:00",
-    "id": "ghost-db81fe320f98",
+    "id": "ghost-df756d5cbc30",
     "layer": "mechanical",
     "severity": "major",
     "status": "suppressed",
@@ -1626,7 +1626,7 @@
       "snippet": null
     },
     "first_seen": "2026-09-03T03:41:20.704222+00:00",
-    "id": "ghost-dc85fe584a41",
+    "id": "ghost-7ff4908d8d6c",
     "layer": "mechanical",
     "severity": "minor",
     "status": "suppressed",
@@ -1649,7 +1649,7 @@
       "snippet": null
     },
     "first_seen": "2026-09-03T03:41:20.726634+00:00",
-    "id": "ghost-9278f7b3a012",
+    "id": "ghost-34952583097c",
     "layer": "mechanical",
     "severity": "minor",
     "status": "suppressed",
@@ -1672,7 +1672,7 @@
       "snippet": null
     },
     "first_seen": "2026-09-03T03:41:20.728697+00:00",
-    "id": "ghost-8c778dee7a96",
+    "id": "ghost-c8a97bc543c2",
     "layer": "mechanical",
     "severity": "minor",
     "status": "suppressed",
@@ -1695,7 +1695,7 @@
       "snippet": null
     },
     "first_seen": "2026-09-03T03:41:20.728729+00:00",
-    "id": "ghost-e3d5fed637cd",
+    "id": "ghost-c5470fff4c26",
     "layer": "mechanical",
     "severity": "minor",
     "status": "suppressed",
@@ -1718,7 +1718,7 @@
       "snippet": null
     },
     "first_seen": "2026-09-03T03:41:20.734773+00:00",
-    "id": "ghost-8696ba769346",
+    "id": "ghost-bfb42b740d72",
     "layer": "mechanical",
     "severity": "minor",
     "status": "suppressed",
@@ -1741,7 +1741,7 @@
       "snippet": null
     },
     "first_seen": "2026-09-03T03:41:20.735037+00:00",
-    "id": "ghost-79ba18f774f4",
+    "id": "ghost-2719b07b2565",
     "layer": "mechanical",
     "severity": "minor",
     "status": "suppressed",
@@ -1764,7 +1764,7 @@
       "snippet": null
     },
     "first_seen": "2026-09-03T03:41:20.736384+00:00",
-    "id": "ghost-34c58495a629",
+    "id": "ghost-f28499118267",
     "layer": "mechanical",
     "severity": "minor",
     "status": "suppressed",
@@ -1787,7 +1787,7 @@
       "snippet": null
     },
     "first_seen": "2026-09-03T03:41:20.737207+00:00",
-    "id": "ghost-dd9030a7835c",
+    "id": "ghost-d4e4dbc93b48",
     "layer": "mechanical",
     "severity": "minor",
     "status": "suppressed",
@@ -1810,7 +1810,7 @@
       "snippet": null
     },
     "first_seen": "2026-09-03T03:41:20.737666+00:00",
-    "id": "ghost-cde7d7d2494d",
+    "id": "ghost-78b82b59caa9",
     "layer": "mechanical",
     "severity": "minor",
     "status": "suppressed",
@@ -1833,7 +1833,7 @@
       "snippet": null
     },
     "first_seen": "2026-09-03T03:41:20.738131+00:00",
-    "id": "ghost-0165a2bc60c0",
+    "id": "ghost-dd756cc49f6c",
     "layer": "mechanical",
     "severity": "minor",
     "status": "suppressed",
@@ -1856,7 +1856,7 @@
       "snippet": null
     },
     "first_seen": "2026-09-03T03:41:20.742800+00:00",
-    "id": "ghost-258208b32105",
+    "id": "ghost-000a477867ec",
     "layer": "mechanical",
     "severity": "minor",
     "status": "suppressed",
@@ -1879,7 +1879,7 @@
       "snippet": null
     },
     "first_seen": "2026-09-03T03:41:20.743642+00:00",
-    "id": "ghost-741072564f4e",
+    "id": "ghost-67dc929c0acf",
     "layer": "mechanical",
     "severity": "minor",
     "status": "suppressed",
@@ -1902,7 +1902,7 @@
       "snippet": null
     },
     "first_seen": "2026-09-03T03:41:20.749011+00:00",
-    "id": "ghost-d3f2890ffb9c",
+    "id": "ghost-062d008d801a",
     "layer": "mechanical",
     "severity": "minor",
     "status": "suppressed",
@@ -1925,7 +1925,7 @@
       "snippet": null
     },
     "first_seen": "2026-09-03T03:41:20.755288+00:00",
-    "id": "ghost-c121904bc9b2",
+    "id": "ghost-1a6010b20936",
     "layer": "mechanical",
     "severity": "minor",
     "status": "suppressed",
@@ -1948,7 +1948,7 @@
       "snippet": null
     },
     "first_seen": "2026-09-03T03:41:20.755741+00:00",
-    "id": "ghost-3805458b3779",
+    "id": "ghost-5b89d50ade43",
     "layer": "mechanical",
     "severity": "minor",
     "status": "suppressed",
@@ -1971,7 +1971,7 @@
       "snippet": null
     },
     "first_seen": "2026-09-03T03:41:20.757111+00:00",
-    "id": "ghost-f6cdf0074722",
+    "id": "ghost-b3a5dbc79c04",
     "layer": "mechanical",
     "severity": "minor",
     "status": "suppressed",
@@ -1994,7 +1994,7 @@
       "snippet": null
     },
     "first_seen": "2026-09-03T03:41:20.767261+00:00",
-    "id": "ghost-8e72d5437f46",
+    "id": "ghost-c196583125fb",
     "layer": "mechanical",
     "severity": "minor",
     "status": "suppressed",
@@ -2017,7 +2017,7 @@
       "snippet": null
     },
     "first_seen": "2026-09-03T03:41:20.767987+00:00",
-    "id": "ghost-7509dff572a2",
+    "id": "ghost-8356d8f0c96d",
     "layer": "mechanical",
     "severity": "minor",
     "status": "suppressed",
@@ -2038,10 +2038,792 @@
       "snippet": null
     },
     "first_seen": "2026-09-03T03:41:20.807974+00:00",
-    "id": "ghost-860779821445",
+    "id": "ghost-62da71418049",
     "layer": "mechanical",
     "severity": "minor",
     "status": "suppressed",
     "summary": "'DGK_LIGHT_INTEGRATION-2cc91dc07cb1bac8.md' claims 18 test(s), but at least 35 test_* function(s) exist in the scanned .py files -- this claim is stale"
+  },
+  {
+    "category": "dead_code",
+    "confidence": null,
+    "detail": "No ast.Name, ast.Attribute, or string-subscript-key node anywhere in the scanned files resolves to this identifier. Scope limit: getattr-by-string and decorator-based registration are still not traced, so this can false-positive on names only reached that way -- confirm before deleting.",
+    "detector": "dead_code",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/home/wking53214/ecology/containment.py",
+      "line_end": null,
+      "line_start": null,
+      "related_files": [],
+      "snippet": null
+    },
+    "first_seen": "2026-09-08T03:43:42.488121+00:00",
+    "id": "ghost-681c33fa7ac9",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'tokenize' is defined but never referenced anywhere in the scanned set"
+  },
+  {
+    "category": "dead_code",
+    "confidence": null,
+    "detail": "No ast.Name, ast.Attribute, or string-subscript-key node anywhere in the scanned files resolves to this identifier. Scope limit: getattr-by-string and decorator-based registration are still not traced, so this can false-positive on names only reached that way -- confirm before deleting.",
+    "detector": "dead_code",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/home/wking53214/ecology/lexical_index.py",
+      "line_end": null,
+      "line_start": null,
+      "related_files": [],
+      "snippet": null
+    },
+    "first_seen": "2026-09-08T03:43:42.488383+00:00",
+    "id": "ghost-bc57b9cb28e5",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'iter_all_dates' is defined but never referenced anywhere in the scanned set"
+  },
+  {
+    "category": "complexity",
+    "confidence": null,
+    "detail": "Line-count proxy for the 'Long Method' smell, not true cyclomatic complexity -- a long function that's mostly a flat sequence of simple statements is a weaker signal than a short function with deep branching. Treat as a prompt to look, not a verdict.",
+    "detector": "long_function",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/home/wking53214/ecology/rag_engine.py",
+      "line_end": 301,
+      "line_start": 183,
+      "related_files": [],
+      "snippet": null
+    },
+    "first_seen": "2026-09-08T03:43:42.514309+00:00",
+    "id": "ghost-ab4c9a831b8b",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'generate_response' spans 118 lines (threshold 80)"
+  },
+  {
+    "category": "duplication",
+    "confidence": null,
+    "detail": "Structural fingerprint match, not textual diff -- this is the 'copy-pasted then renamed' shape specifically. Confirm these are actually solving the same problem before merging; some structural matches are coincidental (e.g. two unrelated simple validators).",
+    "detector": "near_duplicate_function",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/home/wking53214/ecology/src/rag/preprocess.py",
+      "line_end": 196,
+      "line_start": 158,
+      "related_files": [
+        "/home/wking53214/ecology/src/rag/preprocess.py"
+      ],
+      "snippet": null
+    },
+    "first_seen": "2026-09-08T03:43:42.647845+00:00",
+    "id": "ghost-4ad82adb86d7",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "2 functions share identical AST structure (names/literals differ, control flow and shape don't): preprocess.py:158:parse, preprocess.py:201:parse"
+  },
+  {
+    "category": "duplication",
+    "confidence": null,
+    "detail": "Structural fingerprint match, not textual diff -- this is the 'copy-pasted then renamed' shape specifically. Confirm these are actually solving the same problem before merging; some structural matches are coincidental (e.g. two unrelated simple validators).",
+    "detector": "near_duplicate_function",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/home/wking53214/ecology/tests/unit/test_containment.py",
+      "line_end": 107,
+      "line_start": 95,
+      "related_files": [
+        "/home/wking53214/ecology/tests/unit/test_containment.py"
+      ],
+      "snippet": null
+    },
+    "first_seen": "2026-09-08T03:43:42.648150+00:00",
+    "id": "ghost-acf543235751",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "2 functions share identical AST structure (names/literals differ, control flow and shape don't): test_containment.py:95:test_5_reject_right_entity_wrong_proposition, test_containment.py:110:test_6_reject_rationale_without_the_decision"
+  },
+  {
+    "category": "duplication",
+    "confidence": null,
+    "detail": "Structural fingerprint match within one function, not a whole-function match (near_duplicate_function's detection is blind to this shape). Typical real cause: several branches each hand-build the same kind of object or perform the same sequence of calls -- worth a single shared helper if the branches really are doing the same thing, not just a coincidental resemblance.",
+    "detector": "intra_function_duplicate_block",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/home/wking53214/ecology/containment.py",
+      "line_end": 376,
+      "line_start": 376,
+      "related_files": [
+        "/home/wking53214/ecology/containment.py:389-389"
+      ],
+      "snippet": null
+    },
+    "first_seen": "2026-09-08T03:43:42.664250+00:00",
+    "id": "ghost-b9d839780293",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'split_sentences' repeats the same single statement 2 times (lines 376-376, 389-389): same shape, names/literals differ"
+  },
+  {
+    "category": "duplication",
+    "confidence": null,
+    "detail": "Structural fingerprint match within one function, not a whole-function match (near_duplicate_function's detection is blind to this shape). Typical real cause: several branches each hand-build the same kind of object or perform the same sequence of calls -- worth a single shared helper if the branches really are doing the same thing, not just a coincidental resemblance.",
+    "detector": "intra_function_duplicate_block",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/home/wking53214/ecology/containment.py",
+      "line_end": 385,
+      "line_start": 379,
+      "related_files": [
+        "/home/wking53214/ecology/containment.py:393-399"
+      ],
+      "snippet": null
+    },
+    "first_seen": "2026-09-08T03:43:42.664405+00:00",
+    "id": "ghost-040ba3d977ac",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'split_sentences' repeats the same 5-statement block 2 times (lines 379-385, 393-399): same shape, names/literals differ"
+  },
+  {
+    "category": "duplication",
+    "confidence": null,
+    "detail": "Structural fingerprint match within one function, not a whole-function match (near_duplicate_function's detection is blind to this shape). Typical real cause: several branches each hand-build the same kind of object or perform the same sequence of calls -- worth a single shared helper if the branches really are doing the same thing, not just a coincidental resemblance.",
+    "detector": "intra_function_duplicate_block",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/home/wking53214/ecology/containment.py",
+      "line_end": 379,
+      "line_start": 379,
+      "related_files": [
+        "/home/wking53214/ecology/containment.py:393-393"
+      ],
+      "snippet": null
+    },
+    "first_seen": "2026-09-08T03:43:42.664466+00:00",
+    "id": "ghost-a49eed985050",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'split_sentences' repeats the same single statement 2 times (lines 379-379, 393-393): same shape, names/literals differ"
+  },
+  {
+    "category": "duplication",
+    "confidence": null,
+    "detail": "Structural fingerprint match within one function, not a whole-function match (near_duplicate_function's detection is blind to this shape). Typical real cause: several branches each hand-build the same kind of object or perform the same sequence of calls -- worth a single shared helper if the branches really are doing the same thing, not just a coincidental resemblance.",
+    "detector": "intra_function_duplicate_block",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/home/wking53214/ecology/containment.py",
+      "line_end": 381,
+      "line_start": 381,
+      "related_files": [
+        "/home/wking53214/ecology/containment.py:395-395"
+      ],
+      "snippet": null
+    },
+    "first_seen": "2026-09-08T03:43:42.664519+00:00",
+    "id": "ghost-aebf0575624a",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'split_sentences' repeats the same single statement 2 times (lines 381-381, 395-395): same shape, names/literals differ"
+  },
+  {
+    "category": "duplication",
+    "confidence": null,
+    "detail": "Structural fingerprint match within one function, not a whole-function match (near_duplicate_function's detection is blind to this shape). Typical real cause: several branches each hand-build the same kind of object or perform the same sequence of calls -- worth a single shared helper if the branches really are doing the same thing, not just a coincidental resemblance.",
+    "detector": "intra_function_duplicate_block",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/home/wking53214/ecology/containment.py",
+      "line_end": 582,
+      "line_start": 582,
+      "related_files": [
+        "/home/wking53214/ecology/containment.py:587-587"
+      ],
+      "snippet": null
+    },
+    "first_seen": "2026-09-08T03:43:42.668704+00:00",
+    "id": "ghost-8430d504c440",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'verify_detailed' repeats the same single statement 2 times (lines 582-582, 587-587): same shape, names/literals differ"
+  },
+  {
+    "category": "duplication",
+    "confidence": null,
+    "detail": "Structural fingerprint match within one function, not a whole-function match (near_duplicate_function's detection is blind to this shape). Typical real cause: several branches each hand-build the same kind of object or perform the same sequence of calls -- worth a single shared helper if the branches really are doing the same thing, not just a coincidental resemblance.",
+    "detector": "intra_function_duplicate_block",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/home/wking53214/ecology/history_loader.py",
+      "line_end": 225,
+      "line_start": 225,
+      "related_files": [
+        "/home/wking53214/ecology/history_loader.py:234-234"
+      ],
+      "snippet": null
+    },
+    "first_seen": "2026-09-08T03:43:42.684434+00:00",
+    "id": "ghost-92e8f7565780",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'cells_from_transcript' repeats the same single statement 2 times (lines 225-225, 234-234): same shape, names/literals differ"
+  },
+  {
+    "category": "duplication",
+    "confidence": null,
+    "detail": "Structural fingerprint match within one function, not a whole-function match (near_duplicate_function's detection is blind to this shape). Typical real cause: several branches each hand-build the same kind of object or perform the same sequence of calls -- worth a single shared helper if the branches really are doing the same thing, not just a coincidental resemblance.",
+    "detector": "intra_function_duplicate_block",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/home/wking53214/ecology/history_loader.py",
+      "line_end": 307,
+      "line_start": 307,
+      "related_files": [
+        "/home/wking53214/ecology/history_loader.py:308-308"
+      ],
+      "snippet": null
+    },
+    "first_seen": "2026-09-08T03:43:42.686800+00:00",
+    "id": "ghost-8486387f28d4",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'history_repo_summary' repeats the same single statement 2 times (lines 307-307, 308-308): same shape, names/literals differ"
+  },
+  {
+    "category": "duplication",
+    "confidence": null,
+    "detail": "Structural fingerprint match within one function, not a whole-function match (near_duplicate_function's detection is blind to this shape). Typical real cause: several branches each hand-build the same kind of object or perform the same sequence of calls -- worth a single shared helper if the branches really are doing the same thing, not just a coincidental resemblance.",
+    "detector": "intra_function_duplicate_block",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/home/wking53214/ecology/lexical_index.py",
+      "line_end": 130,
+      "line_start": 130,
+      "related_files": [
+        "/home/wking53214/ecology/lexical_index.py:133-133",
+        "/home/wking53214/ecology/lexical_index.py:136-136"
+      ],
+      "snippet": null
+    },
+    "first_seen": "2026-09-08T03:43:42.694884+00:00",
+    "id": "ghost-ec94e84ea4ae",
+    "layer": "mechanical",
+    "severity": "major",
+    "status": "suppressed",
+    "summary": "'lexical_search' repeats the same single statement 3 times (lines 130-130, 133-133, 136-136): same shape, names/literals differ"
+  },
+  {
+    "category": "duplication",
+    "confidence": null,
+    "detail": "Structural fingerprint match within one function, not a whole-function match (near_duplicate_function's detection is blind to this shape). Typical real cause: several branches each hand-build the same kind of object or perform the same sequence of calls -- worth a single shared helper if the branches really are doing the same thing, not just a coincidental resemblance.",
+    "detector": "intra_function_duplicate_block",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/home/wking53214/ecology/rag_engine.py",
+      "line_end": 233,
+      "line_start": 233,
+      "related_files": [
+        "/home/wking53214/ecology/rag_engine.py:235-235"
+      ],
+      "snippet": null
+    },
+    "first_seen": "2026-09-08T03:43:42.711260+00:00",
+    "id": "ghost-35c8076c6255",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'generate_response' repeats the same single statement 2 times (lines 233-233, 235-235): same shape, names/literals differ"
+  },
+  {
+    "category": "duplication",
+    "confidence": null,
+    "detail": "Structural fingerprint match within one function, not a whole-function match (near_duplicate_function's detection is blind to this shape). Typical real cause: several branches each hand-build the same kind of object or perform the same sequence of calls -- worth a single shared helper if the branches really are doing the same thing, not just a coincidental resemblance.",
+    "detector": "intra_function_duplicate_block",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/home/wking53214/ecology/semantic_index.py",
+      "line_end": 134,
+      "line_start": 134,
+      "related_files": [
+        "/home/wking53214/ecology/semantic_index.py:135-135"
+      ],
+      "snippet": null
+    },
+    "first_seen": "2026-09-08T03:43:42.722441+00:00",
+    "id": "ghost-7b1ebba6617b",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'query' repeats the same single statement 2 times (lines 134-134, 135-135): same shape, names/literals differ"
+  },
+  {
+    "category": "duplication",
+    "confidence": null,
+    "detail": "Structural fingerprint match within one function, not a whole-function match (near_duplicate_function's detection is blind to this shape). Typical real cause: several branches each hand-build the same kind of object or perform the same sequence of calls -- worth a single shared helper if the branches really are doing the same thing, not just a coincidental resemblance.",
+    "detector": "intra_function_duplicate_block",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/home/wking53214/ecology/src/rag/pipeline.py",
+      "line_end": 59,
+      "line_start": 59,
+      "related_files": [
+        "/home/wking53214/ecology/src/rag/pipeline.py:60-60"
+      ],
+      "snippet": null
+    },
+    "first_seen": "2026-09-08T03:43:42.739497+00:00",
+    "id": "ghost-a3e02f77d25b",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'cosine' repeats the same single statement 2 times (lines 59-59, 60-60): same shape, names/literals differ"
+  },
+  {
+    "category": "duplication",
+    "confidence": null,
+    "detail": "Structural fingerprint match within one function, not a whole-function match (near_duplicate_function's detection is blind to this shape). Typical real cause: several branches each hand-build the same kind of object or perform the same sequence of calls -- worth a single shared helper if the branches really are doing the same thing, not just a coincidental resemblance.",
+    "detector": "intra_function_duplicate_block",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/home/wking53214/ecology/src/rag/preprocess.py",
+      "line_end": 46,
+      "line_start": 46,
+      "related_files": [
+        "/home/wking53214/ecology/src/rag/preprocess.py:67-67"
+      ],
+      "snippet": null
+    },
+    "first_seen": "2026-09-08T03:43:42.745005+00:00",
+    "id": "ghost-53f74465ad52",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'parse' repeats the same single statement 2 times (lines 46-46, 67-67): same shape, names/literals differ"
+  },
+  {
+    "category": "duplication",
+    "confidence": null,
+    "detail": "Structural fingerprint match within one function, not a whole-function match (near_duplicate_function's detection is blind to this shape). Typical real cause: several branches each hand-build the same kind of object or perform the same sequence of calls -- worth a single shared helper if the branches really are doing the same thing, not just a coincidental resemblance.",
+    "detector": "intra_function_duplicate_block",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/home/wking53214/ecology/src/rag/preprocess.py",
+      "line_end": 177,
+      "line_start": 172,
+      "related_files": [
+        "/home/wking53214/ecology/src/rag/preprocess.py:183-188"
+      ],
+      "snippet": null
+    },
+    "first_seen": "2026-09-08T03:43:42.748728+00:00",
+    "id": "ghost-4064c6947d7a",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'parse' repeats the same 3-statement block 2 times (lines 172-177, 183-188): same shape, names/literals differ"
+  },
+  {
+    "category": "duplication",
+    "confidence": null,
+    "detail": "Structural fingerprint match within one function, not a whole-function match (near_duplicate_function's detection is blind to this shape). Typical real cause: several branches each hand-build the same kind of object or perform the same sequence of calls -- worth a single shared helper if the branches really are doing the same thing, not just a coincidental resemblance.",
+    "detector": "intra_function_duplicate_block",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/home/wking53214/ecology/src/rag/preprocess.py",
+      "line_end": 172,
+      "line_start": 172,
+      "related_files": [
+        "/home/wking53214/ecology/src/rag/preprocess.py:183-183",
+        "/home/wking53214/ecology/src/rag/preprocess.py:191-191"
+      ],
+      "snippet": null
+    },
+    "first_seen": "2026-09-08T03:43:42.748911+00:00",
+    "id": "ghost-95ded9c8e9b4",
+    "layer": "mechanical",
+    "severity": "major",
+    "status": "suppressed",
+    "summary": "'parse' repeats the same single statement 3 times (lines 172-172, 183-183, 191-191): same shape, names/literals differ"
+  },
+  {
+    "category": "duplication",
+    "confidence": null,
+    "detail": "Structural fingerprint match within one function, not a whole-function match (near_duplicate_function's detection is blind to this shape). Typical real cause: several branches each hand-build the same kind of object or perform the same sequence of calls -- worth a single shared helper if the branches really are doing the same thing, not just a coincidental resemblance.",
+    "detector": "intra_function_duplicate_block",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/home/wking53214/ecology/src/rag/preprocess.py",
+      "line_end": 220,
+      "line_start": 215,
+      "related_files": [
+        "/home/wking53214/ecology/src/rag/preprocess.py:226-231"
+      ],
+      "snippet": null
+    },
+    "first_seen": "2026-09-08T03:43:42.749938+00:00",
+    "id": "ghost-88c40a08a48c",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'parse' repeats the same 3-statement block 2 times (lines 215-220, 226-231): same shape, names/literals differ"
+  },
+  {
+    "category": "duplication",
+    "confidence": null,
+    "detail": "Structural fingerprint match within one function, not a whole-function match (near_duplicate_function's detection is blind to this shape). Typical real cause: several branches each hand-build the same kind of object or perform the same sequence of calls -- worth a single shared helper if the branches really are doing the same thing, not just a coincidental resemblance.",
+    "detector": "intra_function_duplicate_block",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/home/wking53214/ecology/src/rag/preprocess.py",
+      "line_end": 215,
+      "line_start": 215,
+      "related_files": [
+        "/home/wking53214/ecology/src/rag/preprocess.py:226-226",
+        "/home/wking53214/ecology/src/rag/preprocess.py:234-234"
+      ],
+      "snippet": null
+    },
+    "first_seen": "2026-09-08T03:43:42.750031+00:00",
+    "id": "ghost-3fa20e2dc81e",
+    "layer": "mechanical",
+    "severity": "major",
+    "status": "suppressed",
+    "summary": "'parse' repeats the same single statement 3 times (lines 215-215, 226-226, 234-234): same shape, names/literals differ"
+  },
+  {
+    "category": "duplication",
+    "confidence": null,
+    "detail": "Structural fingerprint match within one function, not a whole-function match (near_duplicate_function's detection is blind to this shape). Typical real cause: several branches each hand-build the same kind of object or perform the same sequence of calls -- worth a single shared helper if the branches really are doing the same thing, not just a coincidental resemblance.",
+    "detector": "intra_function_duplicate_block",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/home/wking53214/ecology/src/rag/storage.py",
+      "line_end": 34,
+      "line_start": 34,
+      "related_files": [
+        "/home/wking53214/ecology/src/rag/storage.py:35-35"
+      ],
+      "snippet": null
+    },
+    "first_seen": "2026-09-08T03:43:42.755364+00:00",
+    "id": "ghost-39cd2a0f9e47",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'ingest' repeats the same single statement 2 times (lines 34-34, 35-35): same shape, names/literals differ"
+  },
+  {
+    "category": "duplication",
+    "confidence": null,
+    "detail": "Structural fingerprint match within one function, not a whole-function match (near_duplicate_function's detection is blind to this shape). Typical real cause: several branches each hand-build the same kind of object or perform the same sequence of calls -- worth a single shared helper if the branches really are doing the same thing, not just a coincidental resemblance.",
+    "detector": "intra_function_duplicate_block",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/home/wking53214/ecology/src/rag/storage.py",
+      "line_end": 47,
+      "line_start": 47,
+      "related_files": [
+        "/home/wking53214/ecology/src/rag/storage.py:52-52"
+      ],
+      "snippet": null
+    },
+    "first_seen": "2026-09-08T03:43:42.756216+00:00",
+    "id": "ghost-c1933d599bdd",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'search' repeats the same single statement 2 times (lines 47-47, 52-52): same shape, names/literals differ"
+  },
+  {
+    "category": "duplication",
+    "confidence": null,
+    "detail": "Structural fingerprint match within one function, not a whole-function match (near_duplicate_function's detection is blind to this shape). Typical real cause: several branches each hand-build the same kind of object or perform the same sequence of calls -- worth a single shared helper if the branches really are doing the same thing, not just a coincidental resemblance.",
+    "detector": "intra_function_duplicate_block",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/home/wking53214/ecology/src/rag/storage.py",
+      "line_end": 48,
+      "line_start": 48,
+      "related_files": [
+        "/home/wking53214/ecology/src/rag/storage.py:53-53"
+      ],
+      "snippet": null
+    },
+    "first_seen": "2026-09-08T03:43:42.756325+00:00",
+    "id": "ghost-892c67fb3996",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'search' repeats the same single statement 2 times (lines 48-48, 53-53): same shape, names/literals differ"
+  },
+  {
+    "category": "duplication",
+    "confidence": null,
+    "detail": "Structural fingerprint match within one function, not a whole-function match (near_duplicate_function's detection is blind to this shape). Typical real cause: several branches each hand-build the same kind of object or perform the same sequence of calls -- worth a single shared helper if the branches really are doing the same thing, not just a coincidental resemblance.",
+    "detector": "intra_function_duplicate_block",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/home/wking53214/ecology/src/rag/storage.py",
+      "line_end": 49,
+      "line_start": 49,
+      "related_files": [
+        "/home/wking53214/ecology/src/rag/storage.py:54-54"
+      ],
+      "snippet": null
+    },
+    "first_seen": "2026-09-08T03:43:42.756402+00:00",
+    "id": "ghost-d5619ae6099d",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'search' repeats the same single statement 2 times (lines 49-49, 54-54): same shape, names/literals differ"
+  },
+  {
+    "category": "duplication",
+    "confidence": null,
+    "detail": "Structural fingerprint match within one function, not a whole-function match (near_duplicate_function's detection is blind to this shape). Typical real cause: several branches each hand-build the same kind of object or perform the same sequence of calls -- worth a single shared helper if the branches really are doing the same thing, not just a coincidental resemblance.",
+    "detector": "intra_function_duplicate_block",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/home/wking53214/ecology/tests/rag/test_e2e_orchestration.py",
+      "line_end": 25,
+      "line_start": 25,
+      "related_files": [
+        "/home/wking53214/ecology/tests/rag/test_e2e_orchestration.py:33-33"
+      ],
+      "snippet": null
+    },
+    "first_seen": "2026-09-08T03:43:42.763905+00:00",
+    "id": "ghost-e7eb5dcb4c82",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'test_full_pipeline_orchestration' repeats the same single statement 2 times (lines 25-25, 33-33): same shape, names/literals differ"
+  },
+  {
+    "category": "duplication",
+    "confidence": null,
+    "detail": "Structural fingerprint match within one function, not a whole-function match (near_duplicate_function's detection is blind to this shape). Typical real cause: several branches each hand-build the same kind of object or perform the same sequence of calls -- worth a single shared helper if the branches really are doing the same thing, not just a coincidental resemblance.",
+    "detector": "intra_function_duplicate_block",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/home/wking53214/ecology/tests/rag/test_incremental_crawler.py",
+      "line_end": 38,
+      "line_start": 38,
+      "related_files": [
+        "/home/wking53214/ecology/tests/rag/test_incremental_crawler.py:52-52"
+      ],
+      "snippet": null
+    },
+    "first_seen": "2026-09-08T03:43:42.767466+00:00",
+    "id": "ghost-e4eade04181f",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'test_incremental_scanner_skips_unmodified_files' repeats the same single statement 2 times (lines 38-38, 52-52): same shape, names/literals differ"
+  },
+  {
+    "category": "duplication",
+    "confidence": null,
+    "detail": "Structural fingerprint match within one function, not a whole-function match (near_duplicate_function's detection is blind to this shape). Typical real cause: several branches each hand-build the same kind of object or perform the same sequence of calls -- worth a single shared helper if the branches really are doing the same thing, not just a coincidental resemblance.",
+    "detector": "intra_function_duplicate_block",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/home/wking53214/ecology/tests/rag/test_pdf_preprocess.py",
+      "line_end": 27,
+      "line_start": 27,
+      "related_files": [
+        "/home/wking53214/ecology/tests/rag/test_pdf_preprocess.py:28-28"
+      ],
+      "snippet": null
+    },
+    "first_seen": "2026-09-08T03:43:42.768679+00:00",
+    "id": "ghost-d87f21595032",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'test_pdf_parsing_strategy' repeats the same single statement 2 times (lines 27-27, 28-28): same shape, names/literals differ"
+  },
+  {
+    "category": "duplication",
+    "confidence": null,
+    "detail": "Structural fingerprint match within one function, not a whole-function match (near_duplicate_function's detection is blind to this shape). Typical real cause: several branches each hand-build the same kind of object or perform the same sequence of calls -- worth a single shared helper if the branches really are doing the same thing, not just a coincidental resemblance.",
+    "detector": "intra_function_duplicate_block",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/home/wking53214/ecology/tests/rag/test_pdf_preprocess.py",
+      "line_end": 29,
+      "line_start": 29,
+      "related_files": [
+        "/home/wking53214/ecology/tests/rag/test_pdf_preprocess.py:33-33"
+      ],
+      "snippet": null
+    },
+    "first_seen": "2026-09-08T03:43:42.768802+00:00",
+    "id": "ghost-fdfd314d7ff4",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'test_pdf_parsing_strategy' repeats the same single statement 2 times (lines 29-29, 33-33): same shape, names/literals differ"
+  },
+  {
+    "category": "duplication",
+    "confidence": null,
+    "detail": "Structural fingerprint match within one function, not a whole-function match (near_duplicate_function's detection is blind to this shape). Typical real cause: several branches each hand-build the same kind of object or perform the same sequence of calls -- worth a single shared helper if the branches really are doing the same thing, not just a coincidental resemblance.",
+    "detector": "intra_function_duplicate_block",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/home/wking53214/ecology/tests/rag/test_preprocess.py",
+      "line_end": 25,
+      "line_start": 25,
+      "related_files": [
+        "/home/wking53214/ecology/tests/rag/test_preprocess.py:26-26",
+        "/home/wking53214/ecology/tests/rag/test_preprocess.py:30-30",
+        "/home/wking53214/ecology/tests/rag/test_preprocess.py:31-31"
+      ],
+      "snippet": null
+    },
+    "first_seen": "2026-09-08T03:43:42.769423+00:00",
+    "id": "ghost-7d33f88c1296",
+    "layer": "mechanical",
+    "severity": "major",
+    "status": "suppressed",
+    "summary": "'test_markdown_preprocessing_pipeline' repeats the same single statement 4 times (lines 25-25, 26-26, 30-30, 31-31): same shape, names/literals differ"
+  },
+  {
+    "category": "duplication",
+    "confidence": null,
+    "detail": "Structural fingerprint match within one function, not a whole-function match (near_duplicate_function's detection is blind to this shape). Typical real cause: several branches each hand-build the same kind of object or perform the same sequence of calls -- worth a single shared helper if the branches really are doing the same thing, not just a coincidental resemblance.",
+    "detector": "intra_function_duplicate_block",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/home/wking53214/ecology/tests/rag/test_rag.py",
+      "line_end": 194,
+      "line_start": 194,
+      "related_files": [
+        "/home/wking53214/ecology/tests/rag/test_rag.py:196-196",
+        "/home/wking53214/ecology/tests/rag/test_rag.py:198-198"
+      ],
+      "snippet": null
+    },
+    "first_seen": "2026-09-08T03:43:42.773960+00:00",
+    "id": "ghost-7ea253e2a8da",
+    "layer": "mechanical",
+    "severity": "major",
+    "status": "suppressed",
+    "summary": "'test_indexing_a_second_repo_appends_it_does_not_skip' repeats the same single statement 3 times (lines 194-194, 196-196, 198-198): same shape, names/literals differ"
+  },
+  {
+    "category": "duplication",
+    "confidence": null,
+    "detail": "Structural fingerprint match within one function, not a whole-function match (near_duplicate_function's detection is blind to this shape). Typical real cause: several branches each hand-build the same kind of object or perform the same sequence of calls -- worth a single shared helper if the branches really are doing the same thing, not just a coincidental resemblance.",
+    "detector": "intra_function_duplicate_block",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/home/wking53214/ecology/tests/rag/test_vector_pipeline.py",
+      "line_end": 24,
+      "line_start": 24,
+      "related_files": [
+        "/home/wking53214/ecology/tests/rag/test_vector_pipeline.py:64-64"
+      ],
+      "snippet": null
+    },
+    "first_seen": "2026-09-08T03:43:42.778270+00:00",
+    "id": "ghost-fbdc9fb6106f",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'test_end_to_end_pipeline' repeats the same single statement 2 times (lines 24-24, 64-64): same shape, names/literals differ"
+  },
+  {
+    "category": "duplication",
+    "confidence": null,
+    "detail": "Structural fingerprint match within one function, not a whole-function match (near_duplicate_function's detection is blind to this shape). Typical real cause: several branches each hand-build the same kind of object or perform the same sequence of calls -- worth a single shared helper if the branches really are doing the same thing, not just a coincidental resemblance.",
+    "detector": "intra_function_duplicate_block",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/home/wking53214/ecology/tests/rag/test_zip_ingestion.py",
+      "line_end": 33,
+      "line_start": 33,
+      "related_files": [
+        "/home/wking53214/ecology/tests/rag/test_zip_ingestion.py:34-34"
+      ],
+      "snippet": null
+    },
+    "first_seen": "2026-09-08T03:43:42.779129+00:00",
+    "id": "ghost-e6f86c9d5b1f",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'test_zip_in_memory_extraction' repeats the same single statement 2 times (lines 33-33, 34-34): same shape, names/literals differ"
+  },
+  {
+    "category": "duplication",
+    "confidence": null,
+    "detail": "Structural fingerprint match within one function, not a whole-function match (near_duplicate_function's detection is blind to this shape). Typical real cause: several branches each hand-build the same kind of object or perform the same sequence of calls -- worth a single shared helper if the branches really are doing the same thing, not just a coincidental resemblance.",
+    "detector": "intra_function_duplicate_block",
+    "disposition": null,
+    "disposition_note": "",
+    "evidence": {
+      "file": "/home/wking53214/ecology/tests/unit/test_lexical_index.py",
+      "line_end": 45,
+      "line_start": 45,
+      "related_files": [
+        "/home/wking53214/ecology/tests/unit/test_lexical_index.py:50-50"
+      ],
+      "snippet": null
+    },
+    "first_seen": "2026-09-08T03:43:42.790935+00:00",
+    "id": "ghost-c45e7bc70973",
+    "layer": "mechanical",
+    "severity": "minor",
+    "status": "suppressed",
+    "summary": "'test_date_range_filter' repeats the same single statement 2 times (lines 45-45, 50-50): same shape, names/literals differ"
   }
 ]
