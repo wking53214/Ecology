@@ -74,6 +74,7 @@ def _synthesis_matches_its_own_sources(answer: str, verified: list) -> bool:
 # -> ONNXMiniLM_L6_V2 (384d, in-process).
 DEFAULT_COLLECTION_NAME = "living_memory_v3"
 HISTORY_COLLECTION_NAME = "conversation_history_v2"
+COMMIT_COLLECTION_NAME = "commit_history_v1"
 
 
 def _cell_metadata(cell) -> dict:
@@ -175,6 +176,28 @@ def index_history_repo(repo_path, collection_name=HISTORY_COLLECTION_NAME, batch
     collection = client.get_or_create_collection(name=collection_name)
     cells = cells_from_history_repo(
         repo_path, limit=limit,
+        max_cell_chars=max_cell_chars or DEFAULT_MAX_CELL_CHARS,
+    )
+    return _index_cells(collection, cells, batch_size)
+
+
+def index_commit_history(repo_path, collection_name=COMMIT_COLLECTION_NAME, batch_size=32,
+                         db_path="./chroma_db", limit=None, max_cell_chars=None,
+                         include_merges=False):
+    """Index a git repository's commit history (via commit_loader) into its
+    own Chroma collection. Separate from both the code/docs corpus and the
+    conversation history: commits carry the real author time and author,
+    and keeping "what changed" apart from "why it was discussed" lets a
+    query ask each on its own terms. More than one repository can land in
+    the same collection; a re-run adds only commits not yet indexed.
+    `limit` caps commits (smoke runs)."""
+    from commit_loader import cells_from_git_repo
+    from history_loader import DEFAULT_MAX_CELL_CHARS
+
+    client = chromadb.PersistentClient(path=db_path)
+    collection = client.get_or_create_collection(name=collection_name)
+    cells = cells_from_git_repo(
+        repo_path, limit=limit, include_merges=include_merges,
         max_cell_chars=max_cell_chars or DEFAULT_MAX_CELL_CHARS,
     )
     return _index_cells(collection, cells, batch_size)

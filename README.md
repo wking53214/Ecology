@@ -13,7 +13,7 @@ Local **RAG technical memory**: ingest chat exports, PDFs, Python source into ch
 ### A — the path that matches STACK.md (working)
 
 1. `ecology.ingest_directory` → `ActiveKnowledgeObject{identity, content, timestamp, source, date_str}`
-2. Chroma collection **`living_memory_v3`** (ONNX MiniLM-L6-v2, 384-d). History → `conversation_history_v2`.
+2. Chroma collection **`living_memory_v3`** (ONNX MiniLM-L6-v2, 384-d). History → `conversation_history_v2`. Git commit history → `commit_history_v1` (`commit_loader.py`, `rag_engine.index_commit_history`, `scripts/run_commit_index.py`): one cell per commit with its real author time, author, message and changed files, so "what changed" sits beside "why it was discussed".
 3. `generate_response`: ANN → `containment.verify` (default deterministic) → else **"The retrieved corpus does not contain a verifiable answer"**
 4. Else Ollama `llama3.2` (`temperature=0.1`, `num_predict=512`) then `_synthesis_matches_its_own_sources` (`SYNTHESIS_OVERLAP_FLOOR=0.35`)
 5. `FindingRecord` duck-typed toward CCC
