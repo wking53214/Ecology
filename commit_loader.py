@@ -32,6 +32,7 @@ from pathlib import Path
 from typing import Iterator, Optional
 
 from history_loader import DEFAULT_MAX_CELL_CHARS, _split_oversized
+from read_log import GIT_RECORD_MALFORMED, ReadLog
 
 # git log --name-status output is parsed from these separators, which do not
 # occur in commit messages or paths: ASCII record separator before each
@@ -86,14 +87,20 @@ def _describe_change(line: str) -> Optional[str]:
     return f"{word}: {parts[1]}"
 
 
-def parse_git_log(text: str):
+def parse_git_log(text: str, log: ReadLog | None = None):
     """(sha, author, iso_time, message, [change lines]) per commit, oldest
-    first, from `git log` output in this module's format."""
-    for record in text.split(_RS):
+    first, from `git log` output in this module's format.
+
+    A record with too few fields is skipped. Pass a ReadLog to have each one
+    recorded."""
+    for number, record in enumerate(text.split(_RS)):
         if not record.strip():
             continue
         fields = record.split(_US, 4)
         if len(fields) < 5:
+            if log is not None:
+                log.note(GIT_RECORD_MALFORMED, f"record {number}",
+                         f"{len(fields)} of 5 fields: {record.strip()[:60]!r}")
             continue
         sha, author, iso_time, message, tail = fields
         changes = [c for c in (_describe_change(ln) for ln in tail.splitlines() if ln.strip()) if c]
@@ -107,6 +114,7 @@ def cells_from_git_repo(
     limit: Optional[int] = None,
     include_merges: bool = False,
     repo_name: Optional[str] = None,
+    log: ReadLog | None = None,
 ) -> Iterator[CommitCell]:
     """Yield CommitCells for a git repository, oldest commit first.
 
@@ -117,7 +125,7 @@ def cells_from_git_repo(
     repo_path = Path(repo_path)
     name = repo_name or repo_path.resolve().name
     for count, (sha, author, iso_time, message, changes) in enumerate(
-            parse_git_log(_git_log(repo_path, include_merges))):
+            parse_git_log(_git_log(repo_path, include_merges), log)):
         if limit is not None and count >= limit:
             return
         when = datetime.fromisoformat(iso_time)
