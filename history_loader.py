@@ -37,6 +37,15 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Iterator, Optional
 
+from read_log import (
+    CONVERSATION_TOO_SHORT,
+    DECODE_LOSS,
+    MANIFEST_ENTRY_NO_ID,
+    MESSAGE_TOO_SHORT,
+    TRANSCRIPT_MISSING,
+    ReadLog,
+)
+
 # The archives this loader is for. Every one is private personal-conversation
 # data -- CCC's PRIVATE_SOURCE_MARKERS refuses findings citing any of them by
 # default, and `source` below is built to name the repo so that guard fires.
@@ -199,9 +208,13 @@ def cells_from_transcript(
     *,
     max_cell_chars: int = DEFAULT_MAX_CELL_CHARS,
     min_cell_chars: int = DEFAULT_MIN_CELL_CHARS,
+    log: ReadLog | None = None,
 ) -> Iterator[ConversationCell]:
     """Parse one transcript's text into cells. Exposed for callers that
-    already hold the text; `cells_from_history_repo` is the usual entry."""
+    already hold the text; `cells_from_history_repo` is the usual entry.
+
+    Pass a ReadLog to be told which messages were too short to become cells.
+    The cells yielded are the same with or without one."""
     _fm, body = _split_frontmatter(transcript_text)
     source = f"{repo_name}/transcripts/{conv_id}.md"
     start_posix, _ = _iso_to_posix(conversation_start_iso, datetime.now(tz=timezone.utc).timestamp())
@@ -221,6 +234,9 @@ def cells_from_transcript(
     if header_re is None:
         text = body.strip()
         if len(text) < min_cell_chars:
+            if log is not None and text:
+                log.note(CONVERSATION_TOO_SHORT, f"{repo_name}/{conv_id}",
+                         f"{len(text)} chars, below {min_cell_chars}")
             return
         date_str = datetime.fromtimestamp(start_posix, tz=timezone.utc).strftime("%Y-%m-%d")
         yield from _emit(0, _split_oversized(text, max_cell_chars),
@@ -229,11 +245,28 @@ def cells_from_transcript(
 
     for seq, (label, iso, text) in enumerate(_iter_messages(body, header_re)):
         if len(text.strip()) < min_cell_chars:
+            if log is not None and text.strip():
+                log.note(MESSAGE_TOO_SHORT, f"{repo_name}/{conv_id}#{seq}",
+                         f"{len(text.strip())} chars, below {min_cell_chars}")
             continue
         posix, norm_iso = _iso_to_posix(iso, start_posix)
         date_str = datetime.fromtimestamp(posix, tz=timezone.utc).strftime("%Y-%m-%d")
         yield from _emit(seq, _split_oversized(text, max_cell_chars),
                          posix, norm_iso, _normalize_speaker(label), date_str)
+
+
+def _read_transcript(path: Path, log: ReadLog | None, where: str) -> str:
+    """Read a transcript the way the loaders always have (undecodable bytes
+    dropped), and say so in the log when any were."""
+    raw = path.read_bytes()
+    if log is not None:
+        try:
+            raw.decode("utf-8")
+        except UnicodeDecodeError as exc:
+            log.note(DECODE_LOSS, where, f"undecodable bytes dropped, first at byte {exc.start}")
+    # Same text read_text(encoding="utf-8", errors="ignore") returns,
+    # including its universal-newline translation.
+    return raw.decode("utf-8", errors="ignore").replace("\r\n", "\n").replace("\r", "\n")
 
 
 def cells_from_history_repo(
@@ -242,10 +275,15 @@ def cells_from_history_repo(
     max_cell_chars: int = DEFAULT_MAX_CELL_CHARS,
     min_cell_chars: int = DEFAULT_MIN_CELL_CHARS,
     limit: Optional[int] = None,
+    log: ReadLog | None = None,
 ) -> Iterator[ConversationCell]:
     """Yield ConversationCells for every conversation in a *_History repo,
     oldest first. `limit` caps the number of conversations (for a smoke
-    run against a 10k-message archive)."""
+    run against a 10k-message archive).
+
+    Pass a ReadLog to record what was skipped: manifest entries with no id or
+    no transcript file, transcripts with undecodable bytes, messages too short
+    to be cells. The cells yielded are the same with or without one."""
     repo_path = Path(repo_path)
     repo_name = repo_path.name
     entries = _load_manifest(repo_path)
@@ -256,16 +294,22 @@ def cells_from_history_repo(
     for entry in entries:
         conv_id = entry.get("id") or entry.get("safe_id")
         if not conv_id:
+            if log is not None:
+                log.note(MANIFEST_ENTRY_NO_ID, f"{repo_name}/manifest",
+                         f"entry titled {entry.get('title', '')!r} has no id")
             continue
         rel = entry.get("transcript") or f"transcripts/{conv_id}.md"
         transcript = repo_path / rel
         if not transcript.is_file():
+            if log is not None:
+                log.note(TRANSCRIPT_MISSING, f"{repo_name}/{conv_id}", f"no file at {rel}")
             continue
         yield from cells_from_transcript(
             repo_name, conv_id, entry.get("title", ""),
-            transcript.read_text(encoding="utf-8", errors="ignore"),
+            _read_transcript(transcript, log, f"{repo_name}/{conv_id}"),
             _conversation_start(entry),
             max_cell_chars=max_cell_chars, min_cell_chars=min_cell_chars,
+            log=log,
         )
 
 
@@ -279,6 +323,7 @@ def history_repo_summary(repo_path, *, max_cell_chars: int = DEFAULT_MAX_CELL_CH
     repo_path = Path(repo_path)
     entries = _load_manifest(repo_path)
     total = len(entries)
+    log = ReadLog()
     with_cells = 0
     missing = 0            # manifest entry with no id or no transcript file
     empty = 0             # transcript is frontmatter/title only
@@ -295,11 +340,11 @@ def history_repo_summary(repo_path, *, max_cell_chars: int = DEFAULT_MAX_CELL_CH
         if not conv_id or not transcript.is_file():
             missing += 1
             continue
-        text = transcript.read_text(encoding="utf-8", errors="ignore")
+        text = _read_transcript(transcript, log, f"{repo_path.name}/{conv_id}")
         produced = 0
         for cell in cells_from_transcript(
             repo_path.name, conv_id, entry.get("title", ""), text,
-            _conversation_start(entry), max_cell_chars=max_cell_chars,
+            _conversation_start(entry), max_cell_chars=max_cell_chars, log=log,
         ):
             produced += 1
             cell_count += 1
@@ -323,6 +368,9 @@ def history_repo_summary(repo_path, *, max_cell_chars: int = DEFAULT_MAX_CELL_CH
         "speakers": speakers,
         "earliest": earliest,
         "latest": latest,
+        # Input that was read but not turned into cells, by kind. The cell and
+        # conversation counts above say what came out; this says what was left.
+        "skipped": log.counts(),
     }
 
 

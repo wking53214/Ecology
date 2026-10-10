@@ -70,7 +70,7 @@ class ActiveKnowledgeObject:
         return reply
 
 
-def ingest_directory(directory_path):
+def ingest_directory(directory_path, log=None):
     ecology_cluster = []
 
     if not os.path.exists(directory_path):
@@ -101,7 +101,7 @@ def ingest_directory(directory_path):
     for filepath in python_files:
         rel_path = filepath.relative_to(root).as_posix()
         file_timestamp = filepath.stat().st_mtime
-        for symbol_name, content in extract_python_chunks(filepath):
+        for symbol_name, content in extract_python_chunks(filepath, log):
             identity = f"{rel_path}::{symbol_name}"
             cell = ActiveKnowledgeObject(identity=identity, content=content, timestamp=file_timestamp, source=rel_path)
             ecology_cluster.append(cell)
@@ -110,4 +110,7 @@ def ingest_directory(directory_path):
 
     parent_count = len(text_files) + len(python_files)
     print(f"[System] Ecology initialized with {len(ecology_cluster)} active cells descended from {parent_count} parent structures.\n")
+    if log is not None and len(log):
+        # Counted among the parents above but produced no cells.
+        print(f"[System] {len(log)} input(s) were read but contributed nothing: {log.counts()}\n")
     return ecology_cluster

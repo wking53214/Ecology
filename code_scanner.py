@@ -2,6 +2,8 @@ import ast
 from pathlib import Path
 from typing import List, Tuple
 
+from read_log import PYTHON_UNPARSABLE
+
 
 class Gitignore:
     def __init__(self, root: Path):
@@ -49,18 +51,24 @@ def discover_files(root_path: str, extensions: Tuple[str, ...]) -> List[Path]:
     return files
 
 
-def extract_python_chunks(file_path: Path) -> List[Tuple[str, str]]:
+def extract_python_chunks(file_path: Path, log=None) -> List[Tuple[str, str]]:
     """Split a Python file into per-function/class source chunks.
 
     Returns (symbol_name, content) pairs, e.g. ("foo", "<source of foo>"), so
     code can be ingested as addressable memory cells instead of opaque text.
     Identity/addressing (which needs the file's path, not just its bare name,
     to stay collision-free under recursive discovery) is the caller's job.
+
+    A file that does not parse yields no chunks. Pass a ReadLog to have that
+    recorded, so a file that contributed nothing is not mistaken for a file
+    with nothing in it.
     """
     try:
         source = file_path.read_text(encoding="utf-8", errors="ignore")
         tree = ast.parse(source)
-    except (SyntaxError, UnicodeDecodeError):
+    except (SyntaxError, UnicodeDecodeError) as exc:
+        if log is not None:
+            log.note(PYTHON_UNPARSABLE, str(file_path), f"{type(exc).__name__}: {exc}")
         return []
 
     chunks = []
