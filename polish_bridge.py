@@ -54,9 +54,23 @@ class ContentPolishPipeline:
                 "into source control cannot provide integrity guarantees."
             )
         self._signing_key: bytes = signing_key.encode("utf-8")
+        # The key ID is caller-named, never derived from the key.
+        key_id = os.environ.get("ECOLOGY_SIGNING_KEY_ID")
+        if not key_id:
+            raise RuntimeError(
+                "ECOLOGY_SIGNING_KEY_ID must name the key in ECOLOGY_SIGNING_KEY."
+            )
+        self._key_id = key_id
 
-    def _compute_signature(self, text: str) -> str:
-        return hmac.new(self._signing_key, text.encode("utf-8"), hashlib.sha384).hexdigest()
+    def _compute_signature(self, text: str) -> Dict[str, str]:
+        """Signature block: algorithm, key ID and value together (HMAC-SHA256)."""
+        return {
+            "algorithm": "hmac-sha256",
+            "key_id": self._key_id,
+            "value": hmac.new(
+                self._signing_key, text.encode("utf-8"), hashlib.sha256
+            ).hexdigest(),
+        }
 
     async def execute(self, input_prompt: str) -> Dict[str, Any]:
         active_prompt = input_prompt
