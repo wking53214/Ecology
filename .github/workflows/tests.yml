@@ -30,3 +30,27 @@ jobs:
         run: python -m pytest -q
       - name: Lint (hard gate)
         run: ruff check .
+
+  cns:
+    # The optional CNS connector (ecology_cns_connector), with requirements-cns.txt installed. ECOLOGY_REQUIRE_CNS=1
+    # turns a missing cns into a failure, so these tests cannot silently skip here.
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.11", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install the dev requirements, pytest and the cns extra
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install pytest
+          python -m pip install -r requirements-dev.txt
+          python -m pip install -r requirements-cns.txt
+      - name: Test with CNS present
+        env:
+          ECOLOGY_REQUIRE_CNS: "1"
+        run: python -m pytest -q -rs
