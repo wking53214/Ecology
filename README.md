@@ -60,3 +60,11 @@ observe-perceive / α-ζ-β-δ / sentinel_os  ✗ not imported
 ```
 
 Apache-2.0 on engine; corpus excluded.
+
+## Optional CNS connection
+
+Ecology does not need CNS. It has no runtime dependency, nothing in it imports CNS when it loads, and `tests/unit/test_cns_independence.py` checks this with CNS blocked. `ecology_cns_connector.py` is the one place that knows CNS exists. Install it with `pip install -r requirements-cns.txt` (pins CNS v1.8.0); without CNS, asking for a digest raises `CnsNotInstalled` and nothing else changes.
+
+It makes two outputs **bindable** with `cns.gate`: an answer record (the question hash, the answer or the "not in corpus" result, and each cited excerpt as source, extract hash, date and speaker) and a `FindingRecord`. A CNS verdict then carries a `subject_digest`, and `binds(result, output)` says whether that verdict was issued against exactly this output.
+
+This is binding only. It is not a gate, it maps nothing to a verdict, and a bound verdict says which answer it was about, not that the answer was right. The corpus is personal and cannot ship, so the question, the answer and every extract are bound as full SHA-256 digests and never copied; source paths are kept as identifiers.
