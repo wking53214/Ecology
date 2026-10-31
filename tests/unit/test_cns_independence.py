@@ -13,7 +13,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 BLOCK = "import sys; sys.modules['cns'] = None; sys.modules['cns.gate'] = None\n"
 ENV = {"PYTHONPATH": str(ROOT), "PATH": os.environ.get("PATH", "/usr/bin:/bin"), "PYTHONDONTWRITEBYTECODE": "1"}
-PIN = "cns @ git+https://github.com/wking53214/CNS.git@v1.9.0"
+PIN = "cns @ git+https://github.com/wking53214/CNS.git@v2.3.0"
 
 
 def run(code: str, *, block: bool = True) -> subprocess.CompletedProcess:
